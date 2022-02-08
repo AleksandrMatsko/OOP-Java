@@ -1,5 +1,4 @@
-
-
+import java.util.Objects;
 
 public class Pair<T_1,T_2> {
     private T_1 key;
@@ -29,5 +28,18 @@ public class Pair<T_1,T_2> {
 
     public void setValue(T_2 element_2) {
         this.value = element_2;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pair<?, ?> pair = (Pair<?, ?>) o;
+        return Objects.equals(key, pair.key);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(key);
     }
 }
