@@ -1,23 +1,22 @@
 import java.io.*;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.TreeSet;
 
-class TableKeyVal<T_key> {
+class SetKeyVal<T_key> {
     private TreeSet<Pair<T_key, Integer>> container;
 
-    public TableKeyVal(Comparator<Pair<T_key, Integer>> comparator) {
+    public SetKeyVal(Comparator<Pair<T_key, Integer>> comparator) {
         container = new TreeSet<>(comparator);
     }
 
-    /*public boolean contains(T_key key) {
-        return container.contains();
-    }*/
-
     public boolean add(T_key key, int amountOfWords) {
         int keyCount = 0;
-        for (int i = 0; i < amountOfWords; i++) {
-            if (container.contains(new Pair<>(key, i + 1))) {
-                keyCount = i + 1;
+        Iterator<Pair<T_key, Integer>> it = container.iterator();
+        while (it.hasNext()) {
+            Pair<T_key, Integer> cell = it.next();
+            if (cell.getKey().equals(key)) {
+                keyCount = cell.getValue();
                 break;
             }
         }
@@ -30,8 +29,8 @@ class TableKeyVal<T_key> {
     }
 }
 
-public class Parser {
-    private TableKeyVal<String> statistics;
+public class WordCounter {
+    private SetKeyVal<String> statistics;
     private int totalWords;
 
     Comparator<Pair<String, Integer>> cmp = new Comparator<Pair<String, Integer>>() {
@@ -47,8 +46,8 @@ public class Parser {
         }
     };
 
-    public Parser() {
-        statistics = new TableKeyVal<>(cmp);
+    public WordCounter() {
+        statistics = new SetKeyVal<>(cmp);
         totalWords = 0;
     }
 
