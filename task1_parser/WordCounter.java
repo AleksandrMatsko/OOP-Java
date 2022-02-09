@@ -10,7 +10,7 @@ class SetKeyVal<T_key> {
         container = new TreeSet<>(comparator);
     }
 
-    public boolean add(T_key key, int amountOfWords) {
+    public boolean add(T_key key) {
         int keyCount = 0;
         Iterator<Pair<T_key, Integer>> it = container.iterator();
         while (it.hasNext()) {
@@ -56,21 +56,21 @@ public class WordCounter {
         try {
             reader = new InputStreamReader(new FileInputStream(inputFileName));
             int tmp;
-            String word = "";
+            StringBuilder word = new StringBuilder();
             char sym = '/';
             while ((tmp = reader.read()) != -1) {
                 sym = (char)tmp;
                 if (Character.isLetterOrDigit(sym)) {
-                    word += sym;
+                    word.append(sym);
                 }
-                else if (!word.equals("")){
-                    statistics.add(word, totalWords);
+                else if (!word.isEmpty()){
+                    statistics.add(word.toString());
                     totalWords += 1;
-                    word = "";
+                    word.setLength(0);
                 }
             }
             if (Character.isLetterOrDigit(sym)) {
-                statistics.add(word, totalWords);
+                statistics.add(word.toString());
                 totalWords += 1;
             }
 
