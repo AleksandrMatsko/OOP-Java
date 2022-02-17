@@ -1,20 +1,19 @@
 import java.io.*;
 import java.util.Comparator;
-import java.util.TreeSet;
 
 public class WordCounter {
-    private TreeSetOfPairs<String, Integer> statistics;
+    private TableKeyVal<String, Integer> statistics;
     private int totalWords;
 
-    Comparator<Pair<String, Integer>> addCmp = new Comparator<Pair<String, Integer>>() {
+    Comparator<PairKeyVal<String, Integer>> addCmp = new Comparator<PairKeyVal<String, Integer>>() {
         @Override
-        public int compare (Pair< String, Integer > o1, Pair< String, Integer > o2) {
+        public int compare (PairKeyVal<String, Integer> o1, PairKeyVal<String, Integer> o2) {
             return o1.getKey().compareTo(o2.getKey());
         }
     };
 
     public WordCounter() {
-        statistics = new TreeSetOfPairs<>(addCmp);
+        statistics = new TableKeyVal<>(addCmp);
         totalWords = 0;
     }
 
@@ -33,9 +32,9 @@ public class WordCounter {
         dataReader.close();
     }
 
-    Comparator<Pair<String, Integer>> sortCmp = new Comparator<Pair<String, Integer>>() {
+    Comparator<PairKeyVal<String, Integer>> sortCmp = new Comparator<PairKeyVal<String, Integer>>() {
         @Override
-        public int compare (Pair< String, Integer > o1, Pair< String, Integer > o2) {
+        public int compare (PairKeyVal< String, Integer > o1, PairKeyVal< String, Integer > o2) {
             int res = o2.getValue() - o1.getValue();
             if (res != 0) {
                 return res;
@@ -47,12 +46,10 @@ public class WordCounter {
     };
 
     public void releaseStatistics(OutputStream outputStream, char delimiter) {
-        Object[] toRelease = statistics.toArray();
-        //sort result
+        PairKeyVal<String, Integer>[] toRelease = statistics.toArray(sortCmp);
         DataWriter dataWriter = new DataWriter(outputStream, totalWords, delimiter);
         for (int i = 0; i < toRelease.length; i++) {
-            Pair<String, Integer> cell = (Pair<String, Integer>) toRelease[i];
-            dataWriter.writeDataLine(cell.getKey(), cell.getValue());
+            dataWriter.writeDataLine(toRelease[i].getKey(), toRelease[i].getValue());
         }
         dataWriter.writeTotalWords();
         dataWriter.close();
