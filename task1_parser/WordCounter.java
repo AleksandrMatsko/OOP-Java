@@ -5,10 +5,23 @@ public class WordCounter {
     private TableKeyVal<String, Integer> statistics;
     private int totalWords;
 
-    Comparator<PairKeyVal<String, Integer>> addCmp = new Comparator<PairKeyVal<String, Integer>>() {
+    private Comparator<PairKeyVal<String, Integer>> addCmp = new Comparator<PairKeyVal<String, Integer>>() {
         @Override
         public int compare (PairKeyVal<String, Integer> o1, PairKeyVal<String, Integer> o2) {
             return o1.getKey().compareTo(o2.getKey());
+        }
+    };
+
+    private Comparator<PairKeyVal<String, Integer>> sortCmp = new Comparator<PairKeyVal<String, Integer>>() {
+        @Override
+        public int compare (PairKeyVal< String, Integer > o1, PairKeyVal< String, Integer > o2) {
+            int res = o2.getValue() - o1.getValue();
+            if (res != 0) {
+                return res;
+            }
+            else {
+                return o1.getKey().compareTo(o2.getKey());
+            }
         }
     };
 
@@ -32,21 +45,8 @@ public class WordCounter {
         dataReader.close();
     }
 
-    Comparator<PairKeyVal<String, Integer>> sortCmp = new Comparator<PairKeyVal<String, Integer>>() {
-        @Override
-        public int compare (PairKeyVal< String, Integer > o1, PairKeyVal< String, Integer > o2) {
-            int res = o2.getValue() - o1.getValue();
-            if (res != 0) {
-                return res;
-            }
-            else {
-                return o1.getKey().compareTo(o2.getKey());
-            }
-        }
-    };
-
     public void releaseStatistics(OutputStream outputStream, char delimiter) {
-        PairKeyVal<String, Integer>[] toRelease = statistics.toArray(sortCmp);
+        PairKeyVal<String, Integer>[] toRelease = statistics.getSortedData(sortCmp);
         DataWriter dataWriter = new DataWriter(outputStream, totalWords, delimiter);
         for (int i = 0; i < toRelease.length; i++) {
             dataWriter.writeDataLine(toRelease[i].getKey(), toRelease[i].getValue());

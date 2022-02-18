@@ -4,11 +4,11 @@ import java.util.TreeSet;
 
 public class TableKeyVal<TKey, TVal> {
     private TreeSet<PairKeyVal<TKey, TVal>> table;
-    Comparator<PairKeyVal<TKey, TVal>> pairComparator;
+    Comparator<PairKeyVal<TKey, TVal>> keyCmp;
 
-    public TableKeyVal(Comparator<PairKeyVal<TKey, TVal>> comparator) {
-        table = new TreeSet<>(comparator);
-        pairComparator = comparator;
+    public TableKeyVal(Comparator<PairKeyVal<TKey, TVal>> keyComparator) {
+        table = new TreeSet<>(keyComparator);
+        keyCmp = keyComparator;
     }
 
     public boolean add(TKey key, TVal val) {
@@ -19,10 +19,10 @@ public class TableKeyVal<TKey, TVal> {
         return table.floor(new PairKeyVal<>(key, val));
     }
 
-    public PairKeyVal<TKey, TVal>[] toArray(Comparator<PairKeyVal<TKey, TVal>> reSortCmp) {
+    public PairKeyVal<TKey, TVal>[] getSortedData(Comparator<PairKeyVal<TKey, TVal>> reSortComparator) {
         TreeSet<PairKeyVal<TKey, TVal>> sortedData;
-        if (reSortCmp != pairComparator) {
-            sortedData = new TreeSet<>(reSortCmp);
+        if (reSortComparator != keyCmp) {
+            sortedData = new TreeSet<>(reSortComparator);
             sortedData.addAll(table);
         }
         else {
