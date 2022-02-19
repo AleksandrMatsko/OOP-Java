@@ -23,6 +23,16 @@ public class DataWriter {
         catch (IOException ex) {
             System.err.println("Error while writing data - " + ex.getLocalizedMessage());
         }
+        finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                }
+                catch (IOException ex) {
+                    ex.printStackTrace(System.err);
+                }
+            }
+        }
     }
 
     public void writeTotalWords() {
@@ -32,14 +42,25 @@ public class DataWriter {
         catch (IOException ex) {
             System.err.println("Error while writing data - " + ex.getLocalizedMessage());
         }
+        finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                } catch (IOException ex) {
+                    ex.printStackTrace(System.err);
+                }
+            }
+
+        }
     }
 
     public void close() {
-        try {
-            writer.close();
-        }
-        catch (IOException ex) {
-            ex.printStackTrace(System.err);
+        if (writer != null) {
+            try {
+                writer.close();
+            } catch (IOException ex) {
+                ex.printStackTrace(System.err);
+            }
         }
     }
 

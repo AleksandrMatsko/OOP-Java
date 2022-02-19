@@ -31,27 +31,41 @@ public class WordCounter {
     }
 
     public void collectStatistics(InputStream inputStream) {
-        DataReader dataReader = new DataReader(inputStream);
-        while (dataReader.isAvailable()) {
-            String word = dataReader.getWord();
-            if (!word.isEmpty()) {
-                if (!statistics.add(word, 1)) {
-                    int val = statistics.getCell(word, 1).getValue();
-                    statistics.getCell(word, 1).setValue(val + 1);
+        DataReader dataReader = null;
+        try {
+            dataReader = new DataReader(inputStream);
+            while (dataReader.isAvailable()) {
+                String word = dataReader.getWord();
+                if (!word.isEmpty()) {
+                    if (!statistics.add(word, 1)) {
+                        int val = statistics.getCell(word, 1).getValue();
+                        statistics.getCell(word, 1).setValue(val + 1);
+                    }
+                    totalWords += 1;
                 }
-                totalWords += 1;
             }
         }
-        dataReader.close();
+        finally {
+            if (dataReader != null) {
+                dataReader.close();
+            }
+        }
     }
 
     public void releaseStatistics(OutputStream outputStream, char delimiter) {
-        PairKeyVal<String, Integer>[] toRelease = statistics.getSortedData(sortCmp);
-        DataWriter dataWriter = new DataWriter(outputStream, totalWords, delimiter);
-        for (int i = 0; i < toRelease.length; i++) {
-            dataWriter.writeDataLine(toRelease[i].getKey(), toRelease[i].getValue());
+        DataWriter dataWriter = null;
+        try {
+            PairKeyVal<String, Integer>[] toRelease = statistics.getSortedData(sortCmp);
+            dataWriter = new DataWriter(outputStream, totalWords, delimiter);
+            for (int i = 0; i < toRelease.length; i++) {
+                dataWriter.writeDataLine(toRelease[i].getKey(), toRelease[i].getValue());
+            }
+            dataWriter.writeTotalWords();
         }
-        dataWriter.writeTotalWords();
-        dataWriter.close();
+        finally {
+            if (dataWriter != null) {
+                dataWriter.close();
+            }
+        }
     }
 }

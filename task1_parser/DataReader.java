@@ -18,7 +18,7 @@ public class DataReader {
     }
 
     public boolean isAvailable() {
-        return inputScanner.hasNext() || stopIndex < inputLine.length();
+        return inputScanner.hasNextLine() || stopIndex < inputLine.length();
     }
 
     public String getWord() {

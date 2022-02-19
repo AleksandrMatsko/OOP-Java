@@ -7,22 +7,42 @@ public class Main {
             System.exit(1);
         }
         WordCounter parser = new WordCounter();
+        InputStream inputStream = null;
         for (int i = 0; i < args.length - 1; i++) {
             try {
-                InputStream inputStream = new FileInputStream(args[i]);
+                inputStream = new FileInputStream(args[i]);
                 parser.collectStatistics(inputStream);
             }
             catch (IOException ex) {
                 System.err.println("Error while reading file - " + ex.getLocalizedMessage());
             }
+            finally {
+                if (inputStream != null) {
+                    try {
+                        inputStream.close();
+                    }
+                    catch (IOException ex) {
+                        ex.printStackTrace(System.err);
+                    }
+                }
+            }
         }
 
+        OutputStream outputStream = null;
         try {
-            OutputStream outputStream = new FileOutputStream(args[args.length - 1]);
+            outputStream = new FileOutputStream(args[args.length - 1]);
             parser.releaseStatistics(outputStream, ';');
         }
         catch (IOException ex) {
             System.err.println("Error while writing file - " + ex.getLocalizedMessage());
+        }
+        if (outputStream != null) {
+            try {
+                outputStream.close();
+            }
+            catch (IOException ex) {
+                ex.printStackTrace(System.err);
+            }
         }
     }
 }
