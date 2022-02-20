@@ -62,6 +62,9 @@ public class WordCounter {
             }
             dataWriter.writeTotalWords();
         }
+        catch (IOException ex) {
+            System.err.println("Error while writing data - " + ex.getLocalizedMessage());
+        }
         finally {
             if (dataWriter != null) {
                 dataWriter.close();
