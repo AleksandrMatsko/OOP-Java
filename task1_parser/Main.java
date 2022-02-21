@@ -36,12 +36,14 @@ public class Main {
         catch (IOException ex) {
             System.err.println("Error while writing file - " + ex.getLocalizedMessage());
         }
-        if (outputStream != null) {
-            try {
-                outputStream.close();
-            }
-            catch (IOException ex) {
-                ex.printStackTrace(System.err);
+        finally {
+            if (outputStream != null) {
+                try {
+                    outputStream.close();
+                }
+                catch (IOException ex) {
+                    ex.printStackTrace(System.err);
+                }
             }
         }
     }
