@@ -1,7 +1,9 @@
-package com.Factory;
+package src.Factory;
 
-import com.Commands.*;
+import src.Commands.*;
+
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -32,18 +34,22 @@ public class CommandFactory {
             catch (IllegalArgumentException ex) {
                 //
             }
-            if (commandName != null) {
-                commandsTable.put(commandName, Class.forName(className));
-                /*try {
-                    //commandsTable.put(commandName, Class.forName(className));
-                }
-                catch (IIOException ex) {
-                    //throw ex;
-                }*/
+            System.err.println(commandName.toString() + " " + className);
+            try {
+                commandsTable.put(commandName, (Command) Class.forName(className).getDeclaredConstructor().newInstance());
             }
-            else {
-                //throw IllegalCommandName
+            catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
             }
+        }
+        for (Map.Entry entry: commandsTable.entrySet()) {
+            System.err.println(entry.getKey().toString() + " " + entry.getValue().getClass().getName());
         }
     }
 
@@ -54,10 +60,12 @@ public class CommandFactory {
         return factory;
     }
 
-    public Command getCommand(CommandName name) {
+    public Command getCommand(CommandName name) throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         if (!commandsTable.containsKey(name)) {
             //throw CommandNotFound
         }
+        /*Command cmd;
+        cmd = (Command) commandsTable.get(name);*/
         return commandsTable.get(name);
     }
 }

@@ -1,6 +1,4 @@
-package com.Commands;
-
-import com.DataContainers.DefinitionName;
+package src.Commands;
 
 import java.util.Objects;
 

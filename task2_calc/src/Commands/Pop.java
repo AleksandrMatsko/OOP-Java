@@ -1,11 +1,13 @@
-package com.Commands;
+package src.Commands;
 
-import com.DataContainers.Data;
+import src.DataContainers.Data;
+
+import java.util.List;
 
 public class Pop implements Command {
     @Override
-    public void execute(Data<Double> data, String[] args) {
-        if (args.length != 0) {
+    public void execute(Data<Double> data, List<String> args) {
+        if (args.size() != 0) {
             //throw WrongAmountOfArguments;
         }
         data.popVal();
@@ -15,6 +17,4 @@ public class Pop implements Command {
     public CommandType getCommandType() {
         return CommandType.OUT;
     }
-
-
 }

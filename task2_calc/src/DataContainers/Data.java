@@ -1,4 +1,6 @@
-package com.DataContainers;
+package src.DataContainers;
+
+import src.DataContainers.Definitions.*;
 
 import java.util.EmptyStackException;
 import java.util.Stack;
@@ -7,7 +9,7 @@ public class Data<TVal> {
     private final Stack<TVal> stack;
     private final DefinitionTable<TVal> definitionTable;
 
-    Data() {
+    public Data() {
         stack = new Stack<>();
         definitionTable = new DefinitionTable<>();
     }
@@ -36,7 +38,7 @@ public class Data<TVal> {
         definitionTable.add(name, val);
     }
 
-    public boolean isContainDefinition(DefinitionName name) {
+    public boolean containsDefinitionName(DefinitionName name) {
         return definitionTable.contains(name);
     }
 

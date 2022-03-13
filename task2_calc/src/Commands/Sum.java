@@ -1,12 +1,14 @@
-package com.Commands;
+package src.Commands;
 
-import com.DataContainers.Data;
+import src.DataContainers.Data;
+
 import java.util.EmptyStackException;
+import java.util.List;
 
 public class Sum implements Command {
     @Override
-    public void execute(Data<Double> data, String[] args) throws EmptyStackException {
-        if (args.length != 0) {
+    public void execute(Data<Double> data, List<String> args) throws EmptyStackException {
+        if (args.size() != 0) {
             //throw WrongAmountOfArguments;
         }
         double first = data.popVal();
