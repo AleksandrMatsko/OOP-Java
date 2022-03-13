@@ -13,4 +13,9 @@ public class Sum implements Command {
         double second = data.popVal();
         data.pushVal(first + second);
     }
+
+    @Override
+    public CommandType getCommandType() {
+        return CommandType.INOUT;
+    }
 }

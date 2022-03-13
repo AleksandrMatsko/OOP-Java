@@ -2,8 +2,14 @@ package com.Commands;
 
 import com.DataContainers.Data;
 
-import java.util.Stack;
+enum CommandType {
+    IN,
+    INOUT,
+    OUT
+}
 
 public interface Command {
-    public void execute(Data<Double> data, String[] args);
+    void execute(Data<Double> data, String[] args);
+
+    CommandType getCommandType();
 }

@@ -3,8 +3,6 @@ package com.Commands;
 import com.DataContainers.Data;
 import com.DataContainers.DefinitionName;
 
-import java.util.Stack;
-
 public class Push implements Command {
 
     @Override
@@ -26,5 +24,10 @@ public class Push implements Command {
             }
         }
         data.pushVal(val);
+    }
+
+    @Override
+    public CommandType getCommandType() {
+        return CommandType.IN;
     }
 }

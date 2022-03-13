@@ -1,12 +1,14 @@
-package com.DataContainers;
+package com.Commands;
+
+import com.DataContainers.DefinitionName;
 
 import java.util.Objects;
 
-public class DefinitionName {
+public class CommandName {
     private final String name;
 
-    public DefinitionName(String name) throws IllegalArgumentException {
-        if (name.contains(" ") || name.chars().allMatch(Character::isDigit)) {
+    public CommandName(String name) throws IllegalArgumentException {
+        if (!name.chars().allMatch(Character::isLetter)) {
             throw new IllegalArgumentException();
         }
         this.name = name;
@@ -24,7 +26,7 @@ public class DefinitionName {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        DefinitionName that = (DefinitionName) o;
+        CommandName that = (CommandName) o;
         return Objects.equals(name, that.name);
     }
 
