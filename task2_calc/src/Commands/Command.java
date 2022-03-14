@@ -1,18 +1,9 @@
 package src.Commands;
 
-import src.DataContainers.Data;
+import src.DataContainers.StackWithDefinitionTable;
 
 import java.util.List;
 
-enum CommandType {
-    IN,
-    INOUT,
-    OUT,
-    NONE
-}
-
 public interface Command {
-    void execute(Data<Double> data, List<String> args);
-
-    CommandType getCommandType();
+    void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args);
 }

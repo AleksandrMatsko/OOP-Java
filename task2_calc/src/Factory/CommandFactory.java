@@ -34,7 +34,6 @@ public class CommandFactory {
             catch (IllegalArgumentException ex) {
                 //
             }
-            System.err.println(commandName.toString() + " " + className);
             try {
                 commandsTable.put(commandName, (Command) Class.forName(className).getDeclaredConstructor().newInstance());
             }
@@ -47,9 +46,6 @@ public class CommandFactory {
             } catch (NoSuchMethodException e) {
                 e.printStackTrace();
             }
-        }
-        for (Map.Entry entry: commandsTable.entrySet()) {
-            System.err.println(entry.getKey().toString() + " " + entry.getValue().getClass().getName());
         }
     }
 
@@ -64,8 +60,6 @@ public class CommandFactory {
         if (!commandsTable.containsKey(name)) {
             //throw CommandNotFound
         }
-        /*Command cmd;
-        cmd = (Command) commandsTable.get(name);*/
         return commandsTable.get(name);
     }
 }

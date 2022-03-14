@@ -1,6 +1,6 @@
 package src.Commands;
 
-import src.DataContainers.Data;
+import src.DataContainers.StackWithDefinitionTable;
 import src.DataContainers.Definitions.DefinitionName;
 
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 public class Define implements Command {
 
     @Override
-    public void execute(Data<Double> data, List<String> args) {
+    public void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args) throws IllegalArgumentException {
         if (args.size() != 2) {
             //throw WrongAmountOfArguments
         }
@@ -19,19 +19,13 @@ public class Define implements Command {
         catch (IllegalArgumentException ex) {
 
         }
-        double val = 0;
-        if (args.get(0).chars().allMatch(Character::isDigit)) {
-            val = Double.parseDouble(args.get(0));
+        double val;
+        if (args.get(1).chars().allMatch(Character::isDigit) || args.get(1).contains(".") || args.get(1).contains("-")) {
+            val = Double.parseDouble(args.get(1));
         }
         else {
-            //throw IllegalArgumentException
+            throw new IllegalArgumentException();
         }
-        data.addNewDefinition(definitionName, val);
-
-    }
-
-    @Override
-    public CommandType getCommandType() {
-        return CommandType.NONE;
+        stackWithDefinitionTable.addNewDefinition(definitionName, val);
     }
 }

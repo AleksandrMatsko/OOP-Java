@@ -5,11 +5,11 @@ import src.DataContainers.Definitions.*;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-public class Data<TVal> {
+public class StackWithDefinitionTable<TVal> {
     private final Stack<TVal> stack;
     private final DefinitionTable<TVal> definitionTable;
 
-    public Data() {
+    public StackWithDefinitionTable() {
         stack = new Stack<>();
         definitionTable = new DefinitionTable<>();
     }

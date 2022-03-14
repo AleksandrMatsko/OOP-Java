@@ -1,21 +1,25 @@
 package src;
 
 import src.Commands.*;
-import src.DataContainers.Data;
+import src.DataContainers.StackWithDefinitionTable;
 import src.Factory.*;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import java.util.Locale;
 
 public class Executor {
 
     public void executeInput(InputStream in) {
         InputParser parser = new InputParser(in);
-        Data<Double> data = new Data<>();
-        while (true) {
+        StackWithDefinitionTable<Double> stackWithDefinitionTable = new StackWithDefinitionTable<>();
+        while (parser.isAvailable()) {
             List<String> parsedLine = parser.parse();
+            if (parsedLine.get(0).toLowerCase(Locale.ROOT).equals("stop") || parsedLine.get(0).toLowerCase(Locale.ROOT).equals("q")) {
+                break;
+            }
             CommandName commandName = null;
             try {
                 commandName = new CommandName(parsedLine.get(0));
@@ -35,12 +39,12 @@ public class Executor {
                 e.printStackTrace();
             }
             parsedLine.remove(0);
-            //try {
-                cmd.execute(data, parsedLine);
-            //}
-            //catch () {
-
-            //}
+            try {
+                cmd.execute(stackWithDefinitionTable, parsedLine);
+            }
+            catch (IllegalArgumentException ex) {
+                ex.printStackTrace();
+            }
 
         }
     }

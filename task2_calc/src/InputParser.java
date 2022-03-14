@@ -7,18 +7,20 @@ import java.util.List;
 import java.util.Scanner;
 
 public class InputParser {
-    private final InputStream in;
+    private final Scanner scanner;
 
     public InputParser(InputStream in) {
-        this.in = in;
+        scanner = new Scanner(in);
+    }
+
+    public boolean isAvailable() {
+        return scanner.hasNextLine();
     }
 
     public List<String> parse() {
-        Scanner scanner = new Scanner(in);
         String line = "";
         if (scanner.hasNextLine()) {
             line = scanner.nextLine();
-
         }
         else {
             //throw bad input exception
