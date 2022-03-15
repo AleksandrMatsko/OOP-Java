@@ -1,6 +1,9 @@
 package src.Factory;
 
 import src.Commands.*;
+import src.Exceptions.CommandNotFoundException;
+import src.Exceptions.FileExceptions.CannotOpenConfigFileException;
+import src.Exceptions.NameExceptons.IllegalCommandNameException;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -13,52 +16,48 @@ public class CommandFactory {
     private final HashMap<CommandName, Command> commandsTable;
     private static CommandFactory factory = null;
 
-    private CommandFactory() throws IOException, ClassNotFoundException {
+    private CommandFactory() throws CannotOpenConfigFileException, ClassNotFoundException, IllegalCommandNameException {
         commandsTable = new HashMap<>();
         final String configFileName = "config/commands.ini";
         Properties properties = new Properties();
-        properties.load(CommandFactory.class.getResourceAsStream(configFileName));
-        /*try {
-            //properties.load(CommandFactory.class.getResourceAsStream(configFileName));
+        try {
+            properties.load(CommandFactory.class.getResourceAsStream(configFileName));
         }
-        catch (IIOException ex) {
-            //throw CannotOpenConfigFile
-        }*/
+        catch (IOException ex) {
+            throw new CannotOpenConfigFileException();
+        }
         for (Map.Entry entry: properties.entrySet()) {
             String toCommandName = (String) entry.getKey();
             String className = (String) entry.getValue();
-            CommandName commandName = null;
+            CommandName commandName;
             try {
                 commandName = new CommandName(toCommandName);
             }
-            catch (IllegalArgumentException ex) {
-                //
+            catch (IllegalCommandNameException ex) {
+                throw new IllegalCommandNameException("Invalid command name in config file.");
             }
             try {
                 commandsTable.put(commandName, (Command) Class.forName(className).getDeclaredConstructor().newInstance());
             }
-            catch (InstantiationException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (InvocationTargetException e) {
-                e.printStackTrace();
-            } catch (NoSuchMethodException e) {
+            catch (ClassNotFoundException ex) {
+                System.err.println("Cannot create class " + className + " for command " + commandName.toString() + ". Class not found");
+            }
+            catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
                 e.printStackTrace();
             }
         }
     }
 
-    public static CommandFactory getInstance() throws IOException, ClassNotFoundException {
+    public static CommandFactory getInstance() throws CannotOpenConfigFileException, ClassNotFoundException, IllegalCommandNameException {
         if (factory == null) {
             factory = new CommandFactory();
         }
         return factory;
     }
 
-    public Command getCommand(CommandName name) throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    public Command getCommand(CommandName name) throws CommandNotFoundException {
         if (!commandsTable.containsKey(name)) {
-            //throw CommandNotFound
+            throw new CommandNotFoundException("Cannot find command with name " + name.toString());
         }
         return commandsTable.get(name);
     }

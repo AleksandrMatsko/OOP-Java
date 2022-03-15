@@ -7,7 +7,7 @@ import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) {
-        Executor executor = new Executor();
+        Calculator calculator = new Calculator();
         InputStream stream = null;
         if (args.length == 0) {
             stream = System.in;
@@ -21,14 +21,11 @@ public class Main {
             }
         }
         else {
-            //throw new WrongAmountOfArguments
+            System.err.println("Wrong amount of arguments in function main");
         }
         try {
-            executor.executeInput(stream);
+            calculator.executeInput(stream);
         }
-        /*catch () {
-
-        }*/
         finally {
             if (stream != null) {
                 try {

@@ -1,4 +1,4 @@
-package src;
+package src.Parser;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -22,9 +22,6 @@ public class InputParser {
         if (scanner.hasNextLine()) {
             line = scanner.nextLine();
         }
-        else {
-            //throw bad input exception
-        }
-        return new ArrayList<String>(Arrays.asList(line.split(" ")));
+        return new ArrayList<>(Arrays.asList(line.split(" ")));
     }
 }

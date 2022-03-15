@@ -1,6 +1,6 @@
 package src.Exceptions;
 
-public class WrongAmountOfArgumentsException extends CommandException {
+public class WrongAmountOfArgumentsException extends Exception {
     private final int expected;
     private final int has;
 

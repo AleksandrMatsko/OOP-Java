@@ -1,13 +1,15 @@
 package src.DataContainers.Definitions;
 
+import src.Exceptions.NameExceptons.IllegalDefinitionNameException;
+
 import java.util.Objects;
 
 public class DefinitionName {
     private final String name;
 
-    public DefinitionName(String name) throws IllegalArgumentException {
+    public DefinitionName(String name) throws IllegalDefinitionNameException {
         if (name.contains(" ") || name.chars().allMatch(Character::isDigit)) {
-            throw new IllegalArgumentException();
+            throw new IllegalDefinitionNameException();
         }
         this.name = name;
     }

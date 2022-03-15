@@ -1,13 +1,15 @@
 package src.Commands;
 
+import src.Exceptions.NameExceptons.IllegalCommandNameException;
+
 import java.util.Objects;
 
 public class CommandName {
     private final String name;
 
-    public CommandName(String name) throws IllegalArgumentException {
+    public CommandName(String name) throws IllegalCommandNameException {
         if (!name.chars().allMatch(Character::isLetter)) {
-            throw new IllegalArgumentException();
+            throw new IllegalCommandNameException();
         }
         this.name = name;
     }
