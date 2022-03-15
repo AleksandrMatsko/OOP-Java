@@ -2,27 +2,42 @@ package src;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) {
         Executor executor = new Executor();
+        InputStream stream = null;
         if (args.length == 0) {
-            executor.executeInput(System.in);
+            stream = System.in;
         }
         else if (args.length == 1) {
-            InputStream fileStream = null;
             try {
-                fileStream = new FileInputStream(args[0]);
+                stream = new FileInputStream(args[0]);
             }
             catch (FileNotFoundException ex) {
                 ex.printStackTrace();
             }
-            executor.executeInput(fileStream);
         }
         else {
             //throw new WrongAmountOfArguments
         }
+        try {
+            executor.executeInput(stream);
+        }
+        /*catch () {
 
+        }*/
+        finally {
+            if (stream != null) {
+                try {
+                    stream.close();
+                }
+                catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }
     }
 }

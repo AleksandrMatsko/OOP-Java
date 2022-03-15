@@ -2,15 +2,16 @@ package src.Commands;
 
 import src.DataContainers.StackWithDefinitionTable;
 import src.DataContainers.Definitions.DefinitionName;
+import src.Exceptions.WrongAmountOfArgumentsException;
 
 import java.util.List;
 
 public class Define implements Command {
 
     @Override
-    public void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args) throws IllegalArgumentException {
+    public void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args) throws IllegalArgumentException, WrongAmountOfArgumentsException {
         if (args.size() != 2) {
-            //throw WrongAmountOfArguments
+            throw new WrongAmountOfArgumentsException("Wrong amount of arguments in DEFINE", 2, args.size());
         }
         DefinitionName definitionName = null;
         try {
