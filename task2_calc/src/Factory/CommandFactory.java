@@ -16,7 +16,7 @@ public class CommandFactory {
     private final HashMap<CommandName, Command> commandsTable;
     private static CommandFactory factory = null;
 
-    private CommandFactory() throws CannotOpenConfigFileException, ClassNotFoundException, IllegalCommandNameException {
+    private CommandFactory() throws CannotOpenConfigFileException, IllegalCommandNameException {
         commandsTable = new HashMap<>();
         final String configFileName = "config/commands.ini";
         Properties properties = new Properties();
@@ -48,7 +48,7 @@ public class CommandFactory {
         }
     }
 
-    public static CommandFactory getInstance() throws CannotOpenConfigFileException, ClassNotFoundException, IllegalCommandNameException {
+    public static CommandFactory getInstance() throws CannotOpenConfigFileException, IllegalCommandNameException {
         if (factory == null) {
             factory = new CommandFactory();
         }
