@@ -7,8 +7,12 @@ import src.Exceptions.ValueExceptions.IllegalValueException;
 import src.Exceptions.WrongAmountOfArgumentsException;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Push implements Command {
+    private final static Logger logger = Logger.getLogger(Push.class.getName());
+
     @Override
     public void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args) throws
             WrongAmountOfArgumentsException,
@@ -37,5 +41,6 @@ public class Push implements Command {
             }
         }
         stackWithDefinitionTable.pushVal(val);
+        logger.log(Level.FINE, "PUSH successfully executed");
     }
 }

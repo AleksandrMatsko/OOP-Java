@@ -6,8 +6,12 @@ import src.Exceptions.ValueExceptions.UseSqrtToNegativeValueException;
 import src.Exceptions.WrongAmountOfArgumentsException;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Sqrt implements Command {
+    private final static Logger logger = Logger.getLogger(Sqrt.class.getName());
+
     @Override
     public void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args) throws
             WrongAmountOfArgumentsException,
@@ -24,5 +28,6 @@ public class Sqrt implements Command {
             throw new UseSqrtToNegativeValueException("Try to use SQRT to negative number.", val);
         }
         stackWithDefinitionTable.pushVal(Math.sqrt(val));
+        logger.log(Level.FINE, "SQRT successfully executed");
     }
 }

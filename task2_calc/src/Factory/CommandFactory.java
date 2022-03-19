@@ -10,9 +10,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class CommandFactory {
+    private static final Logger logger = Logger.getLogger(CommandFactory.class.getName());
     private final HashMap<CommandName, Command> commandsTable;
     private static CommandFactory factory = null;
 
@@ -24,8 +27,10 @@ public class CommandFactory {
             properties.load(CommandFactory.class.getResourceAsStream(configFileName));
         }
         catch (IOException ex) {
+            logger.log(Level.SEVERE, "Exception: ", ex);
             throw new CannotOpenConfigFileException();
         }
+        logger.log(Level.FINE, "Config file with commands was read successfully");
         for (Map.Entry entry: properties.entrySet()) {
             String toCommandName = (String) entry.getKey();
             String className = (String) entry.getValue();
@@ -34,16 +39,19 @@ public class CommandFactory {
                 commandName = new CommandName(toCommandName);
             }
             catch (IllegalCommandNameException ex) {
+                logger.log(Level.SEVERE, "Exception: ", ex);
                 throw new IllegalCommandNameException("Invalid command name in config file.");
             }
             try {
                 commandsTable.put(commandName, (Command) Class.forName(className).getDeclaredConstructor().newInstance());
             }
             catch (ClassNotFoundException ex) {
+                logger.log(Level.SEVERE, "Exception: ", ex);
                 System.err.println("Cannot create class " + className + " for command " + commandName.toString() + ". Class not found");
             }
-            catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-                e.printStackTrace();
+            catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException ex) {
+                logger.log(Level.SEVERE, "Exception: ", ex);
+                ex.printStackTrace();
             }
         }
     }

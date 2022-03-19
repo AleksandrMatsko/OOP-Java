@@ -5,8 +5,12 @@ import src.Exceptions.NotEnoughDataInStackException;
 import src.Exceptions.WrongAmountOfArgumentsException;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Mul implements Command {
+    private final static Logger logger = Logger.getLogger(Mul.class.getName());
+
     @Override
     public void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args) throws
             WrongAmountOfArgumentsException,
@@ -20,5 +24,6 @@ public class Mul implements Command {
         double first = stackWithDefinitionTable.popVal();
         double second = stackWithDefinitionTable.popVal();
         stackWithDefinitionTable.pushVal(first * second);
+        logger.log(Level.FINE, "MUL successfully executed");
     }
 }

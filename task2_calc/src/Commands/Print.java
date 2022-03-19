@@ -5,8 +5,12 @@ import src.Exceptions.NotEnoughDataInStackException;
 import src.Exceptions.WrongAmountOfArgumentsException;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Print implements Command {
+    private final static Logger logger = Logger.getLogger(Print.class.getName());
+
     @Override
     public void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args) throws
             WrongAmountOfArgumentsException,
@@ -19,5 +23,6 @@ public class Print implements Command {
         }
         double val = stackWithDefinitionTable.peekVal();
         System.out.println(val);
+        logger.log(Level.FINE, "PRINT successfully executed");
     }
 }

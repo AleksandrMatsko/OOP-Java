@@ -6,8 +6,12 @@ import src.Exceptions.NotEnoughDataInStackException;
 import src.Exceptions.WrongAmountOfArgumentsException;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Div implements Command {
+    private final static Logger logger = Logger.getLogger(Div.class.getName());
+
     @Override
     public void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args) throws
             WrongAmountOfArgumentsException,
@@ -25,5 +29,6 @@ public class Div implements Command {
             throw new DivisionByZeroException("Try to divide by zero.", first);
         }
         stackWithDefinitionTable.pushVal(first / second);
+        logger.log(Level.FINE, "DIV successfully executed");
     }
 }

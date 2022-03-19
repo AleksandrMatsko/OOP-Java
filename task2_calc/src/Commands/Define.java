@@ -7,8 +7,11 @@ import src.Exceptions.ValueExceptions.IllegalValueException;
 import src.Exceptions.WrongAmountOfArgumentsException;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Define implements Command {
+    private final static Logger logger = Logger.getLogger(Define.class.getName());
 
     @Override
     public void execute(StackWithDefinitionTable<Double> stackWithDefinitionTable, List<String> args) throws
@@ -33,5 +36,6 @@ public class Define implements Command {
             throw new IllegalValueException("Invalid value in DEFINE.");
         }
         stackWithDefinitionTable.addNewDefinition(definitionName, val);
+        logger.log(Level.FINE, "DEFINE successfully executed");
     }
 }
