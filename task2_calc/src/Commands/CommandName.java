@@ -1,6 +1,6 @@
-package src.Commands;
+package Commands;
 
-import src.Exceptions.NameExceptons.IllegalCommandNameException;
+import Exceptions.NameExceptons.IllegalCommandNameException;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package src.Exceptions.NameExceptons;
+package Exceptions.NameExceptons;
 
 public class IllegalCommandNameException extends IllegalNameException {
     public IllegalCommandNameException() {

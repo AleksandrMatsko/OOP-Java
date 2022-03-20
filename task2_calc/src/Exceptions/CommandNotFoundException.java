@@ -1,4 +1,4 @@
-package src.Exceptions;
+package Exceptions;
 
 public class CommandNotFoundException extends Exception {
     public CommandNotFoundException() {

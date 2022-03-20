@@ -1,6 +1,6 @@
-package src.DataContainers.Definitions;
+package DataContainers.Definitions;
 
-import src.Exceptions.NameExceptons.IllegalDefinitionNameException;
+import Exceptions.NameExceptons.IllegalDefinitionNameException;
 
 import java.util.Objects;
 

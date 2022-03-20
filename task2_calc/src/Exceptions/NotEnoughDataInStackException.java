@@ -1,4 +1,4 @@
-package src.Exceptions;
+package Exceptions;
 
 public class NotEnoughDataInStackException extends Exception {
     private final int required;

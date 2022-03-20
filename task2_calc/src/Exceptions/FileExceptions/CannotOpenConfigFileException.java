@@ -1,4 +1,4 @@
-package src.Exceptions.FileExceptions;
+package Exceptions.FileExceptions;
 
 public class CannotOpenConfigFileException extends CannotOpenFileException {
     public CannotOpenConfigFileException() {

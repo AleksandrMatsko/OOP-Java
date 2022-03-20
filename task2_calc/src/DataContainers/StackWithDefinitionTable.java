@@ -1,6 +1,6 @@
-package src.DataContainers;
+package DataContainers;
 
-import src.DataContainers.Definitions.*;
+import DataContainers.Definitions.*;
 
 import java.util.EmptyStackException;
 import java.util.Stack;

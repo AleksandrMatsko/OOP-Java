@@ -1,9 +1,9 @@
-package src.Factory;
+package Factory;
 
-import src.Commands.*;
-import src.Exceptions.CommandNotFoundException;
-import src.Exceptions.FileExceptions.CannotOpenConfigFileException;
-import src.Exceptions.NameExceptons.IllegalCommandNameException;
+import Commands.*;
+import Exceptions.CommandNotFoundException;
+import Exceptions.FileExceptions.CannotOpenConfigFileException;
+import Exceptions.NameExceptons.IllegalCommandNameException;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;

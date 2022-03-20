@@ -1,10 +1,10 @@
-package src.Commands;
+package Commands;
 
-import src.DataContainers.StackWithDefinitionTable;
-import src.DataContainers.Definitions.DefinitionName;
-import src.Exceptions.NameExceptons.IllegalDefinitionNameException;
-import src.Exceptions.ValueExceptions.IllegalValueException;
-import src.Exceptions.WrongAmountOfArgumentsException;
+import DataContainers.StackWithDefinitionTable;
+import DataContainers.Definitions.DefinitionName;
+import Exceptions.NameExceptons.IllegalDefinitionNameException;
+import Exceptions.ValueExceptions.IllegalValueException;
+import Exceptions.WrongAmountOfArgumentsException;
 
 import java.util.List;
 import java.util.logging.Level;

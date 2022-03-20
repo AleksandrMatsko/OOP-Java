@@ -1,7 +1,6 @@
-package src;
-
-import src.DataContainers.ExecutionContext;
-import src.Exceptions.NameExceptons.IllegalCommandNameException;
+import Calculator.Calculator;
+import DataContainers.ExecutionContext;
+import Exceptions.NameExceptons.IllegalCommandNameException;
 import src.Parser.InputParser;
 
 import java.io.FileInputStream;

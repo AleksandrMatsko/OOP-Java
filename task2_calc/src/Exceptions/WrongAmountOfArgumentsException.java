@@ -1,4 +1,4 @@
-package src.Exceptions;
+package Exceptions;
 
 public class WrongAmountOfArgumentsException extends Exception {
     private final int expected;

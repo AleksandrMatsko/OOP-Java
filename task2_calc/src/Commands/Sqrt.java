@@ -1,9 +1,9 @@
-package src.Commands;
+package Commands;
 
-import src.DataContainers.StackWithDefinitionTable;
-import src.Exceptions.NotEnoughDataInStackException;
-import src.Exceptions.ValueExceptions.UseSqrtToNegativeValueException;
-import src.Exceptions.WrongAmountOfArgumentsException;
+import DataContainers.StackWithDefinitionTable;
+import Exceptions.NotEnoughDataInStackException;
+import Exceptions.ValueExceptions.UseSqrtToNegativeValueException;
+import Exceptions.WrongAmountOfArgumentsException;
 
 import java.util.List;
 import java.util.logging.Level;

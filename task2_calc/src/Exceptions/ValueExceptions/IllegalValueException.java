@@ -1,4 +1,4 @@
-package src.Exceptions.ValueExceptions;
+package Exceptions.ValueExceptions;
 
 public class IllegalValueException extends IllegalArgumentException {
     public IllegalValueException() {

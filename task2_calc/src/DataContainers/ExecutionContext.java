@@ -1,7 +1,7 @@
-package src.DataContainers;
+package DataContainers;
 
-import src.Commands.CommandName;
-import src.Exceptions.NameExceptons.IllegalCommandNameException;
+import Commands.CommandName;
+import Exceptions.NameExceptons.IllegalCommandNameException;
 
 import java.util.List;
 

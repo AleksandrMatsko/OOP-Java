@@ -1,4 +1,4 @@
-package src.Exceptions.FileExceptions;
+package Exceptions.FileExceptions;
 
 import java.io.IOException;
 

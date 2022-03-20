@@ -1,4 +1,4 @@
-package src.DataContainers.Definitions;
+package DataContainers.Definitions;
 
 import java.util.HashMap;
 

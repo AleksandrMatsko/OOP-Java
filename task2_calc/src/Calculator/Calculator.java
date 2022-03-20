@@ -1,18 +1,18 @@
-package src;
+package Calculator;
 
-import src.Commands.*;
-import src.DataContainers.ExecutionContext;
-import src.DataContainers.StackWithDefinitionTable;
-import src.Exceptions.CommandNotFoundException;
-import src.Exceptions.FileExceptions.CannotOpenConfigFileException;
-import src.Exceptions.NameExceptons.IllegalCommandNameException;
-import src.Exceptions.NameExceptons.IllegalDefinitionNameException;
-import src.Exceptions.NotEnoughDataInStackException;
-import src.Exceptions.ValueExceptions.DivisionByZeroException;
-import src.Exceptions.ValueExceptions.IllegalValueException;
-import src.Exceptions.ValueExceptions.UseSqrtToNegativeValueException;
-import src.Exceptions.WrongAmountOfArgumentsException;
-import src.Factory.CommandFactory;
+import Commands.*;
+import DataContainers.ExecutionContext;
+import DataContainers.StackWithDefinitionTable;
+import Exceptions.CommandNotFoundException;
+import Exceptions.FileExceptions.CannotOpenConfigFileException;
+import Exceptions.NameExceptons.IllegalCommandNameException;
+import Exceptions.NameExceptons.IllegalDefinitionNameException;
+import Exceptions.NotEnoughDataInStackException;
+import Exceptions.ValueExceptions.DivisionByZeroException;
+import Exceptions.ValueExceptions.IllegalValueException;
+import Exceptions.ValueExceptions.UseSqrtToNegativeValueException;
+import Exceptions.WrongAmountOfArgumentsException;
+import Factory.CommandFactory;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
