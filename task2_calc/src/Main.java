@@ -38,7 +38,6 @@ public class Main {
         }
         else {
             logger.log(Level.SEVERE, "Wrong amount of arguments in function main");
-            System.err.println("Wrong amount of arguments in function main");
             System.exit(1);
         }
         try {
@@ -61,7 +60,7 @@ public class Main {
                 }
                 catch (IllegalCommandNameException ex) {
                     logger.log(Level.SEVERE, "Exception: ", ex);
-                    System.err.println("Entered invalid command name.");
+                    logger.warning("Entered invalid command name.");
                     continue;
                 }
                 logger.log(Level.FINE, "Execution context successfully created");

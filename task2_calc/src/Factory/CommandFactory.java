@@ -47,11 +47,11 @@ public class CommandFactory {
             }
             catch (ClassNotFoundException ex) {
                 logger.log(Level.SEVERE, "Exception: ", ex);
-                System.err.println("Cannot create class " + className + " for command " + commandName.toString() + ". Class not found");
+                logger.warning("Cannot create class " + className + " for command " + commandName.toString() + ". Class not found");
             }
             catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException ex) {
                 logger.log(Level.SEVERE, "Exception: ", ex);
-                ex.printStackTrace();
+                //ex.printStackTrace();
             }
         }
     }

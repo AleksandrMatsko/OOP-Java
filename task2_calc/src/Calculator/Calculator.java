@@ -33,7 +33,8 @@ public class Calculator {
         }
         catch (IllegalCommandNameException | CannotOpenConfigFileException | CommandNotFoundException ex) {
             logger.log(Level.SEVERE, "Exception: ", ex);
-            System.err.println(ex.getMessage());
+            logger.warning(ex.getMessage());
+            //System.err.println(ex.getMessage());
         }
         if (cmd != null) {
             logger.log(Level.FINE, "Command successfully created");
@@ -43,27 +44,28 @@ public class Calculator {
             }
             catch (WrongAmountOfArgumentsException ex) {
                 logger.log(Level.SEVERE, "Exception: ", ex);
-                System.err.println(ex.getMessage() + " Expected - " + ex.getExpected() + ", Has - " + ex.getHas());
+                logger.warning(ex.getMessage() + " Expected - " + ex.getExpected() + ", Has - " + ex.getHas());
+                //System.err.println(ex.getMessage() + " Expected - " + ex.getExpected() + ", Has - " + ex.getHas());
             }
             catch (NotEnoughDataInStackException ex) {
                 logger.log(Level.SEVERE, "Exception: ", ex);
-                System.err.println(ex.getMessage() + " Required at least - " + ex.getRequired() + ", Provided - " + ex.getProvided());
+                logger.warning(ex.getMessage() + " Required at least - " + ex.getRequired() + ", Provided - " + ex.getProvided());
             }
             catch (IllegalDefinitionNameException ex) {
                 logger.log(Level.SEVERE, "Exception: ", ex);
-                System.err.println(ex.getMessage());
+                logger.warning(ex.getMessage());
             }
             catch (UseSqrtToNegativeValueException ex) {
                 logger.log(Level.SEVERE, "Exception: ", ex);
-                System.err.println(ex.getMessage() + " Value - " + ex.getVal());
+                logger.warning(ex.getMessage() + " Value - " + ex.getVal());
             }
             catch (DivisionByZeroException ex) {
                 logger.log(Level.SEVERE, "Exception: ", ex);
-                System.err.println(ex.getMessage() + " Dividend - " + ex.getVal());
+                logger.warning(ex.getMessage() + " Dividend - " + ex.getVal());
             }
             catch (IllegalValueException ex) {
                 logger.log(Level.SEVERE, "Exception: ", ex);
-                System.err.println(ex.getMessage());
+                logger.warning(ex.getMessage());
             }
         }
     }
