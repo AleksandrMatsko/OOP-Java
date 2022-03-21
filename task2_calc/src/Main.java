@@ -1,7 +1,6 @@
-import Calculator.Calculator;
+import Calculator.InputExecutor;
 import DataContainers.ExecutionContext;
 import Exceptions.NameExceptons.IllegalCommandNameException;
-import src.Parser.InputParser;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -41,31 +40,9 @@ public class Main {
             System.exit(1);
         }
         try {
-            InputParser inputParser = new InputParser(inputStream);
-            Calculator calculator = new Calculator();
-            while (inputParser.isAvailable()) {
-                List<String> parsedLine = inputParser.parse();
-                logger.log(Level.FINE, "Line was parsed");
-                if (parsedLine.get(0).toLowerCase(Locale.ROOT).equals("stop") || parsedLine.get(0).toLowerCase(Locale.ROOT).equals("q")) {
-                    logger.log(Level.FINE, "Stop symbol sequence entered");
-                    break;
-                }
-                else if (parsedLine.get(0).contains("#")) {
-                    logger.log(Level.FINE, "Commentary");
-                    continue;
-                }
-                ExecutionContext executionContext;
-                try {
-                    executionContext = new ExecutionContext(parsedLine);
-                }
-                catch (IllegalCommandNameException ex) {
-                    logger.warning("Entered invalid command name.");
-                    continue;
-                }
-                logger.log(Level.FINE, "Execution context successfully created");
-                calculator.executeWithContext(executionContext);
-            }
-            logger.log(Level.INFO, "Exit from loop");
+            InputExecutor inputExecutor = new InputExecutor(inputStream);
+            inputExecutor.execute();
+            logger.log(Level.FINE, "Stream successfully executed");
         }
         finally {
             if (inputStream != null) {

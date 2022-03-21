@@ -1,4 +1,4 @@
-package src.Parser;
+package Parser;
 
 import java.io.InputStream;
 import java.util.ArrayList;
