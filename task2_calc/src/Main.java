@@ -1,13 +1,9 @@
 import Calculator.InputExecutor;
-import DataContainers.ExecutionContext;
-import Exceptions.NameExceptons.IllegalCommandNameException;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
