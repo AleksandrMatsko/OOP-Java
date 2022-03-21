@@ -17,7 +17,6 @@ import Factory.CommandFactory;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 public class Calculator {
     private static final Logger logger = Logger.getLogger(Calculator.class.getName());
     private final StackWithDefinitionTable<Double> stackWithDefinitionTable;
@@ -32,9 +31,7 @@ public class Calculator {
             cmd = CommandFactory.getInstance().getCommand(executionContext.getCommandName());
         }
         catch (IllegalCommandNameException | CannotOpenConfigFileException | CommandNotFoundException ex) {
-            logger.log(Level.SEVERE, "Exception: ", ex);
             logger.warning(ex.getMessage());
-            //System.err.println(ex.getMessage());
         }
         if (cmd != null) {
             logger.log(Level.FINE, "Command successfully created");
@@ -43,28 +40,21 @@ public class Calculator {
                 cmd.execute(stackWithDefinitionTable, executionContext.getArguments());
             }
             catch (WrongAmountOfArgumentsException ex) {
-                logger.log(Level.SEVERE, "Exception: ", ex);
                 logger.warning(ex.getMessage() + " Expected - " + ex.getExpected() + ", Has - " + ex.getHas());
-                //System.err.println(ex.getMessage() + " Expected - " + ex.getExpected() + ", Has - " + ex.getHas());
             }
             catch (NotEnoughDataInStackException ex) {
-                logger.log(Level.SEVERE, "Exception: ", ex);
                 logger.warning(ex.getMessage() + " Required at least - " + ex.getRequired() + ", Provided - " + ex.getProvided());
             }
             catch (IllegalDefinitionNameException ex) {
-                logger.log(Level.SEVERE, "Exception: ", ex);
                 logger.warning(ex.getMessage());
             }
             catch (UseSqrtToNegativeValueException ex) {
-                logger.log(Level.SEVERE, "Exception: ", ex);
                 logger.warning(ex.getMessage() + " Value - " + ex.getVal());
             }
             catch (DivisionByZeroException ex) {
-                logger.log(Level.SEVERE, "Exception: ", ex);
                 logger.warning(ex.getMessage() + " Dividend - " + ex.getVal());
             }
             catch (IllegalValueException ex) {
-                logger.log(Level.SEVERE, "Exception: ", ex);
                 logger.warning(ex.getMessage());
             }
         }

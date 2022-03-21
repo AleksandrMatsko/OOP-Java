@@ -59,7 +59,6 @@ public class Main {
                     executionContext = new ExecutionContext(parsedLine);
                 }
                 catch (IllegalCommandNameException ex) {
-                    logger.log(Level.SEVERE, "Exception: ", ex);
                     logger.warning("Entered invalid command name.");
                     continue;
                 }
@@ -72,12 +71,11 @@ public class Main {
             if (inputStream != null) {
                 try {
                     inputStream.close();
+                    logger.log(Level.FINE, "Input stream successfully closed");
                 }
                 catch (IOException ex) {
                     logger.log(Level.SEVERE, "Exception: ", ex);
-                    ex.printStackTrace();
                 }
-                logger.log(Level.FINE, "Input stream successfully closed");
             }
         }
     }

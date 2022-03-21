@@ -46,12 +46,10 @@ public class CommandFactory {
                 commandsTable.put(commandName, (Command) Class.forName(className).getDeclaredConstructor().newInstance());
             }
             catch (ClassNotFoundException ex) {
-                logger.log(Level.SEVERE, "Exception: ", ex);
                 logger.warning("Cannot create class " + className + " for command " + commandName.toString() + ". Class not found");
             }
             catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException ex) {
                 logger.log(Level.SEVERE, "Exception: ", ex);
-                //ex.printStackTrace();
             }
         }
     }
