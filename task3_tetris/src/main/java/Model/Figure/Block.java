@@ -29,14 +29,14 @@ public class Block {
         this.y = y;
     }
 
-    int getX() {
+    public int getX() {
         if (x < 0 && y < 0) {
             //exception
         }
         return x;
     }
 
-    int getY() {
+    public int getY() {
         if (x < 0 && y < 0) {
             //exception
         }
