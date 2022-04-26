@@ -1,8 +1,8 @@
 package Model;
 
-import Model.Figure.Block;
-import Model.Figure.Direction;
-import Model.Figure.Figure;
+import Model.Figures.PossibleFigures.Block;
+import Model.Figures.Direction;
+import Model.Figures.PossibleFigures.Figure;
 
 public class Field {
     private final int width;

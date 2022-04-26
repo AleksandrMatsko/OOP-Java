@@ -1,4 +1,4 @@
-package Model.Figure;
+package Model.Figures.PossibleFigures;
 
 import java.util.Objects;
 

@@ -1,4 +1,6 @@
-package Model.Figure;
+package Model.Figures.PossibleFigures;
+
+import Model.Figures.Direction;
 
 public class Figure {
     private final int numOfBlocks;

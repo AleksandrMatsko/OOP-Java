@@ -1,4 +1,4 @@
-package Model.Figure;
+package Model.Figures;
 
 public enum Direction {
     LEFT,
