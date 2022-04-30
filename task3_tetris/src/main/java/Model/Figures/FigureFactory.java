@@ -1,7 +1,7 @@
 package Model.Figures;
 
 import Model.Figures.PossibleFigures.Figure;
-import Model.Figures.PossibleFigures.FigureName;
+import Model.Names.FigureName;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -23,7 +23,7 @@ public class FigureFactory {
         try {
             properties.load(FigureFactory.class.getResourceAsStream(configFileName));
         } catch (IOException ex) {
-            //TODO: normal exception
+            //TODO normal exception
             ex.printStackTrace();
         }
         for (Map.Entry entry : properties.entrySet()) {
@@ -37,7 +37,8 @@ public class FigureFactory {
             //catch () {}
             try {
                 figureTable.put(figureName, (Figure) Class.forName(className).getDeclaredConstructor().newInstance());
-            } catch (ClassNotFoundException ex) {
+            }
+            catch (ClassNotFoundException ex) {
                 //TODO: normal exception
                 ex.printStackTrace();
             }

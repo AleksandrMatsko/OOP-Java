@@ -1,19 +1,25 @@
-package Model.Figures.PossibleFigures;
+package Model.Names;
 
 import java.util.Objects;
 
-public class FigureName {
+public class FigureName implements Name {
     private final String name;
 
     public FigureName(String name) {
-        if (name.length() != 1 || name.chars().allMatch(Character::isDigit)) {
-            //exception
+        if (!matchesSample(name)) {
+            //TODO exception
         }
         this.name = name;
     }
 
+    @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public boolean matchesSample(String name) {
+        return name.length() == 1 && name.chars().allMatch(Character::isLetter);
     }
 
     @Override

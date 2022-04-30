@@ -1,14 +1,22 @@
 package Controller;
 
+import Model.Names.ActionName;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.HashMap;
 
 public class KeyboardListener implements KeyListener {
-    private HashMap<KeyEvent, Boolean> isPressed;
+    private final KeyboardSettings keyboardSettings;
+    private ActionName currentAction;
 
-    public KeyboardListener() {
-        isPressed = new HashMap<>();
+
+    public KeyboardListener(KeyboardSettings keyboardSettings) {
+        this.keyboardSettings = keyboardSettings;
+        currentAction = null;
+    }
+
+    public ActionName getCurrentAction() {
+        return currentAction;
     }
 
     @Override
@@ -16,14 +24,11 @@ public class KeyboardListener implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-            System.out.println("Space pressed");
-        }
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            System.out.println("Left pressed");
-        }
+        currentAction = keyboardSettings.getActionOnKey(e.getKeyCode());
     }
 
     @Override
-    public void keyReleased(KeyEvent e) {}
+    public void keyReleased(KeyEvent e) {
+        currentAction = null;
+    }
 }
