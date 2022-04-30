@@ -4,14 +4,14 @@ import Model.Figures.PossibleFigures.Block;
 import Model.Figures.Direction;
 import Model.Figures.PossibleFigures.Figure;
 
-public class GameField {
+public class Field {
     private final int width;
     private final int height;
     private final int[][] fieldData;
     private Figure currentFigure;
     private int maxLevelOfCells;
 
-    public GameField(int width, int height) {
+    public Field(int width, int height) {
         this.width = width;
         this.height = height + 4;
         fieldData = new int[width][height];
