@@ -1,28 +1,22 @@
-package Model;
+package Game;
 
 import Controller.KeyboardListener;
 import Controller.KeyboardSettings;
 import Model.Actions.ActionFactory;
 import Model.Actions.PossibleActions.ActionInterface;
+import Model.Model;
 import Model.Names.ActionName;
+import Model.ModelSettings;
 
 public class Game {
     private Model model;
     private GameStatus status;
-    private KeyboardListener keyboardListener;
-    private KeyboardSettings keyboardSettings;
-    private ModelSettings modelSettings;
+    private final KeyboardListener keyboardListener;
 
     public Game() {
         status = GameStatus.PREPARATION;
-        keyboardSettings = new KeyboardSettings();
-        keyboardListener = new KeyboardListener(keyboardSettings);
-        modelSettings = new ModelSettings();
-        model = new Model(modelSettings);
-    }
-
-    public void changeSettings() {
-
+        keyboardListener = new KeyboardListener(new KeyboardSettings());
+        model = new Model(new ModelSettings());
     }
 
     //TODO timer
@@ -39,10 +33,16 @@ public class Game {
                 ActionName currentActionName = keyboardListener.getCurrentAction();
                 if (currentActionName != null) {
                     ActionInterface action = ActionFactory.getInstance().getAction(currentActionName);
-                    status = action.execute(model);
+                    status = action.execute(model, status);
                 }
             }
         }
+    }
+
+    public void restart() {
+        status = GameStatus.PREPARATION;
+        model = new Model(model.getSettings());
+        start();
     }
 
 

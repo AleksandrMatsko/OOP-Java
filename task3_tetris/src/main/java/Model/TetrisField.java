@@ -4,23 +4,25 @@ import Model.Figures.PossibleFigures.Block;
 import Model.Figures.Direction;
 import Model.Figures.PossibleFigures.Figure;
 
-public class Field {
+public class TetrisField {
     private final int width;
     private final int height;
     private final int[][] fieldData;
     private Figure currentFigure;
     private int maxLevelOfCells;
+    private boolean colored;
 
-    public Field(int width, int height) {
+    public TetrisField(int width, int height) {
         this.width = width;
         this.height = height + 4;
         fieldData = new int[width][height];
         currentFigure = null;
         maxLevelOfCells = 0;
+        colored = true;
     }
 
     public boolean isContinue() {
-        return maxLevelOfCells < height - 4;
+        return maxLevelOfCells < 4;
     }
 
     private void calcMaxLevelOfCells() {
@@ -64,6 +66,9 @@ public class Field {
     }
 
     public int removeFilledLines() {
+        if (!containFilledLines()) {
+            return 0;
+        }
         int removedLines = 0;
         for (int i = 0; i < height; i++) {
             int counter = 0;
@@ -85,7 +90,7 @@ public class Field {
     }
 
     public boolean spawnFigure(Figure figure) {
-        if (maxLevelOfCells >= height - 4) {
+        if (!isContinue()) {
             return false;
         }
         figure.shiftOnVal(Direction.RIGHT, width / 2 - 1);

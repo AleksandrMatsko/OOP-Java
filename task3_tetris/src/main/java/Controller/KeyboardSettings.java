@@ -2,7 +2,9 @@ package Controller;
 
 import Model.Names.ActionName;
 
+import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +18,7 @@ public class KeyboardSettings {
         actionsProvidedOnKey = new HashMap<>();
         usedKeys = new ArrayList<>();
         //TODO create resource
-        final String configFileName = "src/main/resources/keys.ini";
+        final String configFileName = "/keys.properties";
         Properties properties = new Properties();
         try {
             properties.load(KeyboardSettings.class.getResourceAsStream(configFileName));
@@ -26,8 +28,14 @@ public class KeyboardSettings {
             ex.printStackTrace();
         }
         for (Map.Entry entry : properties.entrySet()) {
-            //TODO convert KeyEvent.() to integer
-            int keyCode = Integer.getInteger((String) entry.getKey());
+            int keyCode = 0;
+            try {
+                keyCode = (Integer) KeyEvent.class.getDeclaredField((String) entry.getKey()).get(null);
+            }
+            catch (NoSuchFieldException | IllegalAccessException ex) {
+                ex.printStackTrace();
+            }
+
             String toActionName = (String) entry.getValue();
             ActionName actionName;
             //TODO try catch

@@ -18,7 +18,7 @@ public class FigureFactory {
     private FigureFactory() {
         figureTable = new HashMap<FigureName, Figure>();
         possibleFigureNames = new ArrayList<>();
-        final String configFileName = "src/main/resources/figures.ini";
+        final String configFileName = "/figures.properties";
         Properties properties = new Properties();
         try {
             properties.load(FigureFactory.class.getResourceAsStream(configFileName));
@@ -68,5 +68,9 @@ public class FigureFactory {
             figureFactory = new FigureFactory();
         }
         return possibleFigureNames;
+    }
+
+    public int getAmountOfFigures() {
+        return possibleFigureNames.size();
     }
 }

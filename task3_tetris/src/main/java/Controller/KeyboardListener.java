@@ -15,6 +15,10 @@ public class KeyboardListener implements KeyListener {
         currentAction = null;
     }
 
+    public KeyboardSettings getKeyboardSettings() {
+        return keyboardSettings;
+    }
+
     public ActionName getCurrentAction() {
         return currentAction;
     }

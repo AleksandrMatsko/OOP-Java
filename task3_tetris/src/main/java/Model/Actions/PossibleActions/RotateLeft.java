@@ -1,12 +1,15 @@
 package Model.Actions.PossibleActions;
 
 import Model.Figures.Direction;
-import Model.GameStatus;
+import Game.GameStatus;
 import Model.Model;
 
 public class RotateLeft implements ActionInterface {
     @Override
-    public GameStatus execute(Model model) {
+    public GameStatus execute(Model model, GameStatus currentStatus) {
+        if (currentStatus != GameStatus.ACTIVE) {
+            //TODO exception
+        }
         model.getGameField().rotateCurrentFigureOnField(Direction.LEFT);
         return GameStatus.ACTIVE;
     }

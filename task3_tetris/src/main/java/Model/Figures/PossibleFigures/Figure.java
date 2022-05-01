@@ -4,8 +4,8 @@ import Model.Figures.Direction;
 
 public class Figure {
     private final int numOfBlocks;
-    private Block centerOfRotation;
-    private Block[] blocks;
+    private final Block centerOfRotation;
+    private final Block[] blocks;
     //private final int colour;
 
     public Figure(int numOfBlocks, Block centerOfRotation, Block[] blocks) {

@@ -1,21 +1,18 @@
 package Model.Actions.PossibleActions;
 
-import Model.Figures.FigureFactory;
-import Model.GameStatus;
+import Model.Figures.FigureRandomizer;
+import Game.GameStatus;
 import Model.Model;
-import Model.Names.FigureName;
-
-import java.util.ArrayList;
-import java.util.Random;
 
 public class SpawnNewFigure implements ActionInterface {
     @Override
-    public GameStatus execute(Model model) {
-        Random random = new Random();
-        ArrayList<FigureName> possibleFigureNames = FigureFactory.getInstance().getPossibleFigureNames();
-        int index = random.nextInt(possibleFigureNames.size());
-        boolean success = model.getGameField().spawnFigure(FigureFactory.getInstance().getFigure(possibleFigureNames.get(index)));
+    public GameStatus execute(Model model,GameStatus currentStatus) {
+        if (currentStatus != GameStatus.ACTIVE) {
+            //TODO exception
+        }
+        boolean success = model.getGameField().spawnFigure(model.getNextFigure());
         if (success) {
+            model.setNextFigure((new FigureRandomizer().getFigure()));
             return GameStatus.ACTIVE;
         }
         return GameStatus.END;

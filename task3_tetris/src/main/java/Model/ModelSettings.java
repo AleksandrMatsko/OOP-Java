@@ -1,9 +1,18 @@
 package Model;
 
 public class ModelSettings {
-    private int heightOfField = 20;
-    private int widthOfField = 10;
-    private boolean colored = true;
+    private int heightOfField;
+    private int widthOfField;
+
+    public ModelSettings() {
+        heightOfField = 20;
+        widthOfField = 10;
+    }
+
+    public ModelSettings(int widthOfField, int heightOfField) {
+        this.widthOfField = widthOfField;
+        this.heightOfField = heightOfField;
+    }
 
     public int getHeightOfField() {
         return heightOfField;
@@ -13,9 +22,6 @@ public class ModelSettings {
         return widthOfField;
     }
 
-    public boolean isColored() {
-        return colored;
-    }
 
     public void setHeightOfField(int heightOfField) {
         this.heightOfField = heightOfField;
@@ -25,7 +31,4 @@ public class ModelSettings {
         this.widthOfField = widthOfField;
     }
 
-    public void setColored(boolean colored) {
-        this.colored = colored;
-    }
 }

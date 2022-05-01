@@ -1,4 +1,4 @@
-package Model;
+package Game;
 
 public enum GameStatus {
     END,

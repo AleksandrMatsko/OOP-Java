@@ -15,8 +15,7 @@ public class ActionFactory {
 
     private ActionFactory() {
         actionTable = new HashMap<>();
-        //TODO create resource
-        final String configFileName = "src/main/resources/actions.ini";
+        final String configFileName = "/actions.properties";
         Properties properties = new Properties();
         try {
             properties.load(ActionFactory.class.getResourceAsStream(configFileName));
