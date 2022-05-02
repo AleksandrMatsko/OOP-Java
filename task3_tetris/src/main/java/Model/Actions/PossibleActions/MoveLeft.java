@@ -11,7 +11,7 @@ public class MoveLeft implements ActionInterface {
         if (currentStatus != GameStatus.ACTIVE) {
             //TODO exception
         }
-        model.getGameField().moveCurrentFigureOnField(Direction.LEFT);
+        model.getTetrisField().moveCurrentFigureOnField(Direction.LEFT);
         return GameStatus.ACTIVE;
     }
 }

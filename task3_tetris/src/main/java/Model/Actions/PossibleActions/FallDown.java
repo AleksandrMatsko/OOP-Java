@@ -9,10 +9,7 @@ public class FallDown implements ActionInterface {
         if (currentStatus != GameStatus.ACTIVE) {
             //TODO exception
         }
-        GameStatus status = (new MoveDown()).execute(model, currentStatus);
-        if (status != GameStatus.ACTIVE) {
-            return status;
-        }
-        return (new MoveDown()).execute(model, currentStatus);
+        model.getSettings().setDefaultDelay(model.getSettings().getDefaultDelay() / 2);
+        return GameStatus.ACTIVE;
     }
 }

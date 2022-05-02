@@ -26,6 +26,7 @@ public class FigureFactory {
             //TODO normal exception
             ex.printStackTrace();
         }
+        int color = 1;
         for (Map.Entry entry : properties.entrySet()) {
             String toFigureName = (String) entry.getKey();
             String className = (String) entry.getValue();
@@ -36,7 +37,7 @@ public class FigureFactory {
             //}
             //catch () {}
             try {
-                figureTable.put(figureName, (Figure) Class.forName(className).getDeclaredConstructor().newInstance());
+                figureTable.put(figureName, (Figure) Class.forName(className).getDeclaredConstructor(int.class).newInstance(color));
             }
             catch (ClassNotFoundException ex) {
                 //TODO: normal exception
@@ -46,6 +47,7 @@ public class FigureFactory {
                 ex.printStackTrace();
             }
             possibleFigureNames.add(figureName);
+            color += 1;
         }
     }
 

@@ -4,20 +4,20 @@ import Model.Figures.FigureRandomizer;
 import Model.Figures.PossibleFigures.Figure;
 
 public class Model {
-    private TetrisField gameField;
+    private TetrisField tetrisField;
     private ModelSettings settings;
-    private long totalScore;
+    private int totalScore;
     private Figure nextFigure;
 
     public Model(ModelSettings modelSettings) {
         settings = modelSettings;
-        gameField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField());
+        tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField());
         totalScore = 0;
         nextFigure = (new FigureRandomizer()).getFigure();
     }
 
-    public TetrisField getGameField() {
-        return gameField;
+    public TetrisField getTetrisField() {
+        return tetrisField;
     }
 
 
@@ -26,7 +26,7 @@ public class Model {
     }
 
     public void changeSettings(ModelSettings settings) {
-        gameField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField());
+        tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField());
         this.settings = settings;
     }
 
@@ -45,7 +45,7 @@ public class Model {
         }
     }
 
-    public long getScore() {
+    public int getScore() {
         return totalScore;
     }
 

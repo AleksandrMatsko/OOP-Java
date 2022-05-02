@@ -21,6 +21,26 @@ public class TetrisField {
         colored = true;
     }
 
+    public boolean isColored() {
+        return colored;
+    }
+
+    public void setColored(boolean colored) {
+        this.colored = colored;
+    }
+
+    public int getCell(int x, int y) {
+        return fieldData[x][y];
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
     public boolean isContinue() {
         return maxLevelOfCells < 4;
     }
@@ -179,7 +199,7 @@ public class TetrisField {
     private void setCurrentFigureOnField() {
         Block[] blocks = currentFigure.getBlocks();
         for (int i = 0; i < currentFigure.getNumOfBlocks(); i++) {
-            fieldData[blocks[i].getX()][blocks[i].getY()] = 1;
+            fieldData[blocks[i].getX()][blocks[i].getY()] = currentFigure.getColor();
         }
     }
 

@@ -1,18 +1,32 @@
 package View;
 
-import Controller.KeyboardListener;
 
-import javax.swing.*;
+import Game.Game;
+import Game.GameStatus;
 
-public class Viewer extends JFrame {
+public class Viewer implements Runnable {
+    private TetrisWindow tetrisWindow;
+    private Menu menu;
+    //private DataForViewer dataForViewer;
+    private final Game game;
 
-    public Viewer() {
-        super("Tetris");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 800);
-        //this.addKeyListener(new KeyboardListener());
+    public Viewer(Game game) {
+        tetrisWindow = new TetrisWindow(game.getKeyboardListener());
+        menu = new Menu();
+        this.game = game;
+        game.start();
+        //this.dataForViewer = dataForViewer;
     }
 
-    public void drawFigure() {}
+    @Override
+    public void run() {
+        if (game.getDataForViewer().gameStatus() != GameStatus.ACTIVE) {
 
+        }
+        else {
+            tetrisWindow.showTetrisField(game.getDataForViewer());
+            System.err.println("Drawing tetris field");
+        }
+
+    }
 }

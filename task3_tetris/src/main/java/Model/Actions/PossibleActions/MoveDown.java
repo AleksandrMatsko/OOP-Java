@@ -10,11 +10,11 @@ public class MoveDown implements ActionInterface {
         if (currentStatus != GameStatus.ACTIVE) {
             //TODO exception
         }
-        boolean success = model.getGameField().moveCurrentFigureOnField(Direction.DOWN);
+        boolean success = model.getTetrisField().moveCurrentFigureOnField(Direction.DOWN);
         if (success) {
             return GameStatus.ACTIVE;
         }
-        int numRemovedLines = model.getGameField().removeFilledLines();
+        int numRemovedLines = model.getTetrisField().removeFilledLines();
         model.calcScore(numRemovedLines);
         return (new SpawnNewFigure()).execute(model, currentStatus);
     }

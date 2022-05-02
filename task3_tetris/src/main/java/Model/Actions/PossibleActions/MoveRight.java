@@ -11,7 +11,7 @@ public class MoveRight implements ActionInterface {
         if (currentStatus != GameStatus.ACTIVE) {
             //TODO exception
         }
-        model.getGameField().moveCurrentFigureOnField(Direction.RIGHT);
+        model.getTetrisField().moveCurrentFigureOnField(Direction.RIGHT);
         return GameStatus.ACTIVE;
     }
 }

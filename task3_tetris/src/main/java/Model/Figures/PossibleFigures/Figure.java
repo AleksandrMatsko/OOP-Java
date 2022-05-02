@@ -6,15 +6,20 @@ public class Figure {
     private final int numOfBlocks;
     private final Block centerOfRotation;
     private final Block[] blocks;
-    //private final int colour;
+    private final int color;
 
-    public Figure(int numOfBlocks, Block centerOfRotation, Block[] blocks) {
+    public Figure(int numOfBlocks, Block centerOfRotation, Block[] blocks, int color) {
         this.numOfBlocks = numOfBlocks;
         if (numOfBlocks != blocks.length) {
             //exception
         }
         this.centerOfRotation = centerOfRotation;
         this.blocks = blocks;
+        this.color = color;
+    }
+
+    public int getColor() {
+        return color;
     }
 
     public int getNumOfBlocks() {
@@ -59,7 +64,7 @@ public class Figure {
         else if (directionToRotate == Direction.DOWN) {
             //exception
         }
-        return new Figure(numOfBlocks, centerOfRotation, rotatedBlocks);
+        return new Figure(numOfBlocks, centerOfRotation, rotatedBlocks, color);
     }
 
     /*public void rotate(Direction directionToRotate) {

@@ -10,7 +10,7 @@ public class SpawnNewFigure implements ActionInterface {
         if (currentStatus != GameStatus.ACTIVE) {
             //TODO exception
         }
-        boolean success = model.getGameField().spawnFigure(model.getNextFigure());
+        boolean success = model.getTetrisField().spawnFigure(model.getNextFigure());
         if (success) {
             model.setNextFigure((new FigureRandomizer().getFigure()));
             return GameStatus.ACTIVE;

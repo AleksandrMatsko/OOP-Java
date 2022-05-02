@@ -3,15 +3,18 @@ package Model;
 public class ModelSettings {
     private int heightOfField;
     private int widthOfField;
+    private int defaultDelay;
 
     public ModelSettings() {
         heightOfField = 20;
         widthOfField = 10;
+        defaultDelay = 700;
     }
 
-    public ModelSettings(int widthOfField, int heightOfField) {
+    public ModelSettings(int widthOfField, int heightOfField, int defaultDelay) {
         this.widthOfField = widthOfField;
         this.heightOfField = heightOfField;
+        this.defaultDelay = defaultDelay;
     }
 
     public int getHeightOfField() {
@@ -22,6 +25,13 @@ public class ModelSettings {
         return widthOfField;
     }
 
+    public int getDefaultDelay() {
+        return defaultDelay;
+    }
+
+    public void setDefaultDelay(int defaultDelay) {
+        this.defaultDelay = defaultDelay;
+    }
 
     public void setHeightOfField(int heightOfField) {
         this.heightOfField = heightOfField;
