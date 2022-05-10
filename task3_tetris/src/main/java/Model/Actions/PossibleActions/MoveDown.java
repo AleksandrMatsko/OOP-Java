@@ -9,6 +9,7 @@ public class MoveDown implements ActionInterface {
     public GameStatus execute(Model model, GameStatus currentStatus) {
         if (currentStatus != GameStatus.ACTIVE) {
             //TODO exception
+            return currentStatus;
         }
         boolean success = model.getTetrisField().moveCurrentFigureOnField(Direction.DOWN);
         if (success) {

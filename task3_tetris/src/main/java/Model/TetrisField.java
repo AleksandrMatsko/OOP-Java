@@ -7,18 +7,24 @@ import Model.Figures.PossibleFigures.Figure;
 public class TetrisField {
     private final int width;
     private final int height;
+    private final int sizeSpawnArea;
     private final int[][] fieldData;
     private Figure currentFigure;
     private int maxLevelOfCells;
     private boolean colored;
 
-    public TetrisField(int width, int height) {
+    public TetrisField(int width, int height, int sizeSpawnArea) {
         this.width = width;
-        this.height = height + 4;
-        fieldData = new int[width][height];
+        this.height = height + sizeSpawnArea;
+        this.sizeSpawnArea = sizeSpawnArea;
+        fieldData = new int[this.width][this.height];
         currentFigure = null;
-        maxLevelOfCells = 0;
+        maxLevelOfCells = this.height - 1;
         colored = true;
+    }
+
+    public int getSizeSpawnArea() {
+        return sizeSpawnArea;
     }
 
     public boolean isColored() {
@@ -42,7 +48,7 @@ public class TetrisField {
     }
 
     public boolean isContinue() {
-        return maxLevelOfCells < 4;
+        return maxLevelOfCells >= sizeSpawnArea;
     }
 
     private void calcMaxLevelOfCells() {
@@ -60,7 +66,7 @@ public class TetrisField {
         for (int i = 0; i < height; i++) {
             int counter = 0;
             for (int j = 0; j < width; j++) {
-                if (fieldData[i][j] == 0) {
+                if (fieldData[j][i] == 0) {
                     break;
                 }
                 else {
@@ -81,7 +87,7 @@ public class TetrisField {
             }
         }
         for (int i = 0; i < width; i++) {
-            fieldData[0][i] = 0;
+            fieldData[i][0] = 0;
         }
     }
 
@@ -109,11 +115,23 @@ public class TetrisField {
         return removedLines;
     }
 
+    private boolean couldBeSpawn(Figure figure) {
+        for (Block block: figure.getBlocks()) {
+            if (fieldData[block.getX()][block.getY()] != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public boolean spawnFigure(Figure figure) {
         if (!isContinue()) {
             return false;
         }
         figure.shiftOnVal(Direction.RIGHT, width / 2 - 1);
+        /*if (!couldBeSpawn(figure)) {
+            return false;
+        }*/
         currentFigure = figure;
         setCurrentFigureOnField();
         return true;
@@ -121,7 +139,8 @@ public class TetrisField {
 
     public boolean isMovableOnVal(Direction direction, int val) {
         if (currentFigure == null) {
-            //exception
+            //TODO exception
+            return false;
         }
         Block[] blocks = currentFigure.getBlocks();
         if (direction == Direction.DOWN) {
@@ -167,8 +186,10 @@ public class TetrisField {
             setCurrentFigureOnField();
             return true;
         }
-        calcMaxLevelOfCells();
-        currentFigure = null;
+        if (!isMovableOnVal(Direction.DOWN, 1)) {
+            calcMaxLevelOfCells();
+            currentFigure = null;
+        }
         return false;
     }
 
@@ -197,16 +218,14 @@ public class TetrisField {
     }
 
     private void setCurrentFigureOnField() {
-        Block[] blocks = currentFigure.getBlocks();
-        for (int i = 0; i < currentFigure.getNumOfBlocks(); i++) {
-            fieldData[blocks[i].getX()][blocks[i].getY()] = currentFigure.getColor();
+        for (Block block : currentFigure.getBlocks()) {
+            fieldData[block.getX()][block.getY()] = currentFigure.getColor();
         }
     }
 
     private void deleteCurrentFigureOnField() {
-        Block[] blocks = currentFigure.getBlocks();
-        for (int i = 0; i < currentFigure.getNumOfBlocks(); i++) {
-            fieldData[blocks[i].getX()][blocks[i].getY()] = 0;
+        for (Block block : currentFigure.getBlocks()) {
+            fieldData[block.getX()][block.getY()] = 0;
         }
     }
 }

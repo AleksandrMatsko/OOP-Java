@@ -11,6 +11,10 @@ import Model.Names.ActionName;
 import Model.ModelSettings;
 import Model.StopWatch;
 import View.DataForViewer;
+import View.Viewer;
+import View.ViewerSettings;
+
+import javax.swing.*;
 
 public class Game {
     private Model model;
@@ -18,8 +22,7 @@ public class Game {
     private final KeyboardListener keyboardListener;
     private final StopWatch stopWatch;
     private int delay;
-    private boolean isModelChanged;
-    //private DataForViewer dataForViewer;
+    private final Viewer viewer;
 
 
     public Game() {
@@ -28,6 +31,12 @@ public class Game {
         model = new Model(new ModelSettings());
         stopWatch = new StopWatch();
         delay = model.getSettings().getDefaultDelay();
+        viewer = new Viewer(new ViewerSettings(model.getTetrisField().isColored()), keyboardListener, model.getSettings());
+    }
+
+    private void showImage() {
+        viewer.setDataForViewer(new DataForViewer(model.getTetrisField(), model.getScore(), model.getNextFigure(), status, model.getTetrisField().isColored()));
+        SwingUtilities.invokeLater(viewer);
     }
 
     public void start() {
@@ -36,28 +45,33 @@ public class Game {
             status = (new SpawnNewFigure()).execute(model, status);
             stopWatch.start(delay);
             System.err.println("Game started");
+            showImage();
         }
         else {
             //TODO exception
         }
         while (status != GameStatus.END) {
-            if (status == GameStatus.ACTIVE) {
-                ActionName currentActionName = keyboardListener.getCurrentAction();
-                if (currentActionName != null) {
-                    ActionInterface action = ActionFactory.getInstance().getAction(currentActionName);
-                    status = action.execute(model, status);
-                    isModelChanged = true;
-                }
-                else {
-                    delay = model.getSettings().getDefaultDelay();
-                }
-                if (stopWatch.isStop() && status != GameStatus.END) {
-                    status = (new MoveDown()).execute(model, status);
-                    System.err.println("Model changed");
-                    isModelChanged = true;
-                    stopWatch.start(delay);
-                }
+            ActionName currentActionName = keyboardListener.getCurrentAction();
+            if (currentActionName != null) {
+                ActionInterface action = ActionFactory.getInstance().getAction(currentActionName);
+                status = action.execute(model, status);
+                keyboardListener.dropCurrentAction();
+                System.err.println("game action = " + currentActionName.getName());
+                showImage();
             }
+            else {
+                delay = model.getSettings().getDefaultDelay();
+            }
+            if (status == GameStatus.END) {
+                break;
+            }
+            if (stopWatch.isStop()) {
+                status = (new MoveDown()).execute(model, status);
+                System.err.println("Model changed");
+                showImage();
+                stopWatch.start(delay);
+            }
+
         }
     }
 
@@ -72,23 +86,4 @@ public class Game {
         return keyboardListener;
     }
 
-    public boolean isModelChanged() {
-        return isModelChanged;
-    }
-
-    public void setModelChanged(boolean modelChanged) {
-        isModelChanged = modelChanged;
-    }
-
-    public synchronized DataForViewer getDataForViewer() {
-        while (!isModelChanged) {
-            try {
-                wait();
-            }
-            catch (InterruptedException ex) {}
-        }
-        isModelChanged = false;
-        notify();
-        return new DataForViewer(model.getTetrisField(), model.getScore(), model.getNextFigure(), status, model.getTetrisField().isColored());
-    }
 }

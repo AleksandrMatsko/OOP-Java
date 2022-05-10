@@ -1,32 +1,47 @@
 package View;
 
+import Controller.KeyboardListener;
+import Model.ModelSettings;
+import Model.TetrisField;
 
-import Game.Game;
-import Game.GameStatus;
+import javax.swing.*;
+import java.awt.*;
 
-public class Viewer implements Runnable {
-    private TetrisWindow tetrisWindow;
-    private Menu menu;
-    //private DataForViewer dataForViewer;
-    private final Game game;
+public class Viewer extends JFrame implements Runnable {
+    private final ViewerSettings viewerSettings;
+    private FieldPainter fieldPainter;
+    private DataForViewer dataForViewer;
+    private final KeyboardListener keyboardListener;
 
-    public Viewer(Game game) {
-        tetrisWindow = new TetrisWindow(game.getKeyboardListener());
-        menu = new Menu();
-        this.game = game;
-        game.start();
-        //this.dataForViewer = dataForViewer;
+
+    public Viewer(ViewerSettings viewerSettings, KeyboardListener keyboardListener, ModelSettings modelSettings) {
+        this.viewerSettings = viewerSettings;
+        fieldPainter = new FieldPainter(new TetrisField(modelSettings.getWidthOfField(), modelSettings.getHeightOfField(),
+                modelSettings.getSizeSpawnArea()), viewerSettings);
+        dataForViewer = null;
+        this.keyboardListener = keyboardListener;
+        addKeyListener(keyboardListener);
+        setTitle("Tetris");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setBounds(modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock() / 2,
+                0, 2 * modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock(),
+                (modelSettings.getHeightOfField() + 1) * viewerSettings.getLenOfBlock());
+        setVisible(true);
+        fieldPainter.setBackground(Color.white);
+        add(BorderLayout.CENTER, fieldPainter);
+    }
+
+    public void setDataForViewer(DataForViewer dataForViewer) {
+        this.dataForViewer = dataForViewer;
     }
 
     @Override
     public void run() {
-        if (game.getDataForViewer().gameStatus() != GameStatus.ACTIVE) {
-
+        if (dataForViewer == null) {
+            //TODO exception
         }
-        else {
-            tetrisWindow.showTetrisField(game.getDataForViewer());
-            System.err.println("Drawing tetris field");
-        }
+        fieldPainter.setTetrisField(dataForViewer.tetrisField());
+        fieldPainter.repaint();
 
     }
 }

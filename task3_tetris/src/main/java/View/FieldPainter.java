@@ -28,17 +28,30 @@ public class FieldPainter extends JPanel {
         int lenOfBlock = viewerSettings.getLenOfBlock();
         g2D.setStroke(new BasicStroke(stroke));
         g2D.drawRect(x, y, lenOfBlock, lenOfBlock);
-        g2D.setColor(colorTable.get(tetrisField.getCell(x, y)));
+        g2D.setColor(colorTable.get(tetrisField.getCell(x, y + tetrisField.getSizeSpawnArea())));
         g2D.fillRect(x * lenOfBlock + stroke, y * lenOfBlock + stroke, lenOfBlock - 2 * stroke, lenOfBlock - 2 * stroke);
     }
 
+    private void paintCanvas(Graphics2D g2D) {
+        g2D.setColor(Color.lightGray);
+        for (int x = 1; x < tetrisField.getWidth(); x++) {
+            for (int y = 1; y < tetrisField.getHeight() - tetrisField.getSizeSpawnArea(); y++) {
+                g2D.drawLine(x * viewerSettings.getLenOfBlock(), 0,
+                        x * viewerSettings.getLenOfBlock(), (tetrisField.getHeight() - tetrisField.getSizeSpawnArea()) * viewerSettings.getLenOfBlock());
+                g2D.drawLine(0, y * viewerSettings.getLenOfBlock(),
+                        tetrisField.getWidth() * viewerSettings.getLenOfBlock(), y * viewerSettings.getLenOfBlock());
+            }
+        }
+    }
+
     @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
+    public void paint(Graphics g) {
+        super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
-        for (int y = 0; y < tetrisField.getHeight(); y++) {
+        paintCanvas(g2D);
+        for (int y = 0; y < tetrisField.getHeight() - tetrisField.getSizeSpawnArea(); y++) {
             for (int x = 0; x < tetrisField.getWidth(); x++) {
-                if (tetrisField.getCell(x, y) != 0) {
+                if (tetrisField.getCell(x, y + tetrisField.getSizeSpawnArea()) != 0) {
                     paintBlock(g2D, x, y);
                 }
             }

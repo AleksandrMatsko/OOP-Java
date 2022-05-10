@@ -4,11 +4,13 @@ public class ModelSettings {
     private int heightOfField;
     private int widthOfField;
     private int defaultDelay;
+    private int sizeSpawnArea;
 
     public ModelSettings() {
         heightOfField = 20;
         widthOfField = 10;
         defaultDelay = 700;
+        sizeSpawnArea = 4;
     }
 
     public ModelSettings(int widthOfField, int heightOfField, int defaultDelay) {
@@ -41,4 +43,11 @@ public class ModelSettings {
         this.widthOfField = widthOfField;
     }
 
+    public int getSizeSpawnArea() {
+        return sizeSpawnArea;
+    }
+
+    public void setSizeSpawnArea(int sizeSpawnArea) {
+        this.sizeSpawnArea = sizeSpawnArea;
+    }
 }

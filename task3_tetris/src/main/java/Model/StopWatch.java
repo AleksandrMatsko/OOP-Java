@@ -2,13 +2,14 @@ package Model;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.CancellationException;
 
 public class StopWatch {
     private Timer timer;
     private boolean stop;
 
     public StopWatch() {
-        timer = null;
+        timer = new Timer();
         stop = false;
     }
 
@@ -19,8 +20,7 @@ public class StopWatch {
         timer.schedule(new StopTask(), milliseconds);
     }
 
-    public boolean isStop() {
-        //System.err.println("called isStop()");
+    public synchronized boolean isStop() {
         return stop;
     }
 

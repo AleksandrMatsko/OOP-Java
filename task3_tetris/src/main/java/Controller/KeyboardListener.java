@@ -23,12 +23,17 @@ public class KeyboardListener implements KeyListener {
         return currentAction;
     }
 
+    public void dropCurrentAction() {
+        currentAction = null;
+    }
+
     @Override
     public void keyTyped(KeyEvent e) {}
 
     @Override
     public void keyPressed(KeyEvent e) {
         currentAction = keyboardSettings.getActionOnKey(e.getKeyCode());
+        System.err.println(currentAction.getName());
     }
 
     @Override

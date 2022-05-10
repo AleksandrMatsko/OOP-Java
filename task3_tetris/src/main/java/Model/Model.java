@@ -8,12 +8,14 @@ public class Model {
     private ModelSettings settings;
     private int totalScore;
     private Figure nextFigure;
+    private final FigureRandomizer figureRandomizer;
 
     public Model(ModelSettings modelSettings) {
         settings = modelSettings;
-        tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField());
+        tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField(), settings.getSizeSpawnArea());
         totalScore = 0;
-        nextFigure = (new FigureRandomizer()).getFigure();
+        figureRandomizer = new FigureRandomizer();
+        nextFigure = figureRandomizer.getFigure();
     }
 
     public TetrisField getTetrisField() {
@@ -26,7 +28,7 @@ public class Model {
     }
 
     public void changeSettings(ModelSettings settings) {
-        tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField());
+        tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField(), settings.getSizeSpawnArea());
         this.settings = settings;
     }
 
@@ -53,8 +55,8 @@ public class Model {
         return nextFigure;
     }
 
-    public void setNextFigure(Figure nextFigure) {
-        this.nextFigure = nextFigure;
+    public void prepareNextFigure() {
+        nextFigure = figureRandomizer.getFigure();
     }
 
 }

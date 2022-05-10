@@ -10,6 +10,7 @@ public class RotateRight implements ActionInterface {
     public GameStatus execute(Model model, GameStatus currentStatus) {
         if (currentStatus != GameStatus.ACTIVE) {
             //TODO exception
+            return currentStatus;
         }
         model.getTetrisField().rotateCurrentFigureOnField(Direction.RIGHT);
         return GameStatus.ACTIVE;

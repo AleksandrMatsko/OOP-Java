@@ -8,6 +8,7 @@ public class FallDown implements ActionInterface {
     public GameStatus execute(Model model, GameStatus currentStatus) {
         if (currentStatus != GameStatus.ACTIVE) {
             //TODO exception
+            return currentStatus;
         }
         model.getSettings().setDefaultDelay(model.getSettings().getDefaultDelay() / 2);
         return GameStatus.ACTIVE;
