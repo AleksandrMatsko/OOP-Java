@@ -7,7 +7,6 @@ import java.awt.*;
 import java.util.HashMap;
 
 public class FieldPainter extends JPanel {
-    private final HashMap<Integer, Color> colorTable;
     private TetrisField tetrisField;
     private ViewerSettings viewerSettings;
 
@@ -15,7 +14,6 @@ public class FieldPainter extends JPanel {
     public FieldPainter(TetrisField tetrisField, ViewerSettings viewerSettings) {
         this.tetrisField = tetrisField;
         this.viewerSettings = viewerSettings;
-        colorTable = viewerSettings.getColorTable();
     }
 
     public void changeViewerSettings(ViewerSettings viewerSettings) {
@@ -28,7 +26,7 @@ public class FieldPainter extends JPanel {
         int lenOfBlock = viewerSettings.getLenOfBlock();
         g2D.setStroke(new BasicStroke(stroke));
         g2D.drawRect(x, y, lenOfBlock, lenOfBlock);
-        g2D.setColor(colorTable.get(tetrisField.getCell(x, y + tetrisField.getSizeSpawnArea())));
+        g2D.setColor(viewerSettings.getColorTable().get(tetrisField.getCell(x, y + tetrisField.getSizeSpawnArea())));
         g2D.fillRect(x * lenOfBlock + stroke, y * lenOfBlock + stroke, lenOfBlock - 2 * stroke, lenOfBlock - 2 * stroke);
     }
 

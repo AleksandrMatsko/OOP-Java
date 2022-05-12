@@ -11,12 +11,12 @@ import java.util.Map;
 import java.util.Properties;
 
 public class FigureFactory {
-    private final HashMap<FigureName, Figure> figureTable;
+    private final HashMap<FigureName, String> classForFigureName;
     private final ArrayList<FigureName> possibleFigureNames;
     private static FigureFactory figureFactory = null;
 
     private FigureFactory() {
-        figureTable = new HashMap<FigureName, Figure>();
+        classForFigureName = new HashMap<>();
         possibleFigureNames = new ArrayList<>();
         final String configFileName = "/figures.properties";
         Properties properties = new Properties();
@@ -36,17 +36,9 @@ public class FigureFactory {
             figureName = new FigureName(toFigureName);
             //}
             //catch () {}
-            try {
-                figureTable.put(figureName, (Figure) Class.forName(className).getDeclaredConstructor(int.class).newInstance(color));
-            }
-            catch (ClassNotFoundException ex) {
-                //TODO: normal exception
-                ex.printStackTrace();
-            }
-            catch (InvocationTargetException | InstantiationException | IllegalAccessException | NoSuchMethodException ex) {
-                ex.printStackTrace();
-            }
+            classForFigureName.put(figureName, className);
             possibleFigureNames.add(figureName);
+            System.err.println(figureName.getName() + " = " + className);
             color += 1;
         }
     }
@@ -58,11 +50,11 @@ public class FigureFactory {
         return figureFactory;
     }
 
-    public Figure getFigure(FigureName figureName) {
-        if (!figureTable.containsKey(figureName)) {
+    public Figure getNewFigure(FigureName figureName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        if (!classForFigureName.containsKey(figureName)) {
             //TODO: exception
         }
-        return figureTable.get(figureName);
+        return (Figure) Class.forName(classForFigureName.get(figureName)).getDeclaredConstructor().newInstance();
     }
 
     public ArrayList<FigureName> getPossibleFigureNames() {

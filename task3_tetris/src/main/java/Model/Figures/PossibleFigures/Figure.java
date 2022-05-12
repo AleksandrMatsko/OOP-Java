@@ -11,7 +11,7 @@ public class Figure {
     public Figure(int numOfBlocks, Block centerOfRotation, Block[] blocks, int color) {
         this.numOfBlocks = numOfBlocks;
         if (numOfBlocks != blocks.length) {
-            //exception
+            //TODO exception
         }
         this.centerOfRotation = centerOfRotation;
         this.blocks = blocks;

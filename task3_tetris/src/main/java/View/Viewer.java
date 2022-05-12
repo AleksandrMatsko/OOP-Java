@@ -1,6 +1,9 @@
 package View;
 
 import Controller.KeyboardListener;
+import Model.Figures.PossibleFigures.Figure;
+import Model.Figures.PossibleFigures.LFigure;
+import Model.Figures.PossibleFigures.OFigure;
 import Model.ModelSettings;
 import Model.TetrisField;
 
@@ -9,15 +12,14 @@ import java.awt.*;
 
 public class Viewer extends JFrame implements Runnable {
     private final ViewerSettings viewerSettings;
-    private FieldPainter fieldPainter;
+    private final FieldPainter fieldPainter;
+    private final NextFigurePainter nextFigurePainter;
     private DataForViewer dataForViewer;
     private final KeyboardListener keyboardListener;
 
 
     public Viewer(ViewerSettings viewerSettings, KeyboardListener keyboardListener, ModelSettings modelSettings) {
         this.viewerSettings = viewerSettings;
-        fieldPainter = new FieldPainter(new TetrisField(modelSettings.getWidthOfField(), modelSettings.getHeightOfField(),
-                modelSettings.getSizeSpawnArea()), viewerSettings);
         dataForViewer = null;
         this.keyboardListener = keyboardListener;
         addKeyListener(keyboardListener);
@@ -27,8 +29,17 @@ public class Viewer extends JFrame implements Runnable {
                 0, 2 * modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock(),
                 (modelSettings.getHeightOfField() + 1) * viewerSettings.getLenOfBlock());
         setVisible(true);
+
+        fieldPainter = new FieldPainter(new TetrisField(modelSettings.getWidthOfField(), modelSettings.getHeightOfField(),
+                modelSettings.getSizeSpawnArea()), viewerSettings);
         fieldPainter.setBackground(Color.white);
-        add(BorderLayout.CENTER, fieldPainter);
+        this.nextFigurePainter = new NextFigurePainter(new OFigure(), viewerSettings);
+        nextFigurePainter.setBackground(Color.white);
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
+        mainPanel.add(fieldPainter);
+        mainPanel.add(nextFigurePainter);
+        add(BorderLayout.CENTER, mainPanel);
     }
 
     public void setDataForViewer(DataForViewer dataForViewer) {
@@ -42,6 +53,8 @@ public class Viewer extends JFrame implements Runnable {
         }
         fieldPainter.setTetrisField(dataForViewer.tetrisField());
         fieldPainter.repaint();
+        nextFigurePainter.setNextFigure(dataForViewer.nextFigure());
+        nextFigurePainter.repaint();
 
     }
 }

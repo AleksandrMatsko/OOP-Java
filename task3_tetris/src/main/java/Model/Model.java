@@ -3,6 +3,8 @@ package Model;
 import Model.Figures.FigureRandomizer;
 import Model.Figures.PossibleFigures.Figure;
 
+import java.lang.reflect.InvocationTargetException;
+
 public class Model {
     private TetrisField tetrisField;
     private ModelSettings settings;
@@ -15,7 +17,14 @@ public class Model {
         tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField(), settings.getSizeSpawnArea());
         totalScore = 0;
         figureRandomizer = new FigureRandomizer();
-        nextFigure = figureRandomizer.getFigure();
+
+        try {
+            nextFigure = figureRandomizer.getFigure();
+        } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | InstantiationException |
+                 IllegalAccessException ex) {
+            //TODO normal reaction
+            ex.printStackTrace();
+        }
     }
 
     public TetrisField getTetrisField() {
@@ -56,7 +65,13 @@ public class Model {
     }
 
     public void prepareNextFigure() {
-        nextFigure = figureRandomizer.getFigure();
+        try {
+            nextFigure = figureRandomizer.getFigure();
+        } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | InstantiationException |
+                 IllegalAccessException ex) {
+            //TODO normal reaction
+            ex.printStackTrace();
+        }
     }
 
 }

@@ -81,9 +81,9 @@ public class TetrisField {
     }
 
     private void shiftDown(int lineIndex) {
-        for (int i = lineIndex; i > 0; i++) {
-            if (width >= 0) {
-                System.arraycopy(fieldData[i - 1], 0, fieldData[i], 0, width);
+        for (int i = lineIndex; i > 0; i--) {
+            for (int j = 0; j < width; j++) {
+                fieldData[j][i] = fieldData[j][i - 1];
             }
         }
         for (int i = 0; i < width; i++) {
@@ -99,7 +99,7 @@ public class TetrisField {
         for (int i = 0; i < height; i++) {
             int counter = 0;
             for (int j = 0; j < width; j++) {
-                if (fieldData[i][j] == 0) {
+                if (fieldData[j][i] == 0) {
                     break;
                 }
                 else {
@@ -209,8 +209,15 @@ public class TetrisField {
 
     public boolean rotateCurrentFigureOnField(Direction direction) {
         if (isRotatable(direction)) {
+            for (Block block : currentFigure.getBlocks()) {
+                System.err.println(block.getX() + " " + block.getY());
+            }
+            System.err.println("---------");
             deleteCurrentFigureOnField();
             currentFigure = currentFigure.rotate(direction);
+            for (Block block : currentFigure.getBlocks()) {
+                System.err.println(block.getX() + " " + block.getY());
+            }
             setCurrentFigureOnField();
             return true;
         }
@@ -219,6 +226,12 @@ public class TetrisField {
 
     private void setCurrentFigureOnField() {
         for (Block block : currentFigure.getBlocks()) {
+            if (block.getX() >= width) {
+                System.err.println("=======");
+                for (Block damagedBlock : currentFigure.getBlocks()) {
+                    System.err.println(damagedBlock.getX() + " " + damagedBlock.getY());
+                }
+            }
             fieldData[block.getX()][block.getY()] = currentFigure.getColor();
         }
     }

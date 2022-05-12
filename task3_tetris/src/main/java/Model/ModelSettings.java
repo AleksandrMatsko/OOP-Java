@@ -10,7 +10,7 @@ public class ModelSettings {
         heightOfField = 20;
         widthOfField = 10;
         defaultDelay = 700;
-        sizeSpawnArea = 4;
+        sizeSpawnArea = 3;
     }
 
     public ModelSettings(int widthOfField, int heightOfField, int defaultDelay) {

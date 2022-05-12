@@ -2,11 +2,11 @@ package Model.Figures.PossibleFigures;
 
 public class SFigure extends Figure {
 
-    public SFigure(int color) {
+    public SFigure() {
         super(4, new Block(1, 1),
                 new Block[]{new Block(0, 1),
                             new Block(1, 1),
                             new Block(1, 0),
-                            new Block(2, 0)}, color);
+                            new Block(2, 0)}, 5);
     }
 }

@@ -1,9 +1,10 @@
 package View;
 
 import Model.Figures.FigureFactory;
-import Model.ModelSettings;
+import Model.Names.FigureName;
 
 import java.awt.*;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -16,7 +17,7 @@ public class ViewerSettings {
 
     public ViewerSettings(boolean isColored) {
         stroke = 2;
-        lenOfBlock = 40;
+        lenOfBlock = 30;
         colorTable = new HashMap<>();
         colorTable.put(0, Color.white);
         if (!isColored) {
@@ -26,8 +27,13 @@ public class ViewerSettings {
         }
         else {
             Random random = new Random();
-            for (int i = 1; i <= FigureFactory.getInstance().getAmountOfFigures(); i++) {
-                colorTable.put(i, new Color(random.nextFloat(), random.nextFloat(), random.nextFloat()));
+            for (FigureName figureName : FigureFactory.getInstance().getPossibleFigureNames()) {
+                try {
+                    colorTable.put(FigureFactory.getInstance().getNewFigure(figureName).getColor(),
+                            new Color(random.nextFloat(), random.nextFloat(), random.nextFloat()));
+                } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException ex) {
+                    ex.printStackTrace();
+                }
             }
         }
     }
