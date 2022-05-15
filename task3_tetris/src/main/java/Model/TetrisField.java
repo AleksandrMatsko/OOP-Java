@@ -195,6 +195,11 @@ public class TetrisField {
 
     public boolean isRotatable(Direction direction) {
         Figure rotatedFigure = currentFigure.rotate(direction);
+        System.err.println("isRotatable");
+        for (Block block : currentFigure.getBlocks()) {
+            System.err.println(block.getX() + " " + block.getY());
+        }
+        System.err.println("---------");
         Block[] rotatedBlocks = rotatedFigure.getBlocks();
         for (int i = 0; i < rotatedFigure.getNumOfBlocks(); i++) {
             if (rotatedBlocks[i].getX() < 0 || rotatedBlocks[i].getX() >= width ||
@@ -208,6 +213,11 @@ public class TetrisField {
     }
 
     public boolean rotateCurrentFigureOnField(Direction direction) {
+        System.err.println("testing rotation");
+        for (Block block : currentFigure.getBlocks()) {
+            System.err.println(block.getX() + " " + block.getY());
+        }
+        System.err.println("---------");
         if (isRotatable(direction)) {
             for (Block block : currentFigure.getBlocks()) {
                 System.err.println(block.getX() + " " + block.getY());

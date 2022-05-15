@@ -4,16 +4,16 @@ import Model.TetrisField;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.HashMap;
 
 public class FieldPainter extends JPanel {
     private TetrisField tetrisField;
     private ViewerSettings viewerSettings;
 
 
-    public FieldPainter(TetrisField tetrisField, ViewerSettings viewerSettings) {
-        this.tetrisField = tetrisField;
+    public FieldPainter(ViewerSettings viewerSettings) {
+        this.tetrisField = null;
         this.viewerSettings = viewerSettings;
+        setBackground(Color.white);
     }
 
     public void changeViewerSettings(ViewerSettings viewerSettings) {
@@ -24,8 +24,6 @@ public class FieldPainter extends JPanel {
         g2D.setColor(Color.white);
         int stroke = viewerSettings.getStroke();
         int lenOfBlock = viewerSettings.getLenOfBlock();
-        g2D.setStroke(new BasicStroke(stroke));
-        g2D.drawRect(x, y, lenOfBlock, lenOfBlock);
         g2D.setColor(viewerSettings.getColorTable().get(tetrisField.getCell(x, y + tetrisField.getSizeSpawnArea())));
         g2D.fillRect(x * lenOfBlock + stroke, y * lenOfBlock + stroke, lenOfBlock - 2 * stroke, lenOfBlock - 2 * stroke);
     }
@@ -45,6 +43,9 @@ public class FieldPainter extends JPanel {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
+        if (tetrisField == null) {
+            //TODO exception
+        }
         Graphics2D g2D = (Graphics2D) g;
         paintCanvas(g2D);
         for (int y = 0; y < tetrisField.getHeight() - tetrisField.getSizeSpawnArea(); y++) {

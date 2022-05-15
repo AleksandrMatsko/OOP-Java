@@ -7,6 +7,7 @@ public class OFigure extends Figure {
                 new Block[]{new Block(0, 0),
                             new Block(0, 1),
                             new Block(1, 0),
-                            new Block(1, 1)}, 4);
+                            new Block(1, 1)},
+                4, false);
     }
 }

@@ -5,15 +5,15 @@ import Model.Figures.PossibleFigures.Figure;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.HashMap;
 
 public class NextFigurePainter extends JPanel {
     private ViewerSettings viewerSettings;
     private Figure nextFigure;
 
-    public NextFigurePainter(Figure nextFigure, ViewerSettings viewerSettings) {
+    public NextFigurePainter(ViewerSettings viewerSettings) {
         this.viewerSettings = viewerSettings;
-        this.nextFigure = nextFigure;
+        this.nextFigure = null;
+        setBackground(Color.white);
     }
 
     public void setNextFigure(Figure nextFigure) {
@@ -33,6 +33,9 @@ public class NextFigurePainter extends JPanel {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
+        if (nextFigure == null) {
+            //TODO exception
+        }
         Graphics2D g2D = (Graphics2D) g;
         for (Block block : nextFigure.getBlocks()) {
             paintBlock(g2D, block.getX(), block.getY());

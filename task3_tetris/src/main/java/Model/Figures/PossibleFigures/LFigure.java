@@ -7,6 +7,7 @@ public class LFigure extends Figure {
                 new Block[]{new Block(0, 1),
                             new Block(1, 1),
                             new Block(2, 0),
-                            new Block(2, 1)}, 3);
+                            new Block(2, 1)},
+                3, true);
     }
 }

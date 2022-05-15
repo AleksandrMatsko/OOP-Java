@@ -1,19 +1,19 @@
 package View;
 
 import Controller.KeyboardListener;
-import Model.Figures.PossibleFigures.Figure;
-import Model.Figures.PossibleFigures.LFigure;
-import Model.Figures.PossibleFigures.OFigure;
+import Model.Figures.Direction;
 import Model.ModelSettings;
-import Model.TetrisField;
 
 import javax.swing.*;
 import java.awt.*;
+
+import static java.lang.Thread.sleep;
 
 public class Viewer extends JFrame implements Runnable {
     private final ViewerSettings viewerSettings;
     private final FieldPainter fieldPainter;
     private final NextFigurePainter nextFigurePainter;
+    private final ScorePrinter scorePrinter;
     private DataForViewer dataForViewer;
     private final KeyboardListener keyboardListener;
 
@@ -26,19 +26,21 @@ public class Viewer extends JFrame implements Runnable {
         setTitle("Tetris");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setBounds(modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock() / 2,
-                0, 2 * modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock(),
+                0, 3 * modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock(),
                 (modelSettings.getHeightOfField() + 1) * viewerSettings.getLenOfBlock());
         setVisible(true);
 
-        fieldPainter = new FieldPainter(new TetrisField(modelSettings.getWidthOfField(), modelSettings.getHeightOfField(),
-                modelSettings.getSizeSpawnArea()), viewerSettings);
-        fieldPainter.setBackground(Color.white);
-        this.nextFigurePainter = new NextFigurePainter(new OFigure(), viewerSettings);
-        nextFigurePainter.setBackground(Color.white);
+        fieldPainter = new FieldPainter(viewerSettings);
+
+        nextFigurePainter = new NextFigurePainter(viewerSettings);
+
+        scorePrinter = new ScorePrinter(viewerSettings);
+
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
         mainPanel.add(fieldPainter);
         mainPanel.add(nextFigurePainter);
+        mainPanel.add(scorePrinter);
         add(BorderLayout.CENTER, mainPanel);
     }
 
@@ -55,6 +57,7 @@ public class Viewer extends JFrame implements Runnable {
         fieldPainter.repaint();
         nextFigurePainter.setNextFigure(dataForViewer.nextFigure());
         nextFigurePainter.repaint();
-
+        scorePrinter.setScore(dataForViewer.score());
+        scorePrinter.update();
     }
 }

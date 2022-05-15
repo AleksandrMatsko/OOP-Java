@@ -7,6 +7,7 @@ public class SFigure extends Figure {
                 new Block[]{new Block(0, 1),
                             new Block(1, 1),
                             new Block(1, 0),
-                            new Block(2, 0)}, 5);
+                            new Block(2, 0)},
+                5, true);
     }
 }

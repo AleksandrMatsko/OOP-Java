@@ -7,8 +7,9 @@ public class Figure {
     private final Block centerOfRotation;
     private final Block[] blocks;
     private final int color;
+    private final  boolean isRotatable;
 
-    public Figure(int numOfBlocks, Block centerOfRotation, Block[] blocks, int color) {
+    public Figure(int numOfBlocks, Block centerOfRotation, Block[] blocks, int color, boolean isRotatable) {
         this.numOfBlocks = numOfBlocks;
         if (numOfBlocks != blocks.length) {
             //TODO exception
@@ -16,6 +17,7 @@ public class Figure {
         this.centerOfRotation = centerOfRotation;
         this.blocks = blocks;
         this.color = color;
+        this.isRotatable = isRotatable;
     }
 
     public int getColor() {
@@ -43,19 +45,20 @@ public class Figure {
     }
 
     public Figure rotate(Direction directionToRotate) {
-        Block[] rotatedBlocks = blocks;
+        if (!isRotatable) {
+            return this;
+        }
+        Block[] rotatedBlocks = new Block[numOfBlocks];
         int i = centerOfRotation.getX();
         int j = centerOfRotation.getY();
         if (directionToRotate == Direction.LEFT) {
             for (int k = 0; k < numOfBlocks; k++) {
-                rotatedBlocks[k].setX(i - (blocks[k].getY() - j));
-                rotatedBlocks[k].setY(j + (blocks[k].getX() - i));
+                rotatedBlocks[k] = new Block(i - (blocks[k].getY() - j), j + (blocks[k].getX() - i));
             }
         }
         else if (directionToRotate == Direction.RIGHT) {
             for (int k = 0; k < numOfBlocks; k++) {
-                rotatedBlocks[k].setX(i + (blocks[k].getY() - j));
-                rotatedBlocks[k].setY(j - (blocks[k].getX() - i));
+                rotatedBlocks[k] = new Block(i + (blocks[k].getY() - j), j - (blocks[k].getX() - i));
             }
         }
         else if (directionToRotate == Direction.NONE) {
@@ -64,30 +67,8 @@ public class Figure {
         else if (directionToRotate == Direction.DOWN) {
             //exception
         }
-        return new Figure(numOfBlocks, centerOfRotation, rotatedBlocks, color);
+        return new Figure(numOfBlocks, new Block(i, j), rotatedBlocks, color, isRotatable);
     }
-
-    /*public void rotate(Direction directionToRotate) {
-        if (dimension == 1) {
-            return;
-        }
-        boolean[] rotatedShape = new boolean[dimension * dimension];
-        if (directionToRotate == Direction.LEFT) {
-            for (int i = 0; i < dimension; i++) {
-                for (int j = 0; j < dimension; j++) {
-                    rotatedShape[(dimension - 1 - i) * dimension + j] = shape[j * dimension + i];
-                }
-            }
-        }
-        else if (directionToRotate == Direction.RIGHT) {
-            for (int i = 0; i < dimension; i++) {
-                for (int j = 0; j < dimension; j++) {
-                    rotatedShape[j * dimension + i] = shape[(dimension - 1 - i) * dimension + j];
-                }
-            }
-        }
-        shape = rotatedShape;
-    }*/
 
     public void shiftOnVal(Direction direction, int val) {
         if (direction == Direction.LEFT) {
