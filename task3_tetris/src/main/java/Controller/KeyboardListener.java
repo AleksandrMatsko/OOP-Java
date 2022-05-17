@@ -33,7 +33,6 @@ public class KeyboardListener implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         currentAction = keyboardSettings.getActionOnKey(e.getKeyCode());
-        System.err.println(currentAction.getName());
     }
 
     @Override

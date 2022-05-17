@@ -14,6 +14,8 @@ public class FieldPainter extends JPanel {
         this.tetrisField = null;
         this.viewerSettings = viewerSettings;
         setBackground(Color.white);
+        setPreferredSize(new Dimension(viewerSettings.getWidth() * viewerSettings.getLenOfBlock(),
+                viewerSettings.getHeight() * viewerSettings.getLenOfBlock()));
     }
 
     public void changeViewerSettings(ViewerSettings viewerSettings) {
@@ -30,12 +32,12 @@ public class FieldPainter extends JPanel {
 
     private void paintCanvas(Graphics2D g2D) {
         g2D.setColor(Color.lightGray);
-        for (int x = 1; x < tetrisField.getWidth(); x++) {
-            for (int y = 1; y < tetrisField.getHeight() - tetrisField.getSizeSpawnArea(); y++) {
+        for (int x = 1; x < viewerSettings.getWidth(); x++) {
+            for (int y = 1; y < viewerSettings.getHeight(); y++) {
                 g2D.drawLine(x * viewerSettings.getLenOfBlock(), 0,
-                        x * viewerSettings.getLenOfBlock(), (tetrisField.getHeight() - tetrisField.getSizeSpawnArea()) * viewerSettings.getLenOfBlock());
+                        x * viewerSettings.getLenOfBlock(), viewerSettings.getHeight() * viewerSettings.getLenOfBlock());
                 g2D.drawLine(0, y * viewerSettings.getLenOfBlock(),
-                        tetrisField.getWidth() * viewerSettings.getLenOfBlock(), y * viewerSettings.getLenOfBlock());
+                        viewerSettings.getWidth() * viewerSettings.getLenOfBlock(), y * viewerSettings.getLenOfBlock());
             }
         }
     }
@@ -48,8 +50,8 @@ public class FieldPainter extends JPanel {
         }
         Graphics2D g2D = (Graphics2D) g;
         paintCanvas(g2D);
-        for (int y = 0; y < tetrisField.getHeight() - tetrisField.getSizeSpawnArea(); y++) {
-            for (int x = 0; x < tetrisField.getWidth(); x++) {
+        for (int y = 0; y < viewerSettings.getHeight(); y++) {
+            for (int x = 0; x < viewerSettings.getWidth(); x++) {
                 if (tetrisField.getCell(x, y + tetrisField.getSizeSpawnArea()) != 0) {
                     paintBlock(g2D, x, y);
                 }

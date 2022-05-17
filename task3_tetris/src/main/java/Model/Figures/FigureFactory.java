@@ -26,7 +26,6 @@ public class FigureFactory {
             //TODO normal exception
             ex.printStackTrace();
         }
-        int color = 1;
         for (Map.Entry entry : properties.entrySet()) {
             String toFigureName = (String) entry.getKey();
             String className = (String) entry.getValue();
@@ -38,8 +37,6 @@ public class FigureFactory {
             //catch () {}
             classForFigureName.put(figureName, className);
             possibleFigureNames.add(figureName);
-            System.err.println(figureName.getName() + " = " + className);
-            color += 1;
         }
     }
 

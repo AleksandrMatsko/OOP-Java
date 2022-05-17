@@ -1,15 +1,14 @@
 package View;
 
 import Controller.KeyboardListener;
-import Model.Figures.Direction;
+import Game.GameStatus;
 import Model.ModelSettings;
 
 import javax.swing.*;
 import java.awt.*;
 
-import static java.lang.Thread.sleep;
-
 public class Viewer extends JFrame implements Runnable {
+    private final MenuPanel menuPanel;
     private final ViewerSettings viewerSettings;
     private final FieldPainter fieldPainter;
     private final NextFigurePainter nextFigurePainter;
@@ -19,6 +18,7 @@ public class Viewer extends JFrame implements Runnable {
 
 
     public Viewer(ViewerSettings viewerSettings, KeyboardListener keyboardListener, ModelSettings modelSettings) {
+        menuPanel = new MenuPanel(viewerSettings);
         this.viewerSettings = viewerSettings;
         dataForViewer = null;
         this.keyboardListener = keyboardListener;
@@ -27,7 +27,7 @@ public class Viewer extends JFrame implements Runnable {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setBounds(modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock() / 2,
                 0, 3 * modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock(),
-                (modelSettings.getHeightOfField() + 1) * viewerSettings.getLenOfBlock());
+                (modelSettings.getHeightOfField() + 2) * viewerSettings.getLenOfBlock());
         setVisible(true);
 
         fieldPainter = new FieldPainter(viewerSettings);
@@ -37,10 +37,11 @@ public class Viewer extends JFrame implements Runnable {
         scorePrinter = new ScorePrinter(viewerSettings);
 
         JPanel mainPanel = new JPanel();
-        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
+        mainPanel.setLayout(new GridBagLayout());
         mainPanel.add(fieldPainter);
         mainPanel.add(nextFigurePainter);
         mainPanel.add(scorePrinter);
+        //mainPanel.add(menuPanel);
         add(BorderLayout.CENTER, mainPanel);
     }
 
@@ -51,7 +52,7 @@ public class Viewer extends JFrame implements Runnable {
     @Override
     public void run() {
         if (dataForViewer == null) {
-            //TODO exception
+            return;
         }
         fieldPainter.setTetrisField(dataForViewer.tetrisField());
         fieldPainter.repaint();

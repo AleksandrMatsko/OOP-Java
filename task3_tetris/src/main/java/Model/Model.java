@@ -11,12 +11,14 @@ public class Model {
     private int totalScore;
     private Figure nextFigure;
     private final FigureRandomizer figureRandomizer;
+    private int delay;
 
     public Model(ModelSettings modelSettings) {
         settings = modelSettings;
         tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField(), settings.getSizeSpawnArea());
         totalScore = 0;
         figureRandomizer = new FigureRandomizer();
+        delay = modelSettings.getDefaultDelay();
 
         try {
             nextFigure = figureRandomizer.getFigure();
@@ -42,6 +44,7 @@ public class Model {
     }
 
     public void calcScore(int numRemovedLines) {
+        int prevScore = totalScore;
         if (numRemovedLines == 1) {
             totalScore += 100;
         }
@@ -53,6 +56,9 @@ public class Model {
         }
         else if (numRemovedLines == 4) {
             totalScore += 1500;
+        }
+        if (prevScore / 2000 < totalScore / 2000) {
+            delay = (int) (delay * 0.9);
         }
     }
 
@@ -74,4 +80,7 @@ public class Model {
         }
     }
 
+    public int getDelay() {
+        return delay;
+    }
 }

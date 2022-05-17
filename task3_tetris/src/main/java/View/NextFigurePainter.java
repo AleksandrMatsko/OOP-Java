@@ -13,6 +13,7 @@ public class NextFigurePainter extends JPanel {
     public NextFigurePainter(ViewerSettings viewerSettings) {
         this.viewerSettings = viewerSettings;
         this.nextFigure = null;
+        setPreferredSize(new Dimension(viewerSettings.getLenOfBlock() * 7, viewerSettings.getLenOfBlock() * 7));
         setBackground(Color.white);
     }
 
@@ -24,10 +25,10 @@ public class NextFigurePainter extends JPanel {
         g2D.setColor(Color.white);
         int stroke = viewerSettings.getStroke();
         int lenOfBlock = viewerSettings.getLenOfBlock();
-        g2D.setStroke(new BasicStroke(stroke));
-        g2D.drawRect(x, y, lenOfBlock, lenOfBlock);
+        //g2D.setStroke(new BasicStroke(stroke));
+        //g2D.drawRect(x, y, lenOfBlock, lenOfBlock);
         g2D.setColor(viewerSettings.getColorTable().get(nextFigure.getColor()));
-        g2D.fillRect(x * lenOfBlock + stroke, y * lenOfBlock + stroke, lenOfBlock - 2 * stroke, lenOfBlock - 2 * stroke);
+        g2D.fillRect((x + 2) * lenOfBlock + stroke, (y + 2) * lenOfBlock + stroke, lenOfBlock - 2 * stroke, lenOfBlock - 2 * stroke);
     }
 
     @Override

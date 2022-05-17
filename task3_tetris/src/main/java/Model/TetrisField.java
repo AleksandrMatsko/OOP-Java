@@ -39,13 +39,13 @@ public class TetrisField {
         return fieldData[x][y];
     }
 
-    public int getWidth() {
+    /*public int getWidth() {
         return width;
-    }
+    }*/
 
-    public int getHeight() {
+    /*public int getHeight() {
         return height;
-    }
+    }*/
 
     public boolean isContinue() {
         return maxLevelOfCells >= sizeSpawnArea;

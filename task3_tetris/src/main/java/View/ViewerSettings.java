@@ -12,10 +12,12 @@ public class ViewerSettings {
     private int lenOfBlock;
     private int stroke;
     private HashMap<Integer, Color> colorTable;
+    private int width;
+    private int height;
 
-    //TODO colorTable
-
-    public ViewerSettings(boolean isColored) {
+    public ViewerSettings(boolean isColored, int width, int height) {
+        this.width = width;
+        this.height = height;
         stroke = 2;
         lenOfBlock = 30;
         colorTable = new HashMap<>();
@@ -48,5 +50,13 @@ public class ViewerSettings {
 
     public int getStroke() {
         return stroke;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 }

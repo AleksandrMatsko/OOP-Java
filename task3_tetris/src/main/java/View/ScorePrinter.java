@@ -16,6 +16,7 @@ public class ScorePrinter extends JLabel {
         setForeground(Color.black);
         setFont(new Font(null, Font.BOLD, 16));
         setText(Integer.toString(score));
+        setPreferredSize(new Dimension(viewerSettings.getLenOfBlock() * 4, viewerSettings.getLenOfBlock() * 4));
     }
 
     public void setScore(int score) {
