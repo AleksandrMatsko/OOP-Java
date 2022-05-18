@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Viewer extends JFrame implements Runnable {
-    private final MenuPanel menuPanel;
+    //private final MenuFrame menuFrame;
     private final ViewerSettings viewerSettings;
     private final FieldPainter fieldPainter;
     private final NextFigurePainter nextFigurePainter;
@@ -18,7 +18,7 @@ public class Viewer extends JFrame implements Runnable {
 
 
     public Viewer(ViewerSettings viewerSettings, KeyboardListener keyboardListener, ModelSettings modelSettings) {
-        menuPanel = new MenuPanel(viewerSettings);
+        //menuFrame = new MenuFrame(viewerSettings);
         this.viewerSettings = viewerSettings;
         dataForViewer = null;
         this.keyboardListener = keyboardListener;
@@ -26,22 +26,38 @@ public class Viewer extends JFrame implements Runnable {
         setTitle("Tetris");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setBounds(modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock() / 2,
-                0, 3 * modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock(),
+                0, 2 * modelSettings.getWidthOfField() * viewerSettings.getLenOfBlock(),
                 (modelSettings.getHeightOfField() + 2) * viewerSettings.getLenOfBlock());
         setVisible(true);
 
-        fieldPainter = new FieldPainter(viewerSettings);
-
-        nextFigurePainter = new NextFigurePainter(viewerSettings);
-
-        scorePrinter = new ScorePrinter(viewerSettings);
-
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new GridBagLayout());
-        mainPanel.add(fieldPainter);
-        mainPanel.add(nextFigurePainter);
-        mainPanel.add(scorePrinter);
-        //mainPanel.add(menuPanel);
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+
+        fieldPainter = new FieldPainter(viewerSettings);
+        gridBagConstraints.fill = GridBagConstraints.CENTER;
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.gridwidth = 1;
+        gridBagConstraints.gridheight = 3;
+        mainPanel.add(fieldPainter, gridBagConstraints);
+
+        nextFigurePainter = new NextFigurePainter(viewerSettings);
+        gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.gridwidth = 1;
+        gridBagConstraints.gridheight = 1;
+        mainPanel.add(nextFigurePainter, gridBagConstraints);
+
+        scorePrinter = new ScorePrinter(viewerSettings);
+        gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        mainPanel.add(scorePrinter, gridBagConstraints);
+
         add(BorderLayout.CENTER, mainPanel);
     }
 
@@ -54,11 +70,15 @@ public class Viewer extends JFrame implements Runnable {
         if (dataForViewer == null) {
             return;
         }
-        fieldPainter.setTetrisField(dataForViewer.tetrisField());
-        fieldPainter.repaint();
-        nextFigurePainter.setNextFigure(dataForViewer.nextFigure());
-        nextFigurePainter.repaint();
-        scorePrinter.setScore(dataForViewer.score());
-        scorePrinter.update();
+        if (dataForViewer.gameStatus() != GameStatus.EXIT) {
+            fieldPainter.setTetrisField(dataForViewer.tetrisField());
+            fieldPainter.repaint();
+            nextFigurePainter.setNextFigure(dataForViewer.nextFigure());
+            nextFigurePainter.repaint();
+            scorePrinter.update(dataForViewer.score());
+        }
+        else {
+            System.exit(0);
+        }
     }
 }

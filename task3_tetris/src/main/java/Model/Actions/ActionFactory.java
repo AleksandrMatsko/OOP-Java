@@ -1,5 +1,6 @@
 package Model.Actions;
 
+import Exceptions.InvalidActionNameException;
 import Model.Actions.PossibleActions.ActionInterface;
 import Model.Names.ActionName;
 
@@ -27,9 +28,14 @@ public class ActionFactory {
         for (Map.Entry entry : properties.entrySet()) {
             String toActionName = (String) entry.getKey();
             String className = (String) entry.getValue();
-            ActionName actionName;
-            //TODO try catch
-            actionName = new ActionName(toActionName);
+            ActionName actionName = null;
+            try {
+                actionName = new ActionName(toActionName);
+            }
+            catch (InvalidActionNameException ex) {
+                //TODO normal reaction
+            }
+
             try {
                 actionTable.put(actionName, (ActionInterface) Class.forName(className).getDeclaredConstructor().newInstance());
             }

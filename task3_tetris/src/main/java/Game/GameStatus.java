@@ -4,5 +4,6 @@ public enum GameStatus {
     END,
     PREPARATION,
     ACTIVE,
-    PAUSE
+    PAUSE,
+    EXIT
 }

@@ -35,7 +35,7 @@ public class NextFigurePainter extends JPanel {
     public void paint(Graphics g) {
         super.paint(g);
         if (nextFigure == null) {
-            //TODO exception
+            return;
         }
         Graphics2D g2D = (Graphics2D) g;
         for (Block block : nextFigure.getBlocks()) {

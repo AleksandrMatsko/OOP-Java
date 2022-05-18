@@ -15,16 +15,13 @@ public class ScorePrinter extends JLabel {
         setBackground(Color.white);
         setForeground(Color.black);
         setFont(new Font(null, Font.BOLD, 16));
-        setText(Integer.toString(score));
+        setText("Score: " + Integer.toString(score));
         setPreferredSize(new Dimension(viewerSettings.getLenOfBlock() * 4, viewerSettings.getLenOfBlock() * 4));
     }
 
-    public void setScore(int score) {
+    public void update(int score) {
         this.score = score;
-    }
-
-    public void update() {
-        setText(Integer.toString(score));
+        setText("Score: " + this.score);
     }
 
 }

@@ -15,7 +15,7 @@ public class HighScoreTable {
     private final Comparator<PairKeyVal<UserName, Integer>> cmp = new Comparator<PairKeyVal<UserName, Integer>>() {
         @Override
         public int compare(PairKeyVal<UserName, Integer> o1, PairKeyVal<UserName, Integer> o2) {
-            int comparison = o1.getValue().compareTo(o2.getValue());
+            int comparison = o2.getValue().compareTo(o1.getValue());
             if (comparison == 0) {
                 return o1.getKey().compareTo(o2.getKey());
             }

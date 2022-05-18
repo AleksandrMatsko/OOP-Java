@@ -13,7 +13,7 @@ public class ScoreFileWriter {
     public ScoreFileWriter(String regex) {
         this.regex = regex;
         try {
-            outputStreamWriter = new OutputStreamWriter(new FileOutputStream("score.txt"));
+            outputStreamWriter = new OutputStreamWriter(new FileOutputStream("src/main/java/Model/ScoreTable/scores.txt"));
         }
         catch (IOException ex) {
             // TODO normal exception
@@ -31,7 +31,7 @@ public class ScoreFileWriter {
 
     public void writeScore(PairKeyVal<UserName, Integer> pairKeyVal) {
         try {
-            outputStreamWriter.write(pairKeyVal.getKey() + regex + pairKeyVal.getValue().toString());
+            outputStreamWriter.write(pairKeyVal.getKey().getName() + regex + pairKeyVal.getValue() + System.lineSeparator());
         }
         catch (IOException ex) {
             // TODO exception

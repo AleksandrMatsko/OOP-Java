@@ -1,5 +1,6 @@
 package Model.Figures;
 
+import Exceptions.InvalidFigureNameException;
 import Model.Figures.PossibleFigures.Figure;
 import Model.Names.FigureName;
 
@@ -29,12 +30,13 @@ public class FigureFactory {
         for (Map.Entry entry : properties.entrySet()) {
             String toFigureName = (String) entry.getKey();
             String className = (String) entry.getValue();
-            FigureName figureName;
-            //TODO: try catch
-            //try {
-            figureName = new FigureName(toFigureName);
-            //}
-            //catch () {}
+            FigureName figureName = null;
+            try {
+                figureName = new FigureName(toFigureName);
+            }
+            catch (InvalidFigureNameException ex) {
+                //TODO normal exception
+            }
             classForFigureName.put(figureName, className);
             possibleFigureNames.add(figureName);
         }

@@ -39,14 +39,6 @@ public class TetrisField {
         return fieldData[x][y];
     }
 
-    /*public int getWidth() {
-        return width;
-    }*/
-
-    /*public int getHeight() {
-        return height;
-    }*/
-
     public boolean isContinue() {
         return maxLevelOfCells >= sizeSpawnArea;
     }
@@ -139,7 +131,6 @@ public class TetrisField {
 
     public boolean isMovableOnVal(Direction direction, int val) {
         if (currentFigure == null) {
-            //TODO exception
             return false;
         }
         Block[] blocks = currentFigure.getBlocks();
@@ -195,11 +186,6 @@ public class TetrisField {
 
     public boolean isRotatable(Direction direction) {
         Figure rotatedFigure = currentFigure.rotate(direction);
-        System.err.println("isRotatable");
-        for (Block block : currentFigure.getBlocks()) {
-            System.err.println(block.getX() + " " + block.getY());
-        }
-        System.err.println("---------");
         Block[] rotatedBlocks = rotatedFigure.getBlocks();
         for (int i = 0; i < rotatedFigure.getNumOfBlocks(); i++) {
             if (rotatedBlocks[i].getX() < 0 || rotatedBlocks[i].getX() >= width ||
@@ -213,21 +199,9 @@ public class TetrisField {
     }
 
     public boolean rotateCurrentFigureOnField(Direction direction) {
-        System.err.println("testing rotation");
-        for (Block block : currentFigure.getBlocks()) {
-            System.err.println(block.getX() + " " + block.getY());
-        }
-        System.err.println("---------");
         if (isRotatable(direction)) {
-            for (Block block : currentFigure.getBlocks()) {
-                System.err.println(block.getX() + " " + block.getY());
-            }
-            System.err.println("---------");
             deleteCurrentFigureOnField();
             currentFigure = currentFigure.rotate(direction);
-            for (Block block : currentFigure.getBlocks()) {
-                System.err.println(block.getX() + " " + block.getY());
-            }
             setCurrentFigureOnField();
             return true;
         }
@@ -236,12 +210,6 @@ public class TetrisField {
 
     private void setCurrentFigureOnField() {
         for (Block block : currentFigure.getBlocks()) {
-            if (block.getX() >= width) {
-                System.err.println("=======");
-                for (Block damagedBlock : currentFigure.getBlocks()) {
-                    System.err.println(damagedBlock.getX() + " " + damagedBlock.getY());
-                }
-            }
             fieldData[block.getX()][block.getY()] = currentFigure.getColor();
         }
     }

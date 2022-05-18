@@ -3,10 +3,11 @@ package View;
 import javax.swing.*;
 import java.awt.*;
 
-public class MenuPanel extends JFrame {
+public class MenuFrame extends JFrame {
     private ViewerSettings viewerSettings;
 
-    public MenuPanel(ViewerSettings viewerSettings) {
+    public MenuFrame(ViewerSettings viewerSettings) {
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         JPanel menuPanel = new JPanel();
         menuPanel.setLayout(new BoxLayout(menuPanel, BoxLayout.PAGE_AXIS));
         menuPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -23,7 +24,7 @@ public class MenuPanel extends JFrame {
         menuPanel.add(highScoresButton);
         menuPanel.add(exitButton);
 
-        setBounds(viewerSettings.getWidth() * viewerSettings.getLenOfBlock() / 2, 0,
+        setBounds(viewerSettings.getWidth() * viewerSettings.getLenOfBlock() * 2, 0,
                 viewerSettings.getWidth() * viewerSettings.getLenOfBlock(),
                 viewerSettings.getHeight() * viewerSettings.getLenOfBlock() / 2);
 

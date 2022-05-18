@@ -1,13 +1,15 @@
 package Model.Names;
 
+import Exceptions.InvalidFigureNameException;
+
 import java.util.Objects;
 
 public class FigureName implements Name {
     private final String name;
 
-    public FigureName(String name) {
+    public FigureName(String name) throws InvalidFigureNameException {
         if (!matchesSample(name)) {
-            //TODO exception
+            throw new InvalidFigureNameException();
         }
         this.name = name;
     }

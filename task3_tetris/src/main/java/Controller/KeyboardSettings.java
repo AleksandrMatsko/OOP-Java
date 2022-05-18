@@ -1,5 +1,6 @@
 package Controller;
 
+import Exceptions.InvalidActionNameException;
 import Model.Names.ActionName;
 
 import java.awt.event.KeyEvent;
@@ -37,9 +38,14 @@ public class KeyboardSettings {
             }
 
             String toActionName = (String) entry.getValue();
-            ActionName actionName;
-            //TODO try catch
-            actionName = new ActionName(toActionName);
+            ActionName actionName = null;
+
+            try {
+                actionName = new ActionName(toActionName);
+            }
+            catch (InvalidActionNameException ex) {
+                //TODO reaction
+            }
             actionsProvidedOnKey.put(keyCode, actionName);
             usedKeys.add(keyCode);
         }

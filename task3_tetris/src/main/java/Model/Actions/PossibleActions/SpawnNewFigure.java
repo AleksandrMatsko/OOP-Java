@@ -1,6 +1,5 @@
 package Model.Actions.PossibleActions;
 
-import Model.Figures.FigureRandomizer;
 import Game.GameStatus;
 import Model.Model;
 
@@ -16,6 +15,7 @@ public class SpawnNewFigure implements ActionInterface {
             model.prepareNextFigure();
             return GameStatus.ACTIVE;
         }
+        model.addNewRecordToTable();
         return GameStatus.END;
     }
 }

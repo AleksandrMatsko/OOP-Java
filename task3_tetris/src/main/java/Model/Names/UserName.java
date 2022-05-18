@@ -1,13 +1,15 @@
 package Model.Names;
 
+import Exceptions.InvalidUserNameException;
+
 import java.util.Objects;
 
 public class UserName implements Name {
     private final String name;
 
-    public UserName(String name) {
+    public UserName(String name) throws InvalidUserNameException {
         if (!matchesSample(name)) {
-            // TODO exception
+            throw new InvalidUserNameException();
         }
         this.name = name;
     }

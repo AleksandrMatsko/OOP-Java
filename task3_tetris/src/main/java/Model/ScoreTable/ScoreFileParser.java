@@ -1,5 +1,6 @@
 package Model.ScoreTable;
 
+import Exceptions.InvalidUserNameException;
 import Model.Names.UserName;
 
 import java.io.FileInputStream;
@@ -14,7 +15,7 @@ public class ScoreFileParser {
         this.regex = regex;
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream("scores.txt");
+            fileInputStream = new FileInputStream("src/main/java/Model/ScoreTable/scores.txt");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -30,7 +31,15 @@ public class ScoreFileParser {
             String line = scanner.nextLine();
             String[] parsedLine = line.split(regex);
             // TODO exception
-            return new PairKeyVal<>(new UserName(parsedLine[0]), Integer.getInteger(parsedLine[1]));
+            UserName userName = null;
+            try {
+                //TODO asking userName
+                userName = new UserName(parsedLine[0]);
+            }
+            catch (InvalidUserNameException ex) {
+                //TODO normal reaction
+            }
+            return new PairKeyVal<>(userName, Integer.valueOf(parsedLine[1]));
         }
         scanner.close();
         return null;

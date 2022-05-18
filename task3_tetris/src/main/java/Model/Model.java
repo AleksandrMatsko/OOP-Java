@@ -1,7 +1,10 @@
 package Model;
 
+import Exceptions.InvalidUserNameException;
 import Model.Figures.FigureRandomizer;
 import Model.Figures.PossibleFigures.Figure;
+import Model.Names.UserName;
+import Model.ScoreTable.HighScoreTable;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,17 +15,44 @@ public class Model {
     private Figure nextFigure;
     private final FigureRandomizer figureRandomizer;
     private int delay;
+    private final HighScoreTable highScoreTable;
+    private UserName userName;
+    private StopWatch stopWatch;
 
     public Model(ModelSettings modelSettings) {
         settings = modelSettings;
+        //TODO ask userName
+        try {
+            this.userName = new UserName("Morlandar");
+        }
+        catch (InvalidUserNameException ex) {
+            //TODO reaction
+        }
         tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField(), settings.getSizeSpawnArea());
         totalScore = 0;
         figureRandomizer = new FigureRandomizer();
         delay = modelSettings.getDefaultDelay();
-
+        highScoreTable = new HighScoreTable(10);
+        stopWatch = new StopWatch();
         try {
             nextFigure = figureRandomizer.getFigure();
-        } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | InstantiationException |
+        }
+        catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | InstantiationException |
+                 IllegalAccessException ex) {
+            //TODO normal reaction
+            ex.printStackTrace();
+        }
+    }
+
+    public void reset() {
+        tetrisField = new TetrisField(settings.getWidthOfField(), settings.getHeightOfField(), settings.getSizeSpawnArea());
+        totalScore = 0;
+        stopWatch = new StopWatch();
+        delay = settings.getDefaultDelay();
+        try {
+            nextFigure = figureRandomizer.getFigure();
+        }
+        catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | InstantiationException |
                  IllegalAccessException ex) {
             //TODO normal reaction
             ex.printStackTrace();
@@ -82,5 +112,13 @@ public class Model {
 
     public int getDelay() {
         return delay;
+    }
+
+    public void addNewRecordToTable() {
+        highScoreTable.add(userName, totalScore);
+    }
+
+    public StopWatch getStopWatch() {
+        return stopWatch;
     }
 }

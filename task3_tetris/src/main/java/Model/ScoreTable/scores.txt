@@ -1,0 +1,7 @@
+Morlandar=10200
+Morlandar=8700
+Morlandar=1800
+Morlandar=900
+Morlandar=400
+Morlandar=300
+Morlandar=0

@@ -1,14 +1,16 @@
 package Model.Names;
 
+import Exceptions.InvalidActionNameException;
+
 import java.util.Objects;
 
 public class ActionName implements Name {
 
     private final String name;
 
-    public ActionName(String name) {
+    public ActionName(String name) throws InvalidActionNameException {
         if (!matchesSample(name)) {
-            //TODO exception
+            throw new InvalidActionNameException();
         }
         this.name = name;
     }
