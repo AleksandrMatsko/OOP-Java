@@ -3,7 +3,6 @@ package Model.Actions.PossibleActions;
 import Exceptions.InvalidUserNameException;
 import Game.GameStatus;
 import Model.Model;
-import Model.ModelSettings;
 import Model.Names.UserName;
 
 public class Restart implements ActionInterface {

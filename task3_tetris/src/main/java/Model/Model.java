@@ -32,7 +32,7 @@ public class Model {
         totalScore = 0;
         figureRandomizer = new FigureRandomizer();
         delay = modelSettings.getDefaultDelay();
-        highScoreTable = new HighScoreTable(10);
+        highScoreTable = new HighScoreTable(modelSettings.getSizeHighScoreTable());
         stopWatch = new StopWatch();
         try {
             nextFigure = figureRandomizer.getFigure();
@@ -120,5 +120,9 @@ public class Model {
 
     public StopWatch getStopWatch() {
         return stopWatch;
+    }
+
+    public String getHighScoreTableAsString() {
+        return highScoreTable.getTableAsString();
     }
 }

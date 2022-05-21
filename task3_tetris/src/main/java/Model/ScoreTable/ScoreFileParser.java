@@ -15,7 +15,7 @@ public class ScoreFileParser {
         this.regex = regex;
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream("src/main/java/Model/ScoreTable/scores.txt");
+            fileInputStream = new FileInputStream("src/main/resources/scores.txt");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

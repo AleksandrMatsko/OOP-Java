@@ -1,7 +1,8 @@
-package View;
+package View.Parts;
 
 import Model.Figures.PossibleFigures.Block;
 import Model.Figures.PossibleFigures.Figure;
+import View.ViewerSettings;
 
 import javax.swing.*;
 import java.awt.*;

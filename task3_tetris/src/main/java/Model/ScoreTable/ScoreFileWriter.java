@@ -13,7 +13,7 @@ public class ScoreFileWriter {
     public ScoreFileWriter(String regex) {
         this.regex = regex;
         try {
-            outputStreamWriter = new OutputStreamWriter(new FileOutputStream("src/main/java/Model/ScoreTable/scores.txt"));
+            outputStreamWriter = new OutputStreamWriter(new FileOutputStream("src/main/resources/scores.txt"));
         }
         catch (IOException ex) {
             // TODO normal exception

@@ -1,4 +1,6 @@
-package View;
+package View.Parts;
+
+import View.ViewerSettings;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +17,7 @@ public class ScorePrinter extends JLabel {
         setBackground(Color.white);
         setForeground(Color.black);
         setFont(new Font(null, Font.BOLD, 16));
-        setText("Score: " + Integer.toString(score));
+        setText("Score: " + score);
         setPreferredSize(new Dimension(viewerSettings.getLenOfBlock() * 4, viewerSettings.getLenOfBlock() * 4));
     }
 

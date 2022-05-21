@@ -1,6 +1,7 @@
-package View;
+package View.Parts;
 
 import Model.TetrisField;
+import View.ViewerSettings;
 
 import javax.swing.*;
 import java.awt.*;

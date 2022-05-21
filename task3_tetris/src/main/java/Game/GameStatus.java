@@ -5,5 +5,7 @@ public enum GameStatus {
     PREPARATION,
     ACTIVE,
     PAUSE,
-    EXIT
+    EXIT,
+    SHOWING_HELP,
+    SHOWING_HIGH_SCORES
 }

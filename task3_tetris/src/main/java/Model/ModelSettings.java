@@ -5,12 +5,14 @@ public class ModelSettings {
     private int widthOfField;
     private int defaultDelay;
     private int sizeSpawnArea;
+    private int sizeHighScoreTable;
 
     public ModelSettings() {
         heightOfField = 20;
         widthOfField = 10;
         defaultDelay = 700;
         sizeSpawnArea = 3;
+        sizeHighScoreTable = 15;
     }
 
     public ModelSettings(int widthOfField, int heightOfField, int defaultDelay) {
@@ -49,5 +51,13 @@ public class ModelSettings {
 
     public void setSizeSpawnArea(int sizeSpawnArea) {
         this.sizeSpawnArea = sizeSpawnArea;
+    }
+
+    public int getSizeHighScoreTable() {
+        return sizeHighScoreTable;
+    }
+
+    public void setSizeHighScoreTable(int sizeHighScoreTable) {
+        this.sizeHighScoreTable = sizeHighScoreTable;
     }
 }

@@ -19,14 +19,14 @@ import View.ViewerSettings;
 import javax.swing.*;
 
 public class Game {
-    private Model model;
+    private final Model model;
     private GameStatus status;
     private final KeyboardListener keyboardListener;
     private final Viewer viewer;
 
 
     public Game() {
-        status = GameStatus.PREPARATION;
+        status = GameStatus.SHOWING_HELP;
         keyboardListener = new KeyboardListener(new KeyboardSettings());
         model = new Model(new ModelSettings());
         viewer = new Viewer(new ViewerSettings(model.getTetrisField().isColored(),
@@ -35,11 +35,17 @@ public class Game {
     }
 
     private void showImage() {
-        viewer.setDataForViewer(new DataForViewer(model.getTetrisField(), model.getScore(), model.getNextFigure(), status, model.getTetrisField().isColored()));
+        viewer.setDataForViewer(new DataForViewer(model.getTetrisField(),
+                model.getScore(),
+                model.getNextFigure(),
+                status,
+                model.getTetrisField().isColored(),
+                model.getHighScoreTableAsString()));
         SwingUtilities.invokeLater(viewer);
     }
 
     public void start() {
+        showImage();
         while (status != GameStatus.EXIT) {
             if (status == GameStatus.PREPARATION) {
                 status = GameStatus.ACTIVE;

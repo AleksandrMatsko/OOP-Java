@@ -64,4 +64,15 @@ public class HighScoreTable {
         return new ArrayList<PairKeyVal<UserName, Integer>>(scoreTable);
     }
 
+    public String getTableAsString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (PairKeyVal<UserName, Integer> pair : scoreTable) {
+            stringBuilder.append(pair.getKey().getName());
+            stringBuilder.append(" ");
+            stringBuilder.append(pair.getValue());
+            stringBuilder.append(System.lineSeparator());
+        }
+        return stringBuilder.toString();
+    }
+
 }
