@@ -30,16 +30,10 @@ public class Block {
     }
 
     public int getX() {
-        if (x < 0 && y < 0) {
-            //TODO exception
-        }
         return x;
     }
 
     public int getY() {
-        if (x < 0 && y < 0) {
-            //TODO exception
-        }
         return y;
     }
 

@@ -15,12 +15,6 @@ public class ModelSettings {
         sizeHighScoreTable = 15;
     }
 
-    public ModelSettings(int widthOfField, int heightOfField, int defaultDelay) {
-        this.widthOfField = widthOfField;
-        this.heightOfField = heightOfField;
-        this.defaultDelay = defaultDelay;
-    }
-
     public int getHeightOfField() {
         return heightOfField;
     }
@@ -33,31 +27,11 @@ public class ModelSettings {
         return defaultDelay;
     }
 
-    public void setDefaultDelay(int defaultDelay) {
-        this.defaultDelay = defaultDelay;
-    }
-
-    public void setHeightOfField(int heightOfField) {
-        this.heightOfField = heightOfField;
-    }
-
-    public void setWidthOfField(int widthOfField) {
-        this.widthOfField = widthOfField;
-    }
-
     public int getSizeSpawnArea() {
         return sizeSpawnArea;
     }
 
-    public void setSizeSpawnArea(int sizeSpawnArea) {
-        this.sizeSpawnArea = sizeSpawnArea;
-    }
-
     public int getSizeHighScoreTable() {
         return sizeHighScoreTable;
-    }
-
-    public void setSizeHighScoreTable(int sizeHighScoreTable) {
-        this.sizeHighScoreTable = sizeHighScoreTable;
     }
 }

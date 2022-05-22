@@ -107,23 +107,11 @@ public class TetrisField {
         return removedLines;
     }
 
-    private boolean couldBeSpawn(Figure figure) {
-        for (Block block: figure.getBlocks()) {
-            if (fieldData[block.getX()][block.getY()] != 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     public boolean spawnFigure(Figure figure) {
         if (!isContinue()) {
             return false;
         }
         figure.shiftOnVal(Direction.RIGHT, width / 2 - 1);
-        /*if (!couldBeSpawn(figure)) {
-            return false;
-        }*/
         currentFigure = figure;
         setCurrentFigureOnField();
         return true;

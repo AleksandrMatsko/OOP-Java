@@ -12,8 +12,6 @@ public class SetPause implements ActionInterface {
         else if (currentStatus == GameStatus.PAUSE) {
             return GameStatus.ACTIVE;
         }
-        model.addNewRecordToTable();
-        //TODO exception
-        return GameStatus.END;
+        return currentStatus;
     }
 }

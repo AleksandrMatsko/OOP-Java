@@ -1,6 +1,6 @@
 package Model.Names;
 
-import Exceptions.InvalidActionNameException;
+import Exceptions.NameExceptions.InvalidActionNameException;
 
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public class ActionName implements Name {
 
     @Override
     public boolean matchesSample(String name) {
-        return name.chars().allMatch(Character::isLetter);
+        return name != null && name.chars().allMatch(Character::isLetter);
     }
 
     @Override

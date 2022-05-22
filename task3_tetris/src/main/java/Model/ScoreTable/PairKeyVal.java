@@ -3,8 +3,8 @@ package Model.ScoreTable;
 import java.util.Objects;
 
 public class PairKeyVal<TKey, TVal> {
-    private TKey key;
-    private TVal value;
+    private final TKey key;
+    private final TVal value;
 
     public PairKeyVal(TKey key, TVal val) {
         this.key = key;
@@ -35,9 +35,4 @@ public class PairKeyVal<TKey, TVal> {
     public int hashCode() {
         return Objects.hash(key);
     }
-
-    public void setValue(TVal val) {
-        this.value = val;
-    }
-
 }

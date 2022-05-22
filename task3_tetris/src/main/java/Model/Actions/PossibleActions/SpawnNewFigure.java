@@ -7,7 +7,6 @@ public class SpawnNewFigure implements ActionInterface {
     @Override
     public GameStatus execute(Model model,GameStatus currentStatus) {
         if (currentStatus != GameStatus.ACTIVE) {
-            //TODO exception
             return currentStatus;
         }
         boolean success = model.getTetrisField().spawnFigure(model.getNextFigure());

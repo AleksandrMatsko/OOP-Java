@@ -1,4 +1,4 @@
-package Exceptions;
+package Exceptions.NameExceptions;
 
 public class InvalidUserNameException extends InvalidNameException {
 

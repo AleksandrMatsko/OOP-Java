@@ -1,6 +1,7 @@
 package Model.Actions;
 
-import Exceptions.InvalidActionNameException;
+import Exceptions.NameExceptions.InvalidActionNameException;
+import Exceptions.NotFoundExceptions.ActionNotFoundException;
 import Model.Actions.PossibleActions.ActionInterface;
 import Model.Names.ActionName;
 
@@ -22,8 +23,7 @@ public class ActionFactory {
             properties.load(ActionFactory.class.getResourceAsStream(configFileName));
         }
         catch (IOException ex) {
-            //TODO normal exception
-            ex.printStackTrace();
+            throw new RuntimeException("Problems with actions.properties");
         }
         for (Map.Entry entry : properties.entrySet()) {
             String toActionName = (String) entry.getKey();
@@ -33,18 +33,15 @@ public class ActionFactory {
                 actionName = new ActionName(toActionName);
             }
             catch (InvalidActionNameException ex) {
-                //TODO normal reaction
+                throw new RuntimeException("Invalid format for ActionName in actions.properties");
             }
 
             try {
                 actionTable.put(actionName, (ActionInterface) Class.forName(className).getDeclaredConstructor().newInstance());
             }
-            catch (ClassNotFoundException ex) {
-                //TODO normal exception
-                ex.printStackTrace();
-            }
-            catch (InvocationTargetException | InstantiationException | IllegalAccessException | NoSuchMethodException ex) {
-                ex.printStackTrace();
+            catch (ClassNotFoundException | InvocationTargetException | InstantiationException |
+                   IllegalAccessException | NoSuchMethodException ex) {
+                throw new RuntimeException(ex);
             }
         }
     }
@@ -56,9 +53,9 @@ public class ActionFactory {
         return actionFactory;
     }
 
-    public ActionInterface getAction(ActionName actionName) {
+    public ActionInterface getAction(ActionName actionName) throws ActionNotFoundException {
         if (!actionTable.containsKey(actionName)) {
-            //TODO exception
+            throw new ActionNotFoundException();
         }
         return actionTable.get(actionName);
     }

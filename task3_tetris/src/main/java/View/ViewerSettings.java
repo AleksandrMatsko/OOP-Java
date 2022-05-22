@@ -1,5 +1,6 @@
 package View;
 
+import Exceptions.NotFoundExceptions.FigureNotFoundException;
 import Model.Figures.FigureFactory;
 import Model.Names.FigureName;
 
@@ -33,9 +34,12 @@ public class ViewerSettings {
                 try {
                     colorTable.put(FigureFactory.getInstance().getNewFigure(figureName).getColor(),
                             new Color(random.nextFloat(), random.nextFloat(), random.nextFloat()));
-                } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException ex) {
-                    ex.printStackTrace();
                 }
+                catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException |
+                         InstantiationException | IllegalAccessException ex) {
+                    throw new RuntimeException(ex);
+                }
+                catch (FigureNotFoundException ignored) {}
             }
         }
     }

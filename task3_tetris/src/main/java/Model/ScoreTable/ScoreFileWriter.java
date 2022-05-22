@@ -10,21 +10,15 @@ public class ScoreFileWriter {
     private final String regex;
     private OutputStreamWriter outputStreamWriter = null;
 
-    public ScoreFileWriter(String regex) {
+    public ScoreFileWriter(String regex) throws IOException {
         this.regex = regex;
-        try {
-            outputStreamWriter = new OutputStreamWriter(new FileOutputStream("src/main/resources/scores.txt"));
-        }
-        catch (IOException ex) {
-            // TODO normal exception
-        }
+        outputStreamWriter = new OutputStreamWriter(new FileOutputStream("src/main/resources/scores.txt"));
     }
 
     public void close() {
         try {
             outputStreamWriter.close();
         } catch (IOException e) {
-            // TODO exception
             throw new RuntimeException(e);
         }
     }
@@ -34,7 +28,6 @@ public class ScoreFileWriter {
             outputStreamWriter.write(pairKeyVal.getKey().getName() + regex + pairKeyVal.getValue() + System.lineSeparator());
         }
         catch (IOException ex) {
-            // TODO exception
             throw new RuntimeException(ex);
         }
     }

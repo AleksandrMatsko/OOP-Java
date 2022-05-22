@@ -1,6 +1,6 @@
 package Model.Names;
 
-import Exceptions.InvalidFigureNameException;
+import Exceptions.NameExceptions.InvalidFigureNameException;
 
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public class FigureName implements Name {
 
     @Override
     public boolean matchesSample(String name) {
-        return name.length() == 1 && name.chars().allMatch(Character::isLetter);
+        return name != null && name.length() == 1 && name.chars().allMatch(Character::isLetter);
     }
 
     @Override

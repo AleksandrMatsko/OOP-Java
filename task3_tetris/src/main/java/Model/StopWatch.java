@@ -16,7 +16,6 @@ public class StopWatch {
     public void start(int milliseconds) {
         stop = false;
         timer = new Timer();
-        System.err.println("Timer started");
         timer.schedule(new StopTask(), milliseconds);
     }
 
@@ -30,7 +29,6 @@ public class StopWatch {
         public void run() {
             timer.cancel();
             timer.purge();
-            System.err.println("Timer stopped");
             stop = true;
         }
     }

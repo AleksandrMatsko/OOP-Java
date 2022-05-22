@@ -3,7 +3,7 @@ package Model.Figures.PossibleFigures;
 public class SFigure extends Figure {
 
     public SFigure() {
-        super(4, new Block(1, 1),
+        super(new Block(1, 1),
                 new Block[]{new Block(0, 1),
                             new Block(1, 1),
                             new Block(1, 0),

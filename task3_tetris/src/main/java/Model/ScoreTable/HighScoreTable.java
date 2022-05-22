@@ -1,7 +1,10 @@
 package Model.ScoreTable;
 
+import Exceptions.NameExceptions.InvalidUserNameException;
 import Model.Names.UserName;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -11,6 +14,7 @@ public class HighScoreTable {
     private final TreeSet<PairKeyVal<UserName, Integer>> scoreTable;
     private final int maxSize;
     private final String regex;
+    private boolean isValid;
 
     private final Comparator<PairKeyVal<UserName, Integer>> cmp = new Comparator<PairKeyVal<UserName, Integer>>() {
         @Override
@@ -26,6 +30,7 @@ public class HighScoreTable {
     public HighScoreTable(int maxSize) {
         scoreTable = new TreeSet<>(cmp);
         regex = "=";
+        isValid = true;
         ScoreFileParser parser = null;
         try {
             parser = new ScoreFileParser(regex);
@@ -33,12 +38,18 @@ public class HighScoreTable {
                 scoreTable.add(parser.getPair());
             }
         }
+        catch (InvalidUserNameException | FileNotFoundException ex) {
+            isValid = false;
+        }
         finally {
             if (parser != null) {
                 parser.close();
             }
         }
         this.maxSize = maxSize;
+        while (scoreTable.size() > maxSize) {
+            scoreTable.remove(scoreTable.last());
+        }
     }
 
     public void add(UserName userName, int score) {
@@ -53,6 +64,9 @@ public class HighScoreTable {
                 writer.writeScore(pairKeyVal);
             }
         }
+        catch (IOException ex) {
+            isValid = false;
+        }
         finally {
             if (writer != null) {
                 writer.close();
@@ -60,11 +74,10 @@ public class HighScoreTable {
         }
     }
 
-    public List<PairKeyVal<UserName, Integer>> getList() {
-        return new ArrayList<PairKeyVal<UserName, Integer>>(scoreTable);
-    }
-
     public String getTableAsString() {
+        if (!isValid) {
+            return "Table is damaged";
+        }
         StringBuilder stringBuilder = new StringBuilder();
         for (PairKeyVal<UserName, Integer> pair : scoreTable) {
             stringBuilder.append(pair.getKey().getName());

@@ -1,6 +1,7 @@
 package Model.Figures;
 
-import Exceptions.InvalidFigureNameException;
+import Exceptions.NotFoundExceptions.FigureNotFoundException;
+import Exceptions.NameExceptions.InvalidFigureNameException;
 import Model.Figures.PossibleFigures.Figure;
 import Model.Names.FigureName;
 
@@ -24,8 +25,7 @@ public class FigureFactory {
         try {
             properties.load(FigureFactory.class.getResourceAsStream(configFileName));
         } catch (IOException ex) {
-            //TODO normal exception
-            ex.printStackTrace();
+            throw new RuntimeException("Problems with figures.properties");
         }
         for (Map.Entry entry : properties.entrySet()) {
             String toFigureName = (String) entry.getKey();
@@ -35,7 +35,7 @@ public class FigureFactory {
                 figureName = new FigureName(toFigureName);
             }
             catch (InvalidFigureNameException ex) {
-                //TODO normal exception
+                throw new RuntimeException("Invalid format for FigureName in figures.properties");
             }
             classForFigureName.put(figureName, className);
             possibleFigureNames.add(figureName);
@@ -49,9 +49,9 @@ public class FigureFactory {
         return figureFactory;
     }
 
-    public Figure getNewFigure(FigureName figureName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public Figure getNewFigure(FigureName figureName) throws FigureNotFoundException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         if (!classForFigureName.containsKey(figureName)) {
-            //TODO: exception
+            throw new FigureNotFoundException();
         }
         return (Figure) Class.forName(classForFigureName.get(figureName)).getDeclaredConstructor().newInstance();
     }
@@ -60,10 +60,19 @@ public class FigureFactory {
         if (figureFactory == null) {
             figureFactory = new FigureFactory();
         }
+        if (possibleFigureNames.isEmpty()) {
+            throw new RuntimeException("No figures registered");
+        }
         return possibleFigureNames;
     }
 
     public int getAmountOfFigures() {
+        if (figureFactory == null) {
+            figureFactory = new FigureFactory();
+        }
+        if (possibleFigureNames.isEmpty()) {
+            throw new RuntimeException("No figures registered");
+        }
         return possibleFigureNames.size();
     }
 }

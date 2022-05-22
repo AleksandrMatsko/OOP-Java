@@ -47,7 +47,7 @@ public class FieldPainter extends JPanel {
     public void paint(Graphics g) {
         super.paint(g);
         if (tetrisField == null) {
-            //TODO exception
+            return;
         }
         Graphics2D g2D = (Graphics2D) g;
         paintCanvas(g2D);

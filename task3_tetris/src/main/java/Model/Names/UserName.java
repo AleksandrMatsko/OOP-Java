@@ -1,6 +1,6 @@
 package Model.Names;
 
-import Exceptions.InvalidUserNameException;
+import Exceptions.NameExceptions.InvalidUserNameException;
 
 import java.util.Objects;
 
@@ -42,6 +42,6 @@ public class UserName implements Name {
 
     @Override
     public boolean matchesSample(String name) {
-        return !name.chars().allMatch(Character::isDigit);
+        return name != null && !name.chars().allMatch(Character::isDigit);
     }
 }
