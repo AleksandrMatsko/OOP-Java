@@ -1,0 +1,6 @@
+Aleksandr Matsko=1000
+Aleksandr Matsko=200
+Aleksandr Matsko=100
+Aleksandr Matsko=0
+Aleksandr Matsko=0
+Aleksandr Matsko=0
