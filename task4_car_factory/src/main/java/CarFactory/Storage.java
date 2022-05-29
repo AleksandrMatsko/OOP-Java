@@ -30,8 +30,8 @@ public class Storage<T extends Detail> {
         if (data.size() >= capacity) {
             this.wait();
         }
-        thing.setID(id);
         id += 1;
+        thing.setID(id);
         data.add(thing);
         notify();
 

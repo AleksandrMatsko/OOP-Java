@@ -18,6 +18,13 @@ public class CarAssembly implements Task {
         this.period = period;
     }
 
+    public synchronized int getPeriod() {
+        return period;
+    }
+
+    public synchronized void setPeriod(int period) {
+        this.period = period;
+    }
 
     @Override
     public void performWork() throws InterruptedException {

@@ -37,5 +37,23 @@ public class MyThreadPool {
         }
     }
 
+    public int getQueueSize() {
+        int size;
+        synchronized (taskQueue) {
+            size = taskQueue.size();
+        }
+        return size;
+    }
+
+
+    public int getNumRunningThreads() {
+        int numRunning = 0;
+        for (Thread thread : availableThreads) {
+            if (thread.getState() == Thread.State.RUNNABLE) {
+                numRunning += 1;
+            }
+        }
+        return numRunning;
+    }
 
 }

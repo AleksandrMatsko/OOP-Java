@@ -13,9 +13,9 @@ public class Dealer extends Thread {
     private CarFactory carFactory;
 
 
-    public Dealer(CarFactory carFactory) {
+    public Dealer(CarFactory carFactory, int period) {
         this.carFactory = carFactory;
-        period = 1000;
+        this.period = period;
     }
 
     public synchronized int getPeriod() {
@@ -30,10 +30,13 @@ public class Dealer extends Thread {
     public void run() {
         while (!isInterrupted()) {
             try {
-                Car car = carFactory.getCar();
-                logger.log(Level.FINE, "Sold: " + car.getFullInfo());
-                System.err.println("Sold: " + car.getFullInfo());
                 Thread.sleep(period);
+                Car car = carFactory.getCar();
+                if (carFactory.isLogging()) {
+                    logger.log(Level.FINE, "Sold: " + car.getFullInfo());
+                }
+                System.err.println("Sold: " + car.getFullInfo());
+                carFactory.registerSoldCar();
             }
             catch (InterruptedException ex) {
                 break;

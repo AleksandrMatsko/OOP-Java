@@ -7,13 +7,15 @@ import CarFactory.Staff.Dealer;
 import CarFactory.Staff.Supplier;
 import CarFactory.StaffActions.CarAssembly;
 import MyThreadPool.MyThreadPool;
+import View.Viewer;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class CarFactory {
+public class CarFactory implements TimeSetter, Closable {
+    private Viewer viewer;
     private Storage<Car> carStorage;
     private Storage<Body> bodyStorage;
     private Storage<Engine> engineStorage;
@@ -30,7 +32,13 @@ public class CarFactory {
     private final Supplier<Body> bodySupplier;
     private final MyThreadPool workers;
 
-    private int workerPeriod;
+    private int workerPeriod = 400;
+    private int accessorySupplierPeriod = 100;
+    private int engineSupplierPeriod = 2000;
+    private int dealerPeriod = 1000;
+    private int bodySupplierPeriod = 1000;
+
+    private int soldCars = 0;
 
 
     public CarFactory() throws IOException {
@@ -46,19 +54,22 @@ public class CarFactory {
 
         dealers = new ArrayList<>();
         for (int i = 0; i < dealersNumber; i++) {
-            dealers.add(new Dealer(this));
+            dealers.add(new Dealer(this, dealerPeriod));
         }
         accessorySuppliers = new ArrayList<>();
         for (int i = 0; i < accessorySuppliersNumber; i++) {
-            accessorySuppliers.add(new Supplier<>(accessoryStorage, Accessory.class, 100));
+            accessorySuppliers.add(new Supplier<>(accessoryStorage, Accessory.class, accessorySupplierPeriod));
         }
 
-        bodySupplier = new Supplier<>(bodyStorage, Body.class, 1000);
-        engineSupplier = new Supplier<>(engineStorage, Engine.class, 2000);
+        bodySupplier = new Supplier<>(bodyStorage, Body.class, bodySupplierPeriod);
+        engineSupplier = new Supplier<>(engineStorage, Engine.class, engineSupplierPeriod);
 
         workers = new MyThreadPool(workersNumber, "Worker");
-        workerPeriod = 400;
 
+    }
+
+    public void setViewer(Viewer viewer) {
+        this.viewer = viewer;
     }
 
     public void stopProduction() {
@@ -121,6 +132,50 @@ public class CarFactory {
         return carStorage.get();
     }
 
+    @Override
+    public void setWorkerPeriod(int workerPeriod) {
+        this.workerPeriod = workerPeriod;
 
+    }
 
+    @Override
+    public void setAccessorySupplierPeriod(int accessorySupplierPeriod) {
+        this.accessorySupplierPeriod = accessorySupplierPeriod;
+        for (Supplier<Accessory> supplier : accessorySuppliers) {
+            supplier.setPeriod(accessorySupplierPeriod);
+        }
+    }
+
+    @Override
+    public void setEngineSupplierPeriod(int engineSupplierPeriod) {
+        this.engineSupplierPeriod = engineSupplierPeriod;
+        engineSupplier.setPeriod(engineSupplierPeriod);
+    }
+
+    @Override
+    public void setDealerPeriod(int dealerPeriod) {
+        this.dealerPeriod = dealerPeriod;
+        for (Dealer dealer : dealers) {
+            dealer.setPeriod(dealerPeriod);
+        }
+    }
+
+    @Override
+    public void setBodySupplierPeriod(int bodySupplierPeriod) {
+        this.bodySupplierPeriod = bodySupplierPeriod;
+        bodySupplier.setPeriod(bodySupplierPeriod);
+    }
+
+    public synchronized void registerSoldCar() {
+        soldCars += 1;
+    }
+
+    public synchronized int getSoldCars() {
+        return soldCars;
+    }
+
+    @Override
+    public void close() {
+        stopProduction();
+    }
 }
