@@ -16,6 +16,10 @@ public class WorkersPanel extends JPanel {
     private int workingSpeed;
     private JSlider slider;
     private JTextField workingSpeedArea;
+    private int activeWorkers;
+    private JTextField activeWorkersArea;
+    private int waitWorkers;
+    private JTextField waitWorkersArea;
 
 
     public WorkersPanel(ChangeListener changeListener) {
@@ -40,6 +44,18 @@ public class WorkersPanel extends JPanel {
         requestedCarsArea.setText("Requested cars: " + requestedCars);
         add(requestedCarsArea);
 
+        activeWorkers = 0;
+        activeWorkersArea = new JTextField();
+        activeWorkersArea.setEditable(false);
+        activeWorkersArea.setText("Workers active: " + activeWorkers);
+        add(activeWorkersArea);
+
+        waitWorkers = 0;
+        waitWorkersArea = new JTextField();
+        waitWorkersArea.setEditable(false);
+        waitWorkersArea.setText("Workers wait: " + waitWorkers);
+        add(waitWorkersArea);
+
         workingSpeed = 150;
         slider = new JSlider(JSlider.HORIZONTAL, 10, 610, workingSpeed);
         slider.addChangeListener(changeListener);
@@ -60,19 +76,29 @@ public class WorkersPanel extends JPanel {
         return name;
     }
 
-    public void updateProduced(int numberProduced) {
+    public synchronized void updateProduced(int numberProduced) {
         carsProduced = numberProduced;
         carsProducedArea.setText("Cars produced: " + carsProduced);
     }
 
-    public void updateSpeed(int workingSpeed) {
+    public synchronized void updateSpeed(int workingSpeed) {
         this.workingSpeed = workingSpeed;
         workingSpeedArea.setText("Working speed " + workingSpeed + " cars / min");
     }
 
-    public void updateRequested(int numberRequested) {
+    public synchronized void updateRequested(int numberRequested) {
         requestedCars = numberRequested;
         requestedCarsArea.setText("Requested cars: " + requestedCars);
+    }
+
+    public void updateActive(int numActive) {
+        activeWorkers = numActive;
+        activeWorkersArea.setText("Workers active: " + activeWorkers);
+    }
+
+    public void updateWait(int numWait) {
+        waitWorkers = numWait;
+        waitWorkersArea.setText("Workers wait: " + waitWorkers);
     }
 
     public void changePeriod(TimeSetter timeSetter, int period) {

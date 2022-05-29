@@ -37,12 +37,8 @@ public class MyThreadPool {
         }
     }
 
-    public int getQueueSize() {
-        int size;
-        synchronized (taskQueue) {
-            size = taskQueue.size();
-        }
-        return size;
+    public synchronized int getQueueSize() {
+        return taskQueue.size();
     }
 
 
@@ -54,6 +50,16 @@ public class MyThreadPool {
             }
         }
         return numRunning;
+    }
+
+    public int getNumWaitingThreads() {
+        int numWaiting = 0;
+        for (Thread thread : availableThreads) {
+            if (thread.getState() == Thread.State.WAITING) {
+                numWaiting += 1;
+            }
+        }
+        return numWaiting;
     }
 
 }

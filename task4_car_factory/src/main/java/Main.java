@@ -10,8 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Viewer viewer = new Viewer();
-        CarFactory carFactory = new CarFactory();
-        carFactory.setViewer(viewer);
+        CarFactory carFactory = new CarFactory(viewer);
         boolean isLogging = carFactory.isLogging();
         if (isLogging) {
             LogManager.getLogManager().readConfiguration(Main.class.getResourceAsStream("/logging.properties"));
@@ -19,11 +18,5 @@ public class Main {
         viewer.setTimeSetter(carFactory);
         viewer.setClosable(carFactory);
         carFactory.startProduction();
-        try {
-            Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        carFactory.stopProduction();
     }
 }

@@ -16,7 +16,7 @@ public class DealersPanel extends JPanel {
     private JTextField requestingSpeedArea;
 
     public DealersPanel(ChangeListener changeListener) {
-        name = "Dealers";
+        name = "Dealer";
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         signArea = new JTextField("Dealers");

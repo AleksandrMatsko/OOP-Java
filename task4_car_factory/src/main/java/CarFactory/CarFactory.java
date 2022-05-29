@@ -2,6 +2,7 @@ package CarFactory;
 
 import CarFactory.Details.Accessory;
 import CarFactory.Details.Body;
+import CarFactory.Details.Car;
 import CarFactory.Details.Engine;
 import CarFactory.Staff.Dealer;
 import CarFactory.Staff.Supplier;
@@ -41,7 +42,8 @@ public class CarFactory implements TimeSetter, Closable {
     private int soldCars = 0;
 
 
-    public CarFactory() throws IOException {
+    public CarFactory(Viewer viewer) throws IOException {
+        this.viewer = viewer;
         Properties properties = new Properties();
         properties.load(CarFactory.class.getResourceAsStream("/configure.properties"));
 
@@ -54,22 +56,18 @@ public class CarFactory implements TimeSetter, Closable {
 
         dealers = new ArrayList<>();
         for (int i = 0; i < dealersNumber; i++) {
-            dealers.add(new Dealer(this, dealerPeriod));
+            dealers.add(new Dealer(this, dealerPeriod, viewer));
         }
         accessorySuppliers = new ArrayList<>();
         for (int i = 0; i < accessorySuppliersNumber; i++) {
-            accessorySuppliers.add(new Supplier<>(accessoryStorage, Accessory.class, accessorySupplierPeriod));
+            accessorySuppliers.add(new Supplier<>(accessoryStorage, Accessory.class, accessorySupplierPeriod, viewer, "AccessorySuppliers"));
         }
 
-        bodySupplier = new Supplier<>(bodyStorage, Body.class, bodySupplierPeriod);
-        engineSupplier = new Supplier<>(engineStorage, Engine.class, engineSupplierPeriod);
+        bodySupplier = new Supplier<>(bodyStorage, Body.class, bodySupplierPeriod, viewer, "BodySupplier");
+        engineSupplier = new Supplier<>(engineStorage, Engine.class, engineSupplierPeriod, viewer, "EngineSupplier");
 
         workers = new MyThreadPool(workersNumber, "Worker");
 
-    }
-
-    public void setViewer(Viewer viewer) {
-        this.viewer = viewer;
     }
 
     public void stopProduction() {
@@ -105,10 +103,10 @@ public class CarFactory implements TimeSetter, Closable {
     }
 
     private void initStorages(Properties properties) {
-        engineStorage = new Storage<Engine>(getIntegerFromProperty(properties, "StorageEngineCapacity"));
-        bodyStorage = new Storage<Body>(getIntegerFromProperty(properties, "StorageBodyCapacity"));
-        carStorage = new Storage<Car>(getIntegerFromProperty(properties, "StorageCarCapacity"));
-        accessoryStorage = new Storage<Accessory>(getIntegerFromProperty(properties, "StorageAccessoryCapacity"));
+        engineStorage = new Storage<Engine>(getIntegerFromProperty(properties, "StorageEngineCapacity"), viewer, "EngineStorage");
+        bodyStorage = new Storage<Body>(getIntegerFromProperty(properties, "StorageBodyCapacity"), viewer, "BodyStorage");
+        carStorage = new Storage<Car>(getIntegerFromProperty(properties, "StorageCarCapacity"), viewer, "CarStorage");
+        accessoryStorage = new Storage<Accessory>(getIntegerFromProperty(properties, "StorageAccessoryCapacity"), viewer, "AccessoryStorage");
     }
 
     public Storage<Body> getBodyStorage() {
@@ -129,6 +127,15 @@ public class CarFactory implements TimeSetter, Closable {
 
     public Car getCar() throws InterruptedException {
         workers.addTask(new CarAssembly(this, workerPeriod));
+
+        int[] args = new int[4];
+        args[0] = carStorage.getProduced();
+        args[1] = workers.getQueueSize();
+        args[2] = workers.getNumRunningThreads();
+        args[3] = workers.getNumWaitingThreads();
+        viewer.updateView("Workers", args);
+
+
         return carStorage.get();
     }
 

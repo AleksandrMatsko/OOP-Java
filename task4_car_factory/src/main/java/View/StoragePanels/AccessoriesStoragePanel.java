@@ -39,6 +39,5 @@ public class AccessoriesStoragePanel extends JPanel implements StorageViewer {
     @Override
     public void updateStored(int numStored) {
         accessoriesStored = numStored;
-        accessoriesStoredArea.setText("Accessories stored: " + accessoriesStored);
-    }
+        accessoriesStoredArea.setText("Accessories stored: " + accessoriesStored);}
 }

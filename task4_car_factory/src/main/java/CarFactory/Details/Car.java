@@ -1,9 +1,4 @@
-package CarFactory;
-
-import CarFactory.Details.Accessory;
-import CarFactory.Details.Body;
-import CarFactory.Details.Detail;
-import CarFactory.Details.Engine;
+package CarFactory.Details;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -48,15 +43,9 @@ public class Car implements Detail {
         }
         return stringBuilder.toString();
     }
-    public void addAccessory(Accessory accessory) {
-        accessories.add(accessory);
-    }
 
-    public void addAccessory(Set<Accessory> accessorySet) {
+    public void addAccessories(Set<Accessory> accessorySet) {
         accessories.addAll(accessorySet);
     }
 
-    public void removeAccessory(Accessory accessory) {
-        accessories.remove(accessory);
-    }
 }

@@ -99,7 +99,29 @@ public class Viewer extends JFrame implements ChangeListener {
         this.closable = closable;
     }
 
-    public synchronized void updateView() {
+    public synchronized void updateView(String asker, int[] args) {
+        if (args.length < 1) {
+            return;
+        }
+
+        if (supplierViewers.containsKey(asker)) {
+            supplierViewers.get(asker).updateProduced(args[0]);
+        }
+        else if (storageViewers.containsKey(asker)) {
+            storageViewers.get(asker).updateStored(args[0]);
+        }
+        else if (asker.equals(workersPanel.getName())) {
+            workersPanel.updateProduced(args[0]);
+            workersPanel.updateRequested(args[1]);
+            workersPanel.updateActive(args[2]);
+            workersPanel.updateWait(args[3]);
+        }
+        else if (asker.equals(dealersPanel.getName())) {
+            dealersPanel.updateSold(args[0]);
+        }
+        else {
+
+        }
 
     }
 
@@ -115,6 +137,10 @@ public class Viewer extends JFrame implements ChangeListener {
         else if (slider.getName().equals(workersPanel.getName())) {
             workersPanel.updateSpeed(newWorkingSpeed);
             workersPanel.changePeriod(timeSetter, period);
+        }
+        else if (slider.getName().equals(dealersPanel.getName())) {
+            dealersPanel.updateSpeed(newWorkingSpeed);
+            dealersPanel.changePeriod(timeSetter, period);
         }
 
     }

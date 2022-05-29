@@ -15,7 +15,7 @@ public class PooledThread extends Thread {
         Task taskToExec = null;
         while (!isInterrupted()) {
             synchronized (taskQueue) {
-                if (taskQueue.isEmpty()) {
+                while (taskQueue.isEmpty()) {
                     try {
                         taskQueue.wait();
                     }
@@ -23,9 +23,7 @@ public class PooledThread extends Thread {
                         break;
                     }
                 }
-                else {
-                    taskToExec = taskQueue.remove(0);
-                }
+                taskToExec = taskQueue.remove(0);
             }
             try {
                 taskToExec.performWork();
