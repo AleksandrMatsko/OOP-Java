@@ -1,13 +1,31 @@
 package CarFactory.Details;
 
-public class Body implements Detail {
-    private static int bodyNumbers = 0;
-    private final int id;
-    private final String stringID;
+import java.util.Objects;
 
-    public Body() {
-        bodyNumbers += 1;
-        id = bodyNumbers;
+public class Body implements Detail {
+    private int id;
+    private String stringID;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Body body = (Body) o;
+        return id == body.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public void setID(int id) {
+        this.id = id;
         stringID = "Body <" + id + "> ";
     }
 
@@ -20,4 +38,6 @@ public class Body implements Detail {
     public String getStringID() {
         return stringID;
     }
+
+
 }

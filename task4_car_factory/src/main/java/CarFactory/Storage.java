@@ -1,10 +1,14 @@
 package CarFactory;
 
-import java.util.LinkedList;
+import CarFactory.Details.Detail;
 
-public class Storage<T> {
+import java.util.LinkedList;
+import java.util.List;
+
+public class Storage<T extends Detail> {
+    private int id = 0;
     private final int capacity;
-    private LinkedList<T> data;
+    private final List<T> data;
 
 
     public Storage(int capacity) {
@@ -12,25 +16,26 @@ public class Storage<T> {
         data = new LinkedList<>();
     }
 
-    public T get() throws InterruptedException {
-        synchronized (this) {
-            while (data.size() <= 0) {
-                this.wait();
-            }
-            T thing = data.pop();
-            notify();
-            return thing;
+    public synchronized T get() throws InterruptedException {
+        while (data.size() < 1) {
+            this.wait();
         }
+        T thing = data.get(0);
+        data.remove(0);
+        notify();
+        return thing;
     }
 
-    public void add(T thing) throws InterruptedException {
-        synchronized (this) {
-            if (data.size() >= capacity) {
-                this.wait();
-            }
-            data.add(thing);
-            notify();
+    public synchronized void add(T thing) throws InterruptedException {
+        if (data.size() >= capacity) {
+            this.wait();
         }
+        thing.setID(id);
+        id += 1;
+        data.add(thing);
+        notify();
+
+
     }
 
     public int getCapacity() {

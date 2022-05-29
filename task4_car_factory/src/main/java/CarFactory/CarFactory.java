@@ -30,6 +30,8 @@ public class CarFactory {
     private final Supplier<Body> bodySupplier;
     private final MyThreadPool workers;
 
+    private int workerPeriod;
+
 
     public CarFactory() throws IOException {
         Properties properties = new Properties();
@@ -55,6 +57,7 @@ public class CarFactory {
         engineSupplier = new Supplier<>(engineStorage, Engine.class, 2000);
 
         workers = new MyThreadPool(workersNumber, "Worker");
+        workerPeriod = 400;
 
     }
 
@@ -68,6 +71,10 @@ public class CarFactory {
         bodySupplier.interrupt();
         engineSupplier.interrupt();
         workers.stopAll();
+    }
+
+    public boolean isLogging() {
+        return logging;
     }
 
     public void startProduction() {
@@ -110,7 +117,7 @@ public class CarFactory {
     }
 
     public Car getCar() throws InterruptedException {
-        workers.addTask(new CarAssembly(this));
+        workers.addTask(new CarAssembly(this, workerPeriod));
         return carStorage.get();
     }
 

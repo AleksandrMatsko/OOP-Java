@@ -3,8 +3,12 @@ package CarFactory.Staff;
 import CarFactory.CarFactory;
 import CarFactory.Car;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class Dealer extends Thread {
+    private static final Logger logger = Logger.getLogger(Dealer.class.getName());
     private int period;
     private CarFactory carFactory;
 
@@ -27,8 +31,9 @@ public class Dealer extends Thread {
         while (!isInterrupted()) {
             try {
                 Car car = carFactory.getCar();
-                Thread.sleep(period);
+                logger.log(Level.FINE, "Sold: " + car.getFullInfo());
                 System.err.println("Sold: " + car.getFullInfo());
+                Thread.sleep(period);
             }
             catch (InterruptedException ex) {
                 break;

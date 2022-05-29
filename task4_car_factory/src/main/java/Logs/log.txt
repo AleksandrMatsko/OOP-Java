@@ -1,0 +1,30 @@
+мая 29, 2022 7:02:22 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <0> Engine <0> Body <0> Accessory <1> Accessory <0> 
+мая 29, 2022 7:02:24 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <1> Engine <1> Body <1> Accessory <2> 
+мая 29, 2022 7:02:26 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <2> Engine <2> Body <2> Accessory <3> Accessory <4> 
+мая 29, 2022 7:02:28 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <3> Engine <3> Body <3> Accessory <5> 
+мая 29, 2022 7:02:30 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <4> Engine <4> Body <4> Accessory <6> Accessory <7> Accessory <8> 
+мая 29, 2022 7:02:32 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <5> Engine <5> Body <5> Accessory <9> Accessory <10> 
+мая 29, 2022 7:02:34 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <6> Engine <6> Body <6> Accessory <11> 
+мая 29, 2022 7:02:36 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <7> Engine <7> Body <7> Accessory <12> Accessory <13> 
+мая 29, 2022 7:02:38 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <8> Engine <8> Body <8> Accessory <14> 
+мая 29, 2022 7:02:40 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <9> Engine <9> Body <9> Accessory <15> 
+мая 29, 2022 7:02:43 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <10> Engine <10> Body <10> Accessory <17> Accessory <16> 
+мая 29, 2022 7:02:45 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <11> Engine <11> Body <11> Accessory <18> Accessory <19> 
+мая 29, 2022 7:02:47 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <12> Engine <12> Body <12> Accessory <20> 
+мая 29, 2022 7:02:49 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <13> Engine <13> Body <13> Accessory <21> Accessory <22> 
+мая 29, 2022 7:02:51 PM CarFactory.Staff.Dealer run
+FINE: Sold: Car <14> Engine <14> Body <14> Accessory <23> Accessory <24> 

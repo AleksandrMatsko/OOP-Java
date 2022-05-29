@@ -6,24 +6,27 @@ import CarFactory.Details.Detail;
 import CarFactory.Details.Engine;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class Car implements Detail {
-    private static int carNumbers = 0;
     private final Engine engine;
     private final Body body;
-    private final HashSet<Accessory> accessories;
-    private final int id;
-    private final String stringID;
+    private final Set<Accessory> accessories;
+    private int id;
+    private String stringID;
 
     public Car(Engine engine, Body body) {
-        carNumbers += 1;
         this.engine = engine;
         this.body = body;
         accessories = new HashSet<>();
-        id = carNumbers;
-        stringID = "Car <" + id + "> ";
     }
 
+
+    @Override
+    public void setID(int id) {
+        this.id = id;
+        stringID = "Car <" + id + "> ";
+    }
 
     @Override
     public int getID() {
@@ -32,8 +35,9 @@ public class Car implements Detail {
 
     @Override
     public String getStringID() {
-        return null;
+        return stringID;
     }
+
 
     public String getFullInfo() {
         StringBuilder stringBuilder = new StringBuilder(stringID);
@@ -46,6 +50,10 @@ public class Car implements Detail {
     }
     public void addAccessory(Accessory accessory) {
         accessories.add(accessory);
+    }
+
+    public void addAccessory(Set<Accessory> accessorySet) {
+        accessories.addAll(accessorySet);
     }
 
     public void removeAccessory(Accessory accessory) {

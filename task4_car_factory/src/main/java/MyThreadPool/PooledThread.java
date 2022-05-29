@@ -31,9 +31,6 @@ public class PooledThread extends Thread {
                 taskToExec.performWork();
             }
             catch (NullPointerException ex) {
-                synchronized (taskQueue) {
-                    System.out.println(taskQueue.size());
-                }
                 ex.printStackTrace();
             }
             catch (InterruptedException ex) {

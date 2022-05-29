@@ -25,7 +25,6 @@ public class MyThreadPool {
     }
 
     public void addTask(Task task) {
-        System.err.println("added task to Pool");
         synchronized (taskQueue) {
             taskQueue.add(task);
             taskQueue.notify();

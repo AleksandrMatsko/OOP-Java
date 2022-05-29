@@ -7,13 +7,15 @@ import CarFactory.Details.Body;
 import CarFactory.Details.Engine;
 import MyThreadPool.Task;
 
-import java.util.Random;
+import java.util.*;
 
 public class CarAssembly implements Task {
     private CarFactory carFactory;
+    private int period;
 
-    public CarAssembly(CarFactory carFactory) {
+    public CarAssembly(CarFactory carFactory, int period) {
         this.carFactory = carFactory;
+        this.period = period;
     }
 
 
@@ -21,13 +23,18 @@ public class CarAssembly implements Task {
     public void performWork() throws InterruptedException {
         Engine engine = carFactory.getEngineStorage().get();
         Body body = carFactory.getBodyStorage().get();
-        Car newCar = new Car(engine, body);
+
+        Thread.sleep(period);
+
+        Set<Accessory> accessories = new HashSet<>();
         Random random = new Random();
-        int index = random.nextInt(2);
-        for (int i = 0; i < index + 1; i++) {
-            Accessory accessory = carFactory.getAccessoryStorage().get();
-            newCar.addAccessory(accessory);
+        for (int i = 0; i < random.nextInt(3) + 1; i++) {
+            accessories.add(carFactory.getAccessoryStorage().get());
         }
+
+        Car newCar = new Car(engine, body);
+        newCar.addAccessory(accessories);
+
         carFactory.addCar(newCar);
     }
 }

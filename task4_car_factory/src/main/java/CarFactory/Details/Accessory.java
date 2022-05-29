@@ -1,13 +1,31 @@
 package CarFactory.Details;
 
-public class Accessory implements Detail {
-    private static int accessoryNumbers = 0;
-    private final int id;
-    private final String stringID;
+import java.util.Objects;
 
-    public Accessory() {
-        accessoryNumbers += 1;
-        id = accessoryNumbers;
+public class Accessory implements Detail {
+    private int id;
+    private String stringID;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Accessory accessory = (Accessory) o;
+        return id == accessory.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public void setID(int id) {
+        this.id = id;
         stringID = "Accessory <" + id + "> ";
     }
 
@@ -16,8 +34,10 @@ public class Accessory implements Detail {
         return id;
     }
 
+
     @Override
     public String getStringID() {
         return stringID;
     }
+
 }
