@@ -1,0 +1,1508 @@
+мая 30, 2022 2:11:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <1> Engine <1> Body <1> Accessory <1> Accessory <2> 
+мая 30, 2022 2:11:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <2> Engine <2> Body <2> Accessory <3> 
+мая 30, 2022 2:11:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <3> Engine <3> Body <3> Accessory <4> 
+мая 30, 2022 2:11:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <4> Engine <4> Body <4> Accessory <5> Accessory <6> Accessory <7> 
+мая 30, 2022 2:11:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <5> Engine <5> Body <5> Accessory <8> Accessory <9> 
+мая 30, 2022 2:11:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <6> Engine <6> Body <6> Accessory <10> Accessory <11> 
+мая 30, 2022 2:11:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <7> Engine <7> Body <7> Accessory <12> 
+мая 30, 2022 2:11:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <8> Engine <8> Body <8> Accessory <13> Accessory <14> Accessory <15> 
+мая 30, 2022 2:11:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <9> Engine <9> Body <9> Accessory <17> Accessory <16> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <10> Engine <10> Body <10> Accessory <18> Accessory <19> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <11> Engine <11> Body <11> Accessory <20> Accessory <21> Accessory <22> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <12> Engine <12> Body <12> Accessory <23> Accessory <24> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <13> Engine <13> Body <13> Accessory <25> Accessory <26> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <14> Engine <14> Body <14> Accessory <27> Accessory <28> Accessory <29> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <15> Engine <15> Body <15> Accessory <30> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <16> Engine <16> Body <16> Accessory <31> Accessory <32> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <17> Engine <17> Body <17> Accessory <33> Accessory <34> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <18> Engine <18> Body <18> Accessory <35> Accessory <36> Accessory <37> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <19> Engine <19> Body <19> Accessory <38> Accessory <39> 
+мая 30, 2022 2:11:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <20> Engine <20> Body <20> Accessory <40> Accessory <41> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <21> Engine <21> Body <21> Accessory <42> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <22> Engine <22> Body <22> Accessory <43> Accessory <44> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <23> Engine <23> Body <23> Accessory <45> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <24> Engine <24> Body <24> Accessory <46> Accessory <47> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <25> Engine <25> Body <25> Accessory <48> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <26> Engine <26> Body <26> Accessory <49> Accessory <50> Accessory <51> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <27> Engine <27> Body <27> Accessory <52> Accessory <53> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <28> Engine <30> Body <30> Accessory <57> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <29> Engine <28> Body <28> Accessory <54> Accessory <55> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <30> Engine <31> Body <31> Accessory <58> Accessory <59> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <31> Engine <29> Body <29> Accessory <56> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <32> Engine <32> Body <32> Accessory <60> Accessory <61> Accessory <62> 
+мая 30, 2022 2:11:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <33> Engine <33> Body <33> Accessory <63> Accessory <64> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <34> Engine <34> Body <34> Accessory <65> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <35> Engine <35> Body <35> Accessory <66> Accessory <67> Accessory <68> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <36> Engine <36> Body <36> Accessory <69> Accessory <70> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <37> Engine <37> Body <37> Accessory <71> Accessory <72> Accessory <73> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <38> Engine <38> Body <38> Accessory <74> Accessory <75> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <39> Engine <39> Body <39> Accessory <76> Accessory <77> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <40> Engine <40> Body <40> Accessory <78> Accessory <79> Accessory <80> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <41> Engine <41> Body <41> Accessory <81> Accessory <82> Accessory <83> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <42> Engine <42> Body <42> Accessory <84> Accessory <85> 
+мая 30, 2022 2:11:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <43> Engine <43> Body <43> Accessory <86> Accessory <87> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <44> Engine <44> Body <44> Accessory <88> Accessory <89> Accessory <90> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <45> Engine <45> Body <45> Accessory <91> Accessory <92> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <46> Engine <46> Body <46> Accessory <93> Accessory <94> Accessory <95> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <47> Engine <47> Body <47> Accessory <97> Accessory <96> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <48> Engine <48> Body <48> Accessory <98> Accessory <99> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <49> Engine <49> Body <49> Accessory <100> Accessory <101> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <50> Engine <50> Body <50> Accessory <102> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <51> Engine <51> Body <51> Accessory <103> Accessory <104> Accessory <105> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <52> Engine <52> Body <52> Accessory <106> Accessory <107> 
+мая 30, 2022 2:11:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <53> Engine <53> Body <53> Accessory <108> Accessory <109> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <54> Engine <54> Body <54> Accessory <110> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <55> Engine <55> Body <55> Accessory <111> Accessory <112> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <56> Engine <56> Body <56> Accessory <113> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <57> Engine <57> Body <57> Accessory <114> Accessory <115> Accessory <116> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <58> Engine <58> Body <58> Accessory <117> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <59> Engine <59> Body <59> Accessory <118> Accessory <119> Accessory <120> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <60> Engine <60> Body <60> Accessory <121> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <61> Engine <61> Body <61> Accessory <122> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <62> Engine <62> Body <62> Accessory <123> Accessory <124> 
+мая 30, 2022 2:11:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <63> Engine <63> Body <63> Accessory <125> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <64> Engine <64> Body <64> Accessory <126> Accessory <127> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <65> Engine <65> Body <65> Accessory <129> Accessory <128> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <66> Engine <66> Body <66> Accessory <130> Accessory <131> Accessory <132> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <67> Engine <67> Body <67> Accessory <133> Accessory <134> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <68> Engine <68> Body <68> Accessory <135> Accessory <136> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <69> Engine <69> Body <69> Accessory <137> Accessory <138> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <70> Engine <70> Body <70> Accessory <139> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <71> Engine <71> Body <71> Accessory <140> Accessory <141> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <72> Engine <72> Body <72> Accessory <142> Accessory <143> Accessory <144> 
+мая 30, 2022 2:11:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <73> Engine <73> Body <73> Accessory <145> Accessory <146> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <74> Engine <74> Body <74> Accessory <147> Accessory <148> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <75> Engine <75> Body <75> Accessory <149> Accessory <150> Accessory <151> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <76> Engine <76> Body <76> Accessory <152> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <77> Engine <77> Body <77> Accessory <153> Accessory <154> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <78> Engine <78> Body <78> Accessory <155> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <79> Engine <79> Body <79> Accessory <156> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <80> Engine <80> Body <80> Accessory <157> Accessory <158> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <81> Engine <81> Body <81> Accessory <159> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <82> Engine <82> Body <82> Accessory <161> Accessory <160> 
+мая 30, 2022 2:11:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <83> Engine <83> Body <83> Accessory <162> Accessory <163> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <84> Engine <84> Body <84> Accessory <164> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <85> Engine <85> Body <85> Accessory <165> Accessory <166> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <86> Engine <86> Body <86> Accessory <167> Accessory <168> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <87> Engine <87> Body <87> Accessory <169> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <88> Engine <88> Body <88> Accessory <170> Accessory <171> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <89> Engine <89> Body <89> Accessory <172> Accessory <173> Accessory <174> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <90> Engine <90> Body <90> Accessory <175> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <91> Engine <91> Body <91> Accessory <176> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <92> Engine <92> Body <92> Accessory <177> 
+мая 30, 2022 2:11:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <93> Engine <93> Body <93> Accessory <178> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <94> Engine <94> Body <94> Accessory <179> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <95> Engine <95> Body <95> Accessory <180> Accessory <181> Accessory <182> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <96> Engine <96> Body <96> Accessory <183> Accessory <184> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <97> Engine <97> Body <97> Accessory <185> Accessory <186> Accessory <187> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <98> Engine <98> Body <98> Accessory <188> Accessory <189> Accessory <190> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <99> Engine <99> Body <99> Accessory <191> Accessory <192> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <100> Engine <100> Body <100> Accessory <193> Accessory <194> Accessory <195> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <101> Engine <101> Body <101> Accessory <196> Accessory <197> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <102> Engine <102> Body <102> Accessory <198> 
+мая 30, 2022 2:11:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <103> Engine <103> Body <103> Accessory <199> Accessory <200> Accessory <201> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <104> Engine <104> Body <104> Accessory <202> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <105> Engine <105> Body <105> Accessory <203> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <106> Engine <106> Body <106> Accessory <204> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <107> Engine <107> Body <107> Accessory <205> Accessory <206> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <108> Engine <108> Body <108> Accessory <207> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <109> Engine <109> Body <109> Accessory <208> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <110> Engine <110> Body <110> Accessory <209> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <111> Engine <111> Body <111> Accessory <210> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <112> Engine <112> Body <112> Accessory <211> Accessory <212> Accessory <213> 
+мая 30, 2022 2:11:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <113> Engine <113> Body <113> Accessory <214> Accessory <215> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <114> Engine <114> Body <114> Accessory <216> Accessory <217> Accessory <218> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <115> Engine <115> Body <115> Accessory <219> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <116> Engine <116> Body <116> Accessory <220> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <117> Engine <117> Body <117> Accessory <221> Accessory <222> Accessory <223> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <118> Engine <118> Body <118> Accessory <224> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <119> Engine <119> Body <119> Accessory <225> Accessory <226> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <120> Engine <120> Body <120> Accessory <227> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <121> Engine <121> Body <121> Accessory <228> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <122> Engine <122> Body <122> Accessory <229> Accessory <230> Accessory <231> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <123> Engine <123> Body <123> Accessory <232> 
+мая 30, 2022 2:11:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <124> Engine <124> Body <124> Accessory <233> Accessory <234> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <125> Engine <125> Body <125> Accessory <235> Accessory <236> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <126> Engine <126> Body <126> Accessory <237> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <127> Engine <127> Body <127> Accessory <238> Accessory <239> Accessory <240> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <128> Engine <128> Body <128> Accessory <241> Accessory <242> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <129> Engine <129> Body <129> Accessory <243> Accessory <244> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <130> Engine <130> Body <130> Accessory <245> Accessory <246> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <131> Engine <131> Body <131> Accessory <247> Accessory <248> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <132> Engine <132> Body <132> Accessory <249> Accessory <250> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <133> Engine <133> Body <133> Accessory <251> Accessory <252> Accessory <253> 
+мая 30, 2022 2:11:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <134> Engine <134> Body <134> Accessory <254> Accessory <255> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <135> Engine <135> Body <135> Accessory <257> Accessory <258> Accessory <256> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <136> Engine <136> Body <136> Accessory <259> Accessory <260> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <137> Engine <137> Body <137> Accessory <261> Accessory <262> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <138> Engine <138> Body <138> Accessory <263> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <139> Engine <139> Body <139> Accessory <264> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <140> Engine <140> Body <140> Accessory <265> Accessory <266> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <141> Engine <141> Body <141> Accessory <267> Accessory <268> Accessory <269> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <142> Engine <142> Body <142> Accessory <270> Accessory <271> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <143> Engine <143> Body <143> Accessory <273> Accessory <272> 
+мая 30, 2022 2:11:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <144> Engine <144> Body <144> Accessory <274> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <145> Engine <145> Body <145> Accessory <275> Accessory <276> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <146> Engine <146> Body <146> Accessory <277> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <147> Engine <147> Body <147> Accessory <278> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <148> Engine <148> Body <148> Accessory <279> Accessory <280> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <149> Engine <149> Body <149> Accessory <281> Accessory <282> Accessory <283> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <150> Engine <150> Body <150> Accessory <284> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <151> Engine <151> Body <151> Accessory <285> Accessory <286> Accessory <287> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <152> Engine <152> Body <152> Accessory <288> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <153> Engine <153> Body <153> Accessory <289> Accessory <290> Accessory <291> 
+мая 30, 2022 2:11:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <154> Engine <154> Body <154> Accessory <292> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <155> Engine <155> Body <155> Accessory <293> Accessory <294> Accessory <295> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <156> Engine <156> Body <156> Accessory <296> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <157> Engine <157> Body <157> Accessory <297> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <158> Engine <158> Body <158> Accessory <298> Accessory <299> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <159> Engine <159> Body <159> Accessory <300> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <160> Engine <160> Body <160> Accessory <301> Accessory <302> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <161> Engine <161> Body <161> Accessory <303> Accessory <304> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <162> Engine <162> Body <162> Accessory <305> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <163> Engine <163> Body <163> Accessory <306> 
+мая 30, 2022 2:11:42 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <164> Engine <164> Body <164> Accessory <307> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <165> Engine <165> Body <165> Accessory <308> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <166> Engine <166> Body <166> Accessory <309> Accessory <310> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <167> Engine <167> Body <167> Accessory <311> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <168> Engine <168> Body <168> Accessory <312> Accessory <313> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <169> Engine <169> Body <169> Accessory <314> Accessory <315> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <170> Engine <170> Body <170> Accessory <316> Accessory <317> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <171> Engine <171> Body <171> Accessory <318> Accessory <319> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <172> Engine <172> Body <172> Accessory <321> Accessory <322> Accessory <320> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <173> Engine <173> Body <173> Accessory <323> 
+мая 30, 2022 2:11:43 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <174> Engine <174> Body <174> Accessory <324> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <175> Engine <175> Body <175> Accessory <325> Accessory <326> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <176> Engine <176> Body <176> Accessory <327> Accessory <328> Accessory <329> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <177> Engine <177> Body <177> Accessory <330> Accessory <331> Accessory <332> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <178> Engine <178> Body <178> Accessory <333> Accessory <334> Accessory <335> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <179> Engine <179> Body <179> Accessory <337> Accessory <336> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <180> Engine <180> Body <180> Accessory <338> Accessory <339> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <181> Engine <181> Body <181> Accessory <340> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <182> Engine <182> Body <182> Accessory <341> Accessory <342> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <183> Engine <183> Body <183> Accessory <343> 
+мая 30, 2022 2:11:44 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <184> Engine <184> Body <184> Accessory <344> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <185> Engine <185> Body <185> Accessory <345> Accessory <346> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <186> Engine <186> Body <186> Accessory <347> Accessory <348> Accessory <349> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <187> Engine <187> Body <187> Accessory <350> Accessory <351> Accessory <352> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <188> Engine <188> Body <188> Accessory <353> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <189> Engine <189> Body <189> Accessory <354> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <190> Engine <190> Body <190> Accessory <355> Accessory <356> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <191> Engine <191> Body <191> Accessory <357> Accessory <358> Accessory <359> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <192> Engine <192> Body <192> Accessory <360> Accessory <361> Accessory <362> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <193> Engine <193> Body <193> Accessory <363> Accessory <364> Accessory <365> 
+мая 30, 2022 2:11:45 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <194> Engine <194> Body <194> Accessory <366> Accessory <367> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <195> Engine <195> Body <195> Accessory <368> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <196> Engine <196> Body <196> Accessory <369> Accessory <370> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <197> Engine <197> Body <197> Accessory <371> Accessory <372> Accessory <373> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <198> Engine <198> Body <198> Accessory <374> Accessory <375> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <199> Engine <199> Body <199> Accessory <376> Accessory <377> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <200> Engine <200> Body <200> Accessory <378> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <201> Engine <201> Body <201> Accessory <379> Accessory <380> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <202> Engine <202> Body <202> Accessory <381> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <203> Engine <203> Body <203> Accessory <382> 
+мая 30, 2022 2:11:46 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <204> Engine <204> Body <204> Accessory <383> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <205> Engine <205> Body <205> Accessory <385> Accessory <386> Accessory <384> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <206> Engine <206> Body <206> Accessory <387> Accessory <388> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <207> Engine <207> Body <207> Accessory <389> Accessory <390> Accessory <391> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <208> Engine <208> Body <208> Accessory <392> Accessory <393> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <209> Engine <209> Body <209> Accessory <394> Accessory <395> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <210> Engine <210> Body <210> Accessory <396> Accessory <397> Accessory <398> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <211> Engine <211> Body <211> Accessory <399> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <212> Engine <212> Body <212> Accessory <401> Accessory <400> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <213> Engine <213> Body <213> Accessory <402> Accessory <403> Accessory <404> 
+мая 30, 2022 2:11:47 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <214> Engine <214> Body <214> Accessory <405> Accessory <406> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <215> Engine <215> Body <215> Accessory <407> Accessory <408> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <216> Engine <216> Body <216> Accessory <409> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <217> Engine <217> Body <217> Accessory <410> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <218> Engine <218> Body <218> Accessory <411> Accessory <412> Accessory <413> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <219> Engine <219> Body <219> Accessory <414> Accessory <415> Accessory <416> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <220> Engine <220> Body <220> Accessory <417> Accessory <418> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <221> Engine <221> Body <221> Accessory <419> Accessory <420> Accessory <421> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <222> Engine <222> Body <222> Accessory <422> Accessory <423> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <223> Engine <223> Body <223> Accessory <424> Accessory <425> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <224> Engine <224> Body <224> Accessory <426> 
+мая 30, 2022 2:11:48 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <225> Engine <225> Body <225> Accessory <427> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <226> Engine <226> Body <226> Accessory <428> Accessory <429> Accessory <430> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <227> Engine <227> Body <227> Accessory <431> Accessory <432> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <228> Engine <228> Body <228> Accessory <433> Accessory <434> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <229> Engine <229> Body <229> Accessory <435> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <230> Engine <230> Body <230> Accessory <436> Accessory <437> Accessory <438> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <231> Engine <231> Body <231> Accessory <439> Accessory <440> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <232> Engine <232> Body <232> Accessory <441> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <233> Engine <233> Body <233> Accessory <442> Accessory <443> Accessory <444> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <234> Engine <234> Body <234> Accessory <445> Accessory <446> 
+мая 30, 2022 2:11:49 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <235> Engine <235> Body <235> Accessory <447> Accessory <448> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <236> Engine <236> Body <236> Accessory <449> Accessory <450> Accessory <451> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <237> Engine <237> Body <237> Accessory <452> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <238> Engine <238> Body <238> Accessory <453> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <239> Engine <239> Body <239> Accessory <454> Accessory <455> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <240> Engine <240> Body <240> Accessory <456> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <241> Engine <241> Body <241> Accessory <457> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <242> Engine <242> Body <242> Accessory <458> Accessory <459> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <243> Engine <243> Body <243> Accessory <460> Accessory <461> Accessory <462> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <244> Engine <244> Body <244> Accessory <465> Accessory <463> Accessory <464> 
+мая 30, 2022 2:11:50 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <245> Engine <245> Body <245> Accessory <466> Accessory <467> Accessory <468> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <246> Engine <246> Body <246> Accessory <469> Accessory <470> Accessory <471> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <247> Engine <247> Body <247> Accessory <472> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <248> Engine <248> Body <248> Accessory <473> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <249> Engine <249> Body <249> Accessory <474> Accessory <475> Accessory <476> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <250> Engine <250> Body <250> Accessory <477> Accessory <478> Accessory <479> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <251> Engine <251> Body <251> Accessory <481> Accessory <480> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <252> Engine <252> Body <252> Accessory <482> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <253> Engine <253> Body <253> Accessory <483> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <254> Engine <254> Body <254> Accessory <484> Accessory <485> Accessory <486> 
+мая 30, 2022 2:11:51 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <255> Engine <255> Body <255> Accessory <487> Accessory <488> Accessory <489> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <256> Engine <256> Body <256> Accessory <490> Accessory <491> Accessory <492> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <257> Engine <257> Body <257> Accessory <493> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <258> Engine <258> Body <258> Accessory <494> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <259> Engine <259> Body <259> Accessory <495> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <260> Engine <260> Body <260> Accessory <497> Accessory <496> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <261> Engine <261> Body <261> Accessory <498> Accessory <499> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <262> Engine <262> Body <262> Accessory <500> Accessory <501> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <263> Engine <263> Body <263> Accessory <502> Accessory <503> Accessory <504> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <264> Engine <264> Body <264> Accessory <505> 
+мая 30, 2022 2:11:52 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <265> Engine <265> Body <265> Accessory <506> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <266> Engine <266> Body <266> Accessory <507> Accessory <508> Accessory <509> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <267> Engine <267> Body <267> Accessory <510> Accessory <511> Accessory <512> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <268> Engine <268> Body <268> Accessory <513> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <269> Engine <269> Body <269> Accessory <514> Accessory <515> Accessory <516> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <270> Engine <270> Body <270> Accessory <517> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <271> Engine <271> Body <271> Accessory <518> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <272> Engine <272> Body <272> Accessory <519> Accessory <520> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <273> Engine <273> Body <273> Accessory <521> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <274> Engine <274> Body <274> Accessory <522> 
+мая 30, 2022 2:11:53 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <275> Engine <275> Body <275> Accessory <523> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <276> Engine <276> Body <276> Accessory <524> Accessory <525> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <277> Engine <277> Body <277> Accessory <526> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <278> Engine <278> Body <278> Accessory <527> Accessory <528> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <279> Engine <279> Body <279> Accessory <529> Accessory <530> Accessory <531> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <280> Engine <280> Body <280> Accessory <532> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <281> Engine <281> Body <281> Accessory <533> Accessory <534> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <282> Engine <282> Body <282> Accessory <535> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <283> Engine <283> Body <283> Accessory <536> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <284> Engine <284> Body <284> Accessory <537> Accessory <538> 
+мая 30, 2022 2:11:54 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <285> Engine <285> Body <285> Accessory <539> Accessory <540> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <286> Engine <286> Body <286> Accessory <541> Accessory <542> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <287> Engine <287> Body <287> Accessory <543> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <288> Engine <288> Body <288> Accessory <545> Accessory <544> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <289> Engine <289> Body <289> Accessory <546> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <290> Engine <290> Body <290> Accessory <547> Accessory <548> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <291> Engine <291> Body <291> Accessory <549> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <292> Engine <292> Body <292> Accessory <550> Accessory <551> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <293> Engine <293> Body <293> Accessory <552> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <294> Engine <294> Body <294> Accessory <553> Accessory <554> 
+мая 30, 2022 2:11:55 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <295> Engine <295> Body <295> Accessory <555> Accessory <556> Accessory <557> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <296> Engine <296> Body <296> Accessory <558> Accessory <559> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <297> Engine <297> Body <297> Accessory <561> Accessory <560> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <298> Engine <298> Body <298> Accessory <562> Accessory <563> Accessory <564> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <299> Engine <299> Body <299> Accessory <565> Accessory <566> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <300> Engine <300> Body <300> Accessory <567> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <301> Engine <301> Body <301> Accessory <568> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <302> Engine <302> Body <302> Accessory <569> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <303> Engine <303> Body <303> Accessory <570> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <304> Engine <304> Body <304> Accessory <571> Accessory <572> Accessory <573> 
+мая 30, 2022 2:11:56 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <305> Engine <305> Body <305> Accessory <574> Accessory <575> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <306> Engine <306> Body <306> Accessory <577> Accessory <578> Accessory <576> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <307> Engine <307> Body <307> Accessory <579> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <308> Engine <308> Body <308> Accessory <580> Accessory <581> Accessory <582> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <309> Engine <309> Body <309> Accessory <583> Accessory <584> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <310> Engine <310> Body <310> Accessory <585> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <311> Engine <311> Body <311> Accessory <586> Accessory <587> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <312> Engine <312> Body <312> Accessory <588> Accessory <589> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <313> Engine <313> Body <313> Accessory <590> Accessory <591> Accessory <592> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <314> Engine <314> Body <314> Accessory <593> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <315> Engine <315> Body <315> Accessory <594> 
+мая 30, 2022 2:11:57 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <316> Engine <316> Body <316> Accessory <595> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <317> Engine <317> Body <317> Accessory <596> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <318> Engine <318> Body <318> Accessory <597> Accessory <598> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <319> Engine <319> Body <319> Accessory <599> Accessory <600> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <320> Engine <320> Body <320> Accessory <601> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <321> Engine <321> Body <321> Accessory <602> Accessory <603> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <322> Engine <322> Body <322> Accessory <604> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <323> Engine <323> Body <323> Accessory <605> Accessory <606> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <324> Engine <324> Body <324> Accessory <607> Accessory <608> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <325> Engine <325> Body <325> Accessory <609> Accessory <610> 
+мая 30, 2022 2:11:58 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <326> Engine <326> Body <326> Accessory <611> Accessory <612> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <327> Engine <327> Body <327> Accessory <613> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <328> Engine <328> Body <328> Accessory <614> Accessory <615> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <329> Engine <329> Body <329> Accessory <616> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <330> Engine <330> Body <330> Accessory <617> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <331> Engine <331> Body <331> Accessory <618> Accessory <619> Accessory <620> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <332> Engine <332> Body <332> Accessory <621> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <333> Engine <333> Body <333> Accessory <622> Accessory <623> Accessory <624> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <334> Engine <334> Body <334> Accessory <625> Accessory <626> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <335> Engine <335> Body <335> Accessory <627> Accessory <628> Accessory <629> 
+мая 30, 2022 2:11:59 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <336> Engine <336> Body <336> Accessory <630> Accessory <631> Accessory <632> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <337> Engine <337> Body <337> Accessory <633> Accessory <634> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <338> Engine <338> Body <338> Accessory <635> Accessory <636> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <339> Engine <339> Body <339> Accessory <637> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <340> Engine <340> Body <340> Accessory <638> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <341> Engine <341> Body <341> Accessory <639> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <342> Engine <342> Body <342> Accessory <641> Accessory <642> Accessory <640> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <343> Engine <343> Body <343> Accessory <643> Accessory <644> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <344> Engine <344> Body <344> Accessory <645> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <345> Engine <345> Body <345> Accessory <646> Accessory <647> 
+мая 30, 2022 2:12:00 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <346> Engine <346> Body <346> Accessory <648> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <347> Engine <347> Body <347> Accessory <649> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <348> Engine <348> Body <348> Accessory <650> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <349> Engine <349> Body <349> Accessory <651> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <350> Engine <350> Body <350> Accessory <652> Accessory <653> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <351> Engine <351> Body <351> Accessory <654> Accessory <655> Accessory <656> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <352> Engine <352> Body <352> Accessory <657> Accessory <658> Accessory <659> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <353> Engine <353> Body <353> Accessory <660> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <354> Engine <354> Body <354> Accessory <661> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <355> Engine <355> Body <355> Accessory <662> 
+мая 30, 2022 2:12:01 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <356> Engine <356> Body <356> Accessory <663> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <357> Engine <357> Body <357> Accessory <664> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <358> Engine <358> Body <358> Accessory <665> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <359> Engine <359> Body <359> Accessory <666> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <360> Engine <360> Body <360> Accessory <667> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <361> Engine <361> Body <361> Accessory <668> Accessory <669> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <362> Engine <362> Body <362> Accessory <670> Accessory <671> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <363> Engine <363> Body <363> Accessory <673> Accessory <672> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <364> Engine <364> Body <364> Accessory <674> Accessory <675> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <365> Engine <365> Body <365> Accessory <676> 
+мая 30, 2022 2:12:02 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <366> Engine <366> Body <366> Accessory <677> Accessory <678> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <367> Engine <367> Body <367> Accessory <679> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <368> Engine <368> Body <368> Accessory <680> Accessory <681> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <369> Engine <369> Body <369> Accessory <682> Accessory <683> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <370> Engine <370> Body <370> Accessory <684> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <371> Engine <371> Body <371> Accessory <685> Accessory <686> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <372> Engine <372> Body <372> Accessory <687> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <373> Engine <373> Body <373> Accessory <689> Accessory <690> Accessory <688> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <374> Engine <374> Body <374> Accessory <691> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <375> Engine <375> Body <375> Accessory <692> 
+мая 30, 2022 2:12:03 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <376> Engine <376> Body <376> Accessory <693> Accessory <694> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <377> Engine <377> Body <377> Accessory <695> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <378> Engine <378> Body <378> Accessory <696> Accessory <697> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <379> Engine <379> Body <379> Accessory <698> Accessory <699> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <380> Engine <380> Body <380> Accessory <700> Accessory <701> Accessory <702> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <381> Engine <381> Body <381> Accessory <703> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <382> Engine <382> Body <382> Accessory <705> Accessory <706> Accessory <704> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <383> Engine <383> Body <383> Accessory <707> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <384> Engine <384> Body <384> Accessory <708> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <385> Engine <385> Body <385> Accessory <709> Accessory <710> Accessory <711> 
+мая 30, 2022 2:12:04 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <386> Engine <386> Body <386> Accessory <712> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <387> Engine <387> Body <387> Accessory <713> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <388> Engine <388> Body <388> Accessory <714> Accessory <715> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <389> Engine <389> Body <389> Accessory <716> Accessory <717> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <390> Engine <390> Body <390> Accessory <718> Accessory <719> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <391> Engine <391> Body <391> Accessory <721> Accessory <722> Accessory <720> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <392> Engine <392> Body <392> Accessory <723> Accessory <724> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <393> Engine <393> Body <393> Accessory <725> Accessory <726> Accessory <727> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <394> Engine <394> Body <394> Accessory <728> Accessory <729> Accessory <730> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <395> Engine <395> Body <395> Accessory <731> 
+мая 30, 2022 2:12:05 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <396> Engine <396> Body <396> Accessory <732> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <397> Engine <397> Body <397> Accessory <733> Accessory <734> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <398> Engine <398> Body <398> Accessory <735> Accessory <736> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <399> Engine <399> Body <399> Accessory <737> Accessory <738> Accessory <739> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <400> Engine <400> Body <400> Accessory <740> Accessory <741> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <401> Engine <401> Body <401> Accessory <742> Accessory <743> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <402> Engine <402> Body <402> Accessory <744> Accessory <745> Accessory <746> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <403> Engine <403> Body <403> Accessory <747> Accessory <748> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <404> Engine <404> Body <404> Accessory <749> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <405> Engine <405> Body <405> Accessory <750> Accessory <751> Accessory <752> 
+мая 30, 2022 2:12:06 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <406> Engine <406> Body <406> Accessory <753> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <407> Engine <407> Body <407> Accessory <754> Accessory <755> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <408> Engine <408> Body <408> Accessory <756> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <409> Engine <409> Body <409> Accessory <757> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <410> Engine <410> Body <410> Accessory <758> Accessory <759> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <411> Engine <411> Body <411> Accessory <760> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <412> Engine <412> Body <412> Accessory <761> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <413> Engine <413> Body <413> Accessory <762> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <414> Engine <414> Body <414> Accessory <763> Accessory <764> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <415> Engine <415> Body <415> Accessory <765> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <416> Engine <416> Body <416> Accessory <766> Accessory <767> 
+мая 30, 2022 2:12:07 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <417> Engine <417> Body <417> Accessory <769> Accessory <768> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <418> Engine <418> Body <418> Accessory <770> Accessory <771> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <419> Engine <419> Body <419> Accessory <772> Accessory <773> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <420> Engine <420> Body <420> Accessory <774> Accessory <775> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <421> Engine <421> Body <421> Accessory <776> Accessory <777> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <422> Engine <422> Body <422> Accessory <778> Accessory <779> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <423> Engine <423> Body <423> Accessory <780> Accessory <781> Accessory <782> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <424> Engine <424> Body <424> Accessory <783> Accessory <784> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <425> Engine <425> Body <425> Accessory <785> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <426> Engine <426> Body <426> Accessory <786> Accessory <787> Accessory <788> 
+мая 30, 2022 2:12:08 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <427> Engine <427> Body <427> Accessory <789> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <428> Engine <428> Body <428> Accessory <790> Accessory <791> Accessory <792> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <429> Engine <429> Body <429> Accessory <793> Accessory <794> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <430> Engine <430> Body <430> Accessory <795> Accessory <796> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <431> Engine <431> Body <431> Accessory <797> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <432> Engine <432> Body <432> Accessory <798> Accessory <799> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <433> Engine <433> Body <433> Accessory <800> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <434> Engine <434> Body <434> Accessory <801> Accessory <802> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <435> Engine <435> Body <435> Accessory <803> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <436> Engine <436> Body <436> Accessory <804> 
+мая 30, 2022 2:12:09 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <437> Engine <437> Body <437> Accessory <805> Accessory <806> Accessory <807> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <438> Engine <438> Body <438> Accessory <808> Accessory <809> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <439> Engine <439> Body <439> Accessory <810> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <440> Engine <440> Body <440> Accessory <811> Accessory <812> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <441> Engine <441> Body <441> Accessory <813> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <442> Engine <442> Body <442> Accessory <814> Accessory <815> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <443> Engine <443> Body <443> Accessory <816> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <444> Engine <444> Body <444> Accessory <817> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <445> Engine <445> Body <445> Accessory <818> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <446> Engine <446> Body <446> Accessory <819> Accessory <820> Accessory <821> 
+мая 30, 2022 2:12:10 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <447> Engine <447> Body <447> Accessory <822> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <448> Engine <448> Body <448> Accessory <823> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <449> Engine <449> Body <449> Accessory <824> Accessory <825> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <450> Engine <450> Body <450> Accessory <826> Accessory <827> Accessory <828> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <451> Engine <451> Body <451> Accessory <829> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <452> Engine <452> Body <452> Accessory <830> Accessory <831> Accessory <832> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <453> Engine <453> Body <453> Accessory <833> Accessory <834> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <454> Engine <454> Body <454> Accessory <835> Accessory <836> Accessory <837> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <455> Engine <455> Body <455> Accessory <838> Accessory <839> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <456> Engine <456> Body <456> Accessory <840> 
+мая 30, 2022 2:12:11 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <457> Engine <457> Body <457> Accessory <841> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <458> Engine <458> Body <458> Accessory <842> Accessory <843> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <459> Engine <459> Body <459> Accessory <844> Accessory <845> Accessory <846> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <460> Engine <460> Body <460> Accessory <847> Accessory <848> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <461> Engine <461> Body <461> Accessory <849> Accessory <850> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <462> Engine <462> Body <462> Accessory <851> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <463> Engine <463> Body <463> Accessory <852> Accessory <853> Accessory <854> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <464> Engine <464> Body <464> Accessory <855> Accessory <856> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <465> Engine <465> Body <465> Accessory <857> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <466> Engine <466> Body <466> Accessory <858> Accessory <859> Accessory <860> 
+мая 30, 2022 2:12:12 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <467> Engine <467> Body <467> Accessory <861> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <468> Engine <468> Body <468> Accessory <862> Accessory <863> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <469> Engine <469> Body <469> Accessory <865> Accessory <866> Accessory <864> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <470> Engine <470> Body <470> Accessory <867> Accessory <868> Accessory <869> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <471> Engine <471> Body <471> Accessory <870> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <472> Engine <472> Body <472> Accessory <871> Accessory <872> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <473> Engine <473> Body <473> Accessory <873> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <474> Engine <474> Body <474> Accessory <874> Accessory <875> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <475> Engine <475> Body <475> Accessory <876> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <476> Engine <476> Body <476> Accessory <877> 
+мая 30, 2022 2:12:13 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <477> Engine <477> Body <477> Accessory <878> Accessory <879> Accessory <880> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <478> Engine <478> Body <478> Accessory <881> Accessory <882> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <479> Engine <479> Body <479> Accessory <883> Accessory <884> Accessory <885> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <480> Engine <480> Body <480> Accessory <886> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <481> Engine <481> Body <481> Accessory <887> Accessory <888> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <482> Engine <482> Body <482> Accessory <889> Accessory <890> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <483> Engine <483> Body <483> Accessory <891> Accessory <892> Accessory <893> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <484> Engine <484> Body <484> Accessory <894> Accessory <895> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <485> Engine <485> Body <485> Accessory <896> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <486> Engine <486> Body <486> Accessory <897> Accessory <898> 
+мая 30, 2022 2:12:14 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <487> Engine <487> Body <487> Accessory <899> Accessory <900> Accessory <901> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <488> Engine <488> Body <488> Accessory <902> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <489> Engine <489> Body <489> Accessory <903> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <490> Engine <490> Body <490> Accessory <904> Accessory <905> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <491> Engine <491> Body <491> Accessory <906> Accessory <907> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <492> Engine <492> Body <492> Accessory <908> Accessory <909> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <493> Engine <493> Body <493> Accessory <910> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <494> Engine <494> Body <494> Accessory <913> Accessory <911> Accessory <912> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <495> Engine <495> Body <495> Accessory <914> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <496> Engine <496> Body <496> Accessory <915> 
+мая 30, 2022 2:12:15 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <497> Engine <497> Body <497> Accessory <916> Accessory <917> Accessory <918> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <498> Engine <498> Body <498> Accessory <919> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <499> Engine <499> Body <499> Accessory <920> Accessory <921> Accessory <922> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <500> Engine <500> Body <500> Accessory <923> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <501> Engine <501> Body <501> Accessory <924> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <502> Engine <502> Body <502> Accessory <925> Accessory <926> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <503> Engine <503> Body <503> Accessory <927> Accessory <928> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <504> Engine <504> Body <504> Accessory <929> Accessory <930> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <505> Engine <505> Body <505> Accessory <931> Accessory <932> Accessory <933> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <506> Engine <506> Body <506> Accessory <934> Accessory <935> Accessory <936> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <507> Engine <507> Body <507> Accessory <937> Accessory <938> Accessory <939> 
+мая 30, 2022 2:12:16 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <508> Engine <508> Body <508> Accessory <940> Accessory <941> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <509> Engine <509> Body <509> Accessory <942> Accessory <943> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <510> Engine <510> Body <510> Accessory <945> Accessory <946> Accessory <944> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <511> Engine <511> Body <511> Accessory <947> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <512> Engine <512> Body <512> Accessory <948> Accessory <949> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <513> Engine <513> Body <513> Accessory <950> Accessory <951> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <514> Engine <514> Body <514> Accessory <952> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <515> Engine <515> Body <515> Accessory <953> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <516> Engine <516> Body <516> Accessory <954> Accessory <955> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <517> Engine <517> Body <517> Accessory <956> 
+мая 30, 2022 2:12:17 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <518> Engine <518> Body <518> Accessory <957> Accessory <958> Accessory <959> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <519> Engine <519> Body <519> Accessory <961> Accessory <960> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <520> Engine <520> Body <520> Accessory <962> Accessory <963> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <521> Engine <521> Body <521> Accessory <964> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <522> Engine <522> Body <522> Accessory <965> Accessory <966> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <523> Engine <523> Body <523> Accessory <967> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <524> Engine <524> Body <524> Accessory <968> Accessory <969> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <525> Engine <525> Body <525> Accessory <970> Accessory <971> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <526> Engine <526> Body <526> Accessory <972> Accessory <973> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <527> Engine <527> Body <527> Accessory <974> Accessory <975> Accessory <976> 
+мая 30, 2022 2:12:18 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <528> Engine <528> Body <528> Accessory <977> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <529> Engine <529> Body <529> Accessory <978> Accessory <979> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <530> Engine <530> Body <530> Accessory <980> Accessory <981> Accessory <982> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <531> Engine <531> Body <531> Accessory <983> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <532> Engine <532> Body <532> Accessory <984> Accessory <985> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <533> Engine <533> Body <533> Accessory <986> Accessory <987> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <534> Engine <534> Body <534> Accessory <988> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <535> Engine <535> Body <535> Accessory <989> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <536> Engine <536> Body <536> Accessory <990> Accessory <991> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <537> Engine <537> Body <537> Accessory <992> 
+мая 30, 2022 2:12:19 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <538> Engine <538> Body <538> Accessory <993> Accessory <994> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <539> Engine <539> Body <539> Accessory <995> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <540> Engine <540> Body <540> Accessory <996> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <541> Engine <541> Body <541> Accessory <997> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <542> Engine <542> Body <542> Accessory <998> Accessory <999> Accessory <1000> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <543> Engine <543> Body <543> Accessory <1001> Accessory <1002> Accessory <1003> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <544> Engine <544> Body <544> Accessory <1004> Accessory <1005> Accessory <1006> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <545> Engine <545> Body <545> Accessory <1009> Accessory <1007> Accessory <1008> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <546> Engine <546> Body <546> Accessory <1010> Accessory <1011> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <547> Engine <547> Body <547> Accessory <1012> Accessory <1013> 
+мая 30, 2022 2:12:20 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <548> Engine <548> Body <548> Accessory <1014> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <549> Engine <549> Body <549> Accessory <1015> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <550> Engine <550> Body <550> Accessory <1016> Accessory <1017> Accessory <1018> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <551> Engine <551> Body <551> Accessory <1019> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <552> Engine <552> Body <552> Accessory <1020> Accessory <1021> Accessory <1022> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <553> Engine <553> Body <553> Accessory <1023> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <554> Engine <554> Body <554> Accessory <1025> Accessory <1024> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <555> Engine <555> Body <555> Accessory <1026> Accessory <1027> Accessory <1028> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <556> Engine <556> Body <556> Accessory <1029> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <557> Engine <557> Body <557> Accessory <1030> Accessory <1031> 
+мая 30, 2022 2:12:21 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <558> Engine <558> Body <558> Accessory <1032> Accessory <1033> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <559> Engine <559> Body <559> Accessory <1034> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <560> Engine <560> Body <560> Accessory <1035> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <561> Engine <561> Body <561> Accessory <1036> Accessory <1037> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <562> Engine <562> Body <562> Accessory <1038> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <563> Engine <563> Body <563> Accessory <1041> Accessory <1039> Accessory <1040> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <564> Engine <564> Body <564> Accessory <1042> Accessory <1043> Accessory <1044> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <565> Engine <565> Body <565> Accessory <1045> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <566> Engine <566> Body <566> Accessory <1046> Accessory <1047> Accessory <1048> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <567> Engine <567> Body <567> Accessory <1049> 
+мая 30, 2022 2:12:22 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <568> Engine <568> Body <568> Accessory <1050> Accessory <1051> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <569> Engine <569> Body <569> Accessory <1052> Accessory <1053> Accessory <1054> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <570> Engine <570> Body <570> Accessory <1057> Accessory <1055> Accessory <1056> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <571> Engine <571> Body <571> Accessory <1058> Accessory <1059> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <572> Engine <572> Body <572> Accessory <1060> Accessory <1061> Accessory <1062> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <573> Engine <573> Body <573> Accessory <1063> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <574> Engine <574> Body <574> Accessory <1064> Accessory <1065> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <575> Engine <575> Body <575> Accessory <1066> Accessory <1067> Accessory <1068> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <576> Engine <576> Body <576> Accessory <1069> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <577> Engine <577> Body <577> Accessory <1070> Accessory <1071> 
+мая 30, 2022 2:12:23 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <578> Engine <578> Body <578> Accessory <1073> Accessory <1072> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <579> Engine <579> Body <579> Accessory <1074> Accessory <1075> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <580> Engine <580> Body <580> Accessory <1076> Accessory <1077> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <581> Engine <581> Body <581> Accessory <1078> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <582> Engine <582> Body <582> Accessory <1079> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <583> Engine <583> Body <583> Accessory <1080> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <584> Engine <584> Body <584> Accessory <1081> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <585> Engine <585> Body <585> Accessory <1082> Accessory <1083> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <586> Engine <586> Body <586> Accessory <1084> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <587> Engine <587> Body <587> Accessory <1085> 
+мая 30, 2022 2:12:24 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <588> Engine <588> Body <588> Accessory <1086> Accessory <1087> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <589> Engine <589> Body <589> Accessory <1089> Accessory <1088> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <590> Engine <590> Body <590> Accessory <1090> Accessory <1091> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <591> Engine <591> Body <591> Accessory <1092> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <592> Engine <592> Body <592> Accessory <1093> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <593> Engine <593> Body <593> Accessory <1094> Accessory <1095> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <594> Engine <594> Body <594> Accessory <1096> Accessory <1097> Accessory <1098> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <595> Engine <595> Body <595> Accessory <1099> Accessory <1100> Accessory <1101> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <596> Engine <596> Body <596> Accessory <1102> Accessory <1103> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <597> Engine <597> Body <597> Accessory <1105> Accessory <1104> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <598> Engine <598> Body <598> Accessory <1106> Accessory <1107> Accessory <1108> 
+мая 30, 2022 2:12:25 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <599> Engine <599> Body <599> Accessory <1109> Accessory <1110> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <600> Engine <600> Body <600> Accessory <1111> Accessory <1112> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <601> Engine <601> Body <601> Accessory <1113> Accessory <1114> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <602> Engine <602> Body <602> Accessory <1115> Accessory <1116> Accessory <1117> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <603> Engine <603> Body <603> Accessory <1118> Accessory <1119> Accessory <1120> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <604> Engine <604> Body <604> Accessory <1121> Accessory <1122> Accessory <1123> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <605> Engine <605> Body <605> Accessory <1124> Accessory <1125> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <606> Engine <606> Body <606> Accessory <1126> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <607> Engine <607> Body <607> Accessory <1127> Accessory <1128> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <608> Engine <608> Body <608> Accessory <1129> Accessory <1130> Accessory <1131> 
+мая 30, 2022 2:12:26 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <609> Engine <609> Body <609> Accessory <1132> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <610> Engine <610> Body <610> Accessory <1133> Accessory <1134> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <611> Engine <611> Body <611> Accessory <1135> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <612> Engine <612> Body <612> Accessory <1137> Accessory <1138> Accessory <1136> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <613> Engine <613> Body <613> Accessory <1139> Accessory <1140> Accessory <1141> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <614> Engine <614> Body <614> Accessory <1142> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <615> Engine <615> Body <615> Accessory <1143> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <616> Engine <616> Body <616> Accessory <1144> Accessory <1145> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <617> Engine <617> Body <617> Accessory <1146> Accessory <1147> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <618> Engine <618> Body <618> Accessory <1148> Accessory <1149> 
+мая 30, 2022 2:12:27 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <619> Engine <619> Body <619> Accessory <1150> Accessory <1151> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <620> Engine <620> Body <620> Accessory <1153> Accessory <1152> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <621> Engine <621> Body <621> Accessory <1154> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <622> Engine <622> Body <622> Accessory <1155> Accessory <1156> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <623> Engine <623> Body <623> Accessory <1157> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <624> Engine <624> Body <624> Accessory <1158> Accessory <1159> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <625> Engine <625> Body <625> Accessory <1160> Accessory <1161> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <626> Engine <626> Body <626> Accessory <1162> Accessory <1163> Accessory <1164> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <627> Engine <627> Body <627> Accessory <1165> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <628> Engine <628> Body <628> Accessory <1166> Accessory <1167> 
+мая 30, 2022 2:12:28 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <629> Engine <629> Body <629> Accessory <1169> Accessory <1170> Accessory <1168> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <630> Engine <630> Body <630> Accessory <1171> Accessory <1172> Accessory <1173> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <631> Engine <631> Body <631> Accessory <1174> Accessory <1175> Accessory <1176> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <632> Engine <632> Body <632> Accessory <1177> Accessory <1178> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <633> Engine <633> Body <633> Accessory <1179> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <634> Engine <634> Body <634> Accessory <1180> Accessory <1181> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <635> Engine <635> Body <635> Accessory <1182> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <636> Engine <636> Body <636> Accessory <1183> Accessory <1184> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <637> Engine <637> Body <637> Accessory <1185> Accessory <1186> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <638> Engine <638> Body <638> Accessory <1187> Accessory <1188> Accessory <1189> 
+мая 30, 2022 2:12:29 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <639> Engine <639> Body <639> Accessory <1190> Accessory <1191> Accessory <1192> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <640> Engine <640> Body <640> Accessory <1193> Accessory <1194> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <641> Engine <641> Body <641> Accessory <1195> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <642> Engine <642> Body <642> Accessory <1196> Accessory <1197> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <643> Engine <643> Body <643> Accessory <1198> Accessory <1199> Accessory <1200> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <644> Engine <644> Body <644> Accessory <1201> Accessory <1202> Accessory <1203> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <645> Engine <645> Body <645> Accessory <1204> Accessory <1205> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <646> Engine <646> Body <646> Accessory <1206> Accessory <1207> Accessory <1208> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <647> Engine <647> Body <647> Accessory <1209> Accessory <1210> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <648> Engine <648> Body <648> Accessory <1211> Accessory <1212> 
+мая 30, 2022 2:12:30 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <649> Engine <649> Body <649> Accessory <1213> Accessory <1214> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <650> Engine <650> Body <650> Accessory <1217> Accessory <1215> Accessory <1216> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <651> Engine <651> Body <651> Accessory <1218> Accessory <1219> Accessory <1220> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <652> Engine <652> Body <652> Accessory <1221> Accessory <1222> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <653> Engine <653> Body <653> Accessory <1223> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <654> Engine <654> Body <654> Accessory <1224> Accessory <1225> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <655> Engine <655> Body <655> Accessory <1226> Accessory <1227> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <656> Engine <656> Body <656> Accessory <1228> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <657> Engine <657> Body <657> Accessory <1229> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <658> Engine <658> Body <658> Accessory <1230> Accessory <1231> 
+мая 30, 2022 2:12:31 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <659> Engine <659> Body <659> Accessory <1233> Accessory <1232> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <660> Engine <660> Body <660> Accessory <1234> Accessory <1235> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <661> Engine <661> Body <661> Accessory <1236> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <662> Engine <662> Body <662> Accessory <1237> Accessory <1238> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <663> Engine <663> Body <663> Accessory <1239> Accessory <1240> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <664> Engine <664> Body <664> Accessory <1241> Accessory <1242> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <665> Engine <665> Body <665> Accessory <1243> Accessory <1244> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <666> Engine <666> Body <666> Accessory <1245> Accessory <1246> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <667> Engine <667> Body <667> Accessory <1247> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <668> Engine <668> Body <668> Accessory <1248> 
+мая 30, 2022 2:12:32 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <669> Engine <669> Body <669> Accessory <1249> Accessory <1250> Accessory <1251> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <670> Engine <670> Body <670> Accessory <1252> Accessory <1253> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <671> Engine <671> Body <671> Accessory <1254> Accessory <1255> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <672> Engine <672> Body <672> Accessory <1256> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <673> Engine <673> Body <673> Accessory <1257> Accessory <1258> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <674> Engine <674> Body <674> Accessory <1259> Accessory <1260> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <675> Engine <675> Body <675> Accessory <1261> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <676> Engine <676> Body <676> Accessory <1262> Accessory <1263> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <677> Engine <677> Body <677> Accessory <1264> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <678> Engine <678> Body <678> Accessory <1265> 
+мая 30, 2022 2:12:33 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <679> Engine <679> Body <679> Accessory <1266> Accessory <1267> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <680> Engine <680> Body <680> Accessory <1268> Accessory <1269> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <681> Engine <681> Body <681> Accessory <1270> Accessory <1271> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <682> Engine <682> Body <682> Accessory <1272> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <683> Engine <683> Body <683> Accessory <1273> Accessory <1274> Accessory <1275> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <684> Engine <684> Body <684> Accessory <1276> Accessory <1277> Accessory <1278> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <685> Engine <685> Body <685> Accessory <1279> Accessory <1280> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <686> Engine <686> Body <686> Accessory <1281> Accessory <1282> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <687> Engine <687> Body <687> Accessory <1283> Accessory <1284> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <688> Engine <688> Body <688> Accessory <1285> Accessory <1286> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <689> Engine <689> Body <689> Accessory <1287> Accessory <1288> Accessory <1289> 
+мая 30, 2022 2:12:34 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <690> Engine <690> Body <690> Accessory <1290> Accessory <1291> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <691> Engine <691> Body <691> Accessory <1292> Accessory <1293> Accessory <1294> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <692> Engine <692> Body <692> Accessory <1295> Accessory <1296> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <693> Engine <693> Body <693> Accessory <1297> Accessory <1298> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <694> Engine <694> Body <694> Accessory <1299> Accessory <1300> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <695> Engine <695> Body <695> Accessory <1301> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <696> Engine <696> Body <696> Accessory <1302> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <697> Engine <697> Body <697> Accessory <1303> Accessory <1304> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <698> Engine <698> Body <698> Accessory <1305> Accessory <1306> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <699> Engine <699> Body <699> Accessory <1307> 
+мая 30, 2022 2:12:35 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <700> Engine <700> Body <700> Accessory <1308> Accessory <1309> Accessory <1310> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <701> Engine <701> Body <701> Accessory <1311> Accessory <1312> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <702> Engine <702> Body <702> Accessory <1313> Accessory <1314> Accessory <1315> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <703> Engine <703> Body <703> Accessory <1316> Accessory <1317> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <704> Engine <704> Body <704> Accessory <1318> Accessory <1319> Accessory <1320> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <705> Engine <705> Body <705> Accessory <1321> Accessory <1322> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <706> Engine <706> Body <706> Accessory <1323> Accessory <1324> Accessory <1325> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <707> Engine <707> Body <707> Accessory <1326> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <708> Engine <708> Body <708> Accessory <1327> Accessory <1328> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <709> Engine <709> Body <709> Accessory <1329> 
+мая 30, 2022 2:12:36 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <710> Engine <710> Body <710> Accessory <1330> Accessory <1331> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <711> Engine <711> Body <711> Accessory <1332> Accessory <1333> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <712> Engine <712> Body <712> Accessory <1334> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <713> Engine <713> Body <713> Accessory <1335> Accessory <1336> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <714> Engine <714> Body <714> Accessory <1337> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <715> Engine <715> Body <715> Accessory <1338> Accessory <1339> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <716> Engine <716> Body <716> Accessory <1340> Accessory <1341> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <717> Engine <717> Body <717> Accessory <1342> Accessory <1343> Accessory <1344> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <718> Engine <718> Body <718> Accessory <1345> Accessory <1346> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <719> Engine <719> Body <719> Accessory <1347> 
+мая 30, 2022 2:12:37 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <720> Engine <720> Body <720> Accessory <1348> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <721> Engine <721> Body <721> Accessory <1349> Accessory <1350> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <722> Engine <722> Body <722> Accessory <1351> Accessory <1352> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <723> Engine <723> Body <723> Accessory <1353> Accessory <1354> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <724> Engine <724> Body <724> Accessory <1355> Accessory <1356> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <725> Engine <725> Body <725> Accessory <1357> Accessory <1358> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <726> Engine <726> Body <726> Accessory <1359> Accessory <1360> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <727> Engine <727> Body <727> Accessory <1361> Accessory <1362> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <728> Engine <728> Body <728> Accessory <1363> Accessory <1364> Accessory <1365> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <729> Engine <729> Body <729> Accessory <1366> Accessory <1367> 
+мая 30, 2022 2:12:38 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <730> Engine <730> Body <730> Accessory <1368> Accessory <1369> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <731> Engine <731> Body <731> Accessory <1370> Accessory <1371> Accessory <1372> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <732> Engine <732> Body <732> Accessory <1373> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <733> Engine <733> Body <733> Accessory <1374> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <734> Engine <734> Body <734> Accessory <1375> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <735> Engine <735> Body <735> Accessory <1377> Accessory <1378> Accessory <1376> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <736> Engine <736> Body <736> Accessory <1379> Accessory <1380> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <737> Engine <737> Body <737> Accessory <1381> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <738> Engine <738> Body <738> Accessory <1382> Accessory <1383> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <739> Engine <739> Body <739> Accessory <1384> Accessory <1385> 
+мая 30, 2022 2:12:39 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <740> Engine <740> Body <740> Accessory <1386> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <741> Engine <741> Body <741> Accessory <1387> Accessory <1388> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <742> Engine <742> Body <742> Accessory <1389> Accessory <1390> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <743> Engine <743> Body <743> Accessory <1393> Accessory <1391> Accessory <1392> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <744> Engine <744> Body <744> Accessory <1394> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <745> Engine <745> Body <745> Accessory <1395> Accessory <1396> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <746> Engine <746> Body <746> Accessory <1397> Accessory <1398> Accessory <1399> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <747> Engine <747> Body <747> Accessory <1400> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <748> Engine <748> Body <748> Accessory <1401> Accessory <1402> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <749> Engine <749> Body <749> Accessory <1403> Accessory <1404> Accessory <1405> 
+мая 30, 2022 2:12:40 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <750> Engine <750> Body <750> Accessory <1406> Accessory <1407> 
+мая 30, 2022 2:12:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <751> Engine <751> Body <751> Accessory <1408> 
+мая 30, 2022 2:12:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <752> Engine <752> Body <752> Accessory <1409> 
+мая 30, 2022 2:12:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <753> Engine <753> Body <753> Accessory <1410> Accessory <1411> Accessory <1412> 
+мая 30, 2022 2:12:41 AM CarFactory.Staff.Dealer run
+INFO: Sold: Car <754> Engine <754> Body <754> Accessory <1413> Accessory <1414> 
