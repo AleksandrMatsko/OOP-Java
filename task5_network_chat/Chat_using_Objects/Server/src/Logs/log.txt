@@ -1,20 +1,192 @@
-июн. 04, 2022 8:26:34 PM Server.Server run
+июн. 04, 2022 11:13:41 PM Server.Server run
 INFO: Server started on port: 12345
-июн. 04, 2022 8:26:42 PM Server.Server run
-INFO: Client connected /127.0.0.1:60128
-июн. 04, 2022 8:26:45 PM Server.RequestHandler run
+июн. 04, 2022 11:13:46 PM Server.Server run
+INFO: Client connected /127.0.0.1:61382
+июн. 04, 2022 11:13:52 PM Server.RequestHandler run
+WARNING: User name is taken: SERVER
+июн. 04, 2022 11:14:00 PM Server.RequestHandler run
 INFO: Sending stored messages
-июн. 04, 2022 8:26:45 PM Server.RequestHandler run
-INFO: Broadcast message of connection of user: 0w0
-июн. 04, 2022 8:26:52 PM Server.RequestHandler run
-INFO: Received message from 0w0
-июн. 04, 2022 8:27:07 PM Server.RequestHandler run
-INFO: Received message from 0w0
-июн. 04, 2022 8:27:12 PM Server.RequestHandler run
-INFO: Received message from 0w0
-июн. 04, 2022 8:27:14 PM Server.RequestHandler run
-INFO: Received message from 0w0
-июн. 04, 2022 8:27:20 PM Server.RequestHandler run
-INFO: Received message from 0w0
-июн. 04, 2022 8:27:20 PM Server.Commands.ServerRequestCommand execute
-INFO: 0w0 disconnected
+июн. 04, 2022 11:14:00 PM Server.RequestHandler run
+INFO: Broadcast message of connection of user: server
+июн. 04, 2022 11:14:11 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:15 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:27 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:29 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:29 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:30 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:30 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:34 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:34 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:34 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:34 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:34 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:34 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:35 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:36 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:37 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:37 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:37 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:37 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:37 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:38 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:39 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:44 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:45 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:49 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:58 PM Server.RequestHandler run
+INFO: Received message from server
+июн. 04, 2022 11:14:58 PM Server.Commands.ServerRequestCommand execute
+INFO: server disconnected
+июн. 04, 2022 11:15:02 PM Server.Server run
+INFO: Client connected /127.0.0.1:61389
+июн. 04, 2022 11:15:06 PM Server.RequestHandler run
+WARNING: User name is taken: SERVER
+июн. 04, 2022 11:15:12 PM Server.RequestHandler run
+INFO: Sending stored messages
+июн. 04, 2022 11:15:12 PM Server.RequestHandler run
+INFO: Broadcast message of connection of user: TRUE_SERVER
+июн. 04, 2022 11:15:42 PM Server.RequestHandler run
+INFO: Received message from TRUE_SERVER

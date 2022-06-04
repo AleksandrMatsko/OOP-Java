@@ -1,6 +1,7 @@
 package Server;
 
 import Chat.*;
+import Exceptions.InvalidUserNameException;
 import Names.UserName;
 import Server.Commands.GeneralMessageCommand;
 import Server.Commands.IServerCommand;
@@ -25,6 +26,7 @@ public class Server implements Runnable {
     private int numOfShowingMessages;
     private final Chat chat;
     private boolean isLogging;
+    private final UserName serverName;
 
 
     public Server() {
@@ -34,6 +36,12 @@ public class Server implements Runnable {
         }
         catch (IOException ex) {
             ex.printStackTrace();
+        }
+        try {
+            serverName = new UserName(properties.getProperty("ServerName"));
+        }
+        catch (InvalidUserNameException ex) {
+            throw new RuntimeException("Invalid server name");
         }
         port = Integer.parseInt(properties.getProperty("Port"));
         numOfShowingMessages = Integer.parseInt(properties.getProperty("NumShowingMessages"));
@@ -49,10 +57,15 @@ public class Server implements Runnable {
         return isLogging;
     }
 
+    public UserName getServerName() {
+        return serverName;
+    }
+
     public void disconnect(UserName userName) {
         if (!clients.containsKey(userName)) {
             //TODO exception
         }
+        clients.get(userName).sendMessage(new Message("/exit", MessageType.SERVER_RESPONSE, serverName));
         clients.get(userName).close();
         clients.remove(userName);
     }
@@ -67,7 +80,7 @@ public class Server implements Runnable {
     }
 
     public boolean registerNewUser(UserName userName, RequestHandler requestHandler) {
-        if (clients.containsKey(userName)) {
+        if (clients.containsKey(userName) || userName.equals(serverName)) {
             return false;
         }
         clients.put(userName, requestHandler);
@@ -131,5 +144,12 @@ public class Server implements Runnable {
         finally {
             close();
         }
+    }
+
+    public void stop() {
+        for (Map.Entry<UserName, RequestHandler> entry : clients.entrySet()) {
+            disconnect(entry.getKey());
+        }
+        close();
     }
 }

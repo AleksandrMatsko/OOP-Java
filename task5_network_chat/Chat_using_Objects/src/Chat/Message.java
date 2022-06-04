@@ -15,11 +15,18 @@ public class Message implements Serializable {
     private UserName senderName;
     private MessageType messageType;
 
-    public Message(String messageData, MessageType messageType) {
+    /*public Message(String messageData, MessageType messageType) {
         this.messageData = messageData;
         date = new GregorianCalendar();
         this.messageType = messageType;
         senderName = null;
+    }*/
+
+    public Message(String messageData, MessageType messageType, UserName userName) {
+        this.messageData = messageData;
+        date = new GregorianCalendar();
+        this.messageType = messageType;
+        senderName = userName;
     }
 
     public MessageType getMessageType() {

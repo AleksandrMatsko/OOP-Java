@@ -16,7 +16,7 @@ public class Client implements Runnable, Observable {
     private Socket socket;
     private ObjectInputStream reader;
     private ObjectOutputStream writer;
-    private Chat chat;
+    private final Chat chat;
     private final Set<Observer> observers;
     private Message receivedMessage;
     private UserName userName;
@@ -25,6 +25,7 @@ public class Client implements Runnable, Observable {
         this.ip = ip;
         this.port = port;
         observers = new HashSet<Observer>();
+        chat = new Chat();
     }
 
     public UserName getUserName() {
@@ -36,10 +37,16 @@ public class Client implements Runnable, Observable {
     }
 
     public boolean isConnected() {
+        if (socket == null) {
+            return false;
+        }
         return !socket.isClosed();
     }
 
     public void close() {
+        if (!isConnected()) {
+            return;
+        }
         try {
             writer.close();
             socket.close();
@@ -61,36 +68,42 @@ public class Client implements Runnable, Observable {
         }
     }
 
-    public void run() {
+    public void connect() {
         try {
             socket = new Socket(ip, port);
             writer = new ObjectOutputStream(socket.getOutputStream());
             reader = new ObjectInputStream(socket.getInputStream());
-            chat = new Chat();
-            Thread thread = new Thread(new ClientController(this));
+        }
+        catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void run() {
+        try {
+            connect();
+            if (socket == null || !isConnected()) {
+                return;
+            }
 
             UserNameAsker userNameAsker = new UserNameAsker();
             userName = userNameAsker.ask();
-            Message loginMessage = new Message("Hello", MessageType.SERVER_REQUEST);
-            loginMessage.setSenderName(userName);
+            Message loginMessage = new Message("Hello", MessageType.SERVER_REQUEST, userName);
             sendMessage(loginMessage);
 
-            thread.start();
             while (isConnected()) {
                 receivedMessage = (Message) reader.readObject();
                 if (receivedMessage.getMessageType() == MessageType.GENERAL_MESSAGE) {
                     chat.addMessage(receivedMessage);
-                    System.out.println(receivedMessage.getMessageData());
                 }
                 else if (receivedMessage.getMessageType() == MessageType.SERVER_RESPONSE) {
                     if (receivedMessage.getMessageData().equals("Invalid request")) {
-                        loginMessage = new Message("Hello", MessageType.SERVER_REQUEST);
-                        loginMessage.setSenderName(userName);
+                        loginMessage = new Message("Hello", MessageType.SERVER_REQUEST, userName);
                         sendMessage(loginMessage);
                     }
                     else if (receivedMessage.getMessageData().equals("User name is taken")) {
                         userName = userNameAsker.ask();
-                        loginMessage.setSenderName(userName);
+                        loginMessage = new Message("Hello", MessageType.SERVER_REQUEST, userName);
                         sendMessage(loginMessage);
                     }
                     else if (receivedMessage.getMessageData().equals("/exit")) {
@@ -109,6 +122,7 @@ public class Client implements Runnable, Observable {
         }
         finally {
             close();
+            notifyObservers();
         }
     }
 
@@ -124,5 +138,9 @@ public class Client implements Runnable, Observable {
 
     public void removeObserver(Observer observer) {
         observers.remove(observer);
+    }
+
+    public Message getReceivedMessage() {
+        return receivedMessage;
     }
 }

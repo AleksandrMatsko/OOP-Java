@@ -60,7 +60,7 @@ public class RequestHandler implements Runnable {
             while (!isSuccessLogin) {
                 Message loginMessage = (Message) reader.readObject();
                 if (loginMessage.getMessageType() != MessageType.SERVER_REQUEST) {
-                    sendMessage(new Message("Invalid request", MessageType.SERVER_RESPONSE));
+                    sendMessage(new Message("Invalid request", MessageType.SERVER_RESPONSE, server.getServerName()));
                     continue;
                 }
                 userName = loginMessage.getSenderName();
@@ -69,7 +69,7 @@ public class RequestHandler implements Runnable {
                     if (server.isLogging()) {
                         logger.warning("User name is taken: " + userName.getName());
                     }
-                    sendMessage(new Message("User name is taken", MessageType.SERVER_RESPONSE));
+                    sendMessage(new Message("User name is taken", MessageType.SERVER_RESPONSE, server.getServerName()));
                 }
                 else {
                     ListIterator<Message> iterator = server.getStoredMessages().listIterator(server.getStoredMessages().size());
@@ -80,7 +80,7 @@ public class RequestHandler implements Runnable {
                 }
             }
 
-            server.broadcastMessage(new Message("User connected: " + userName.getName(), MessageType.GENERAL_MESSAGE));
+            server.broadcastMessage(new Message("User connected: " + userName.getName(), MessageType.GENERAL_MESSAGE, server.getServerName()));
             logger.info("Broadcast message of connection of user: " + userName.getName());
 
             while (!socket.isClosed()) {

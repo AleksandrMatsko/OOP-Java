@@ -17,17 +17,19 @@ public class ServerRequestCommand implements IServerCommand {
         }
         if (message.getMessageData().equals("/exit")) {
             server.disconnect(requestHandler.getUserName());
-            requestHandler.sendMessage(new Message(message.getMessageData(), MessageType.SERVER_RESPONSE));
             if (server.isLogging()) {
                 logger.info(requestHandler.getUserName().getName() + " disconnected");
             }
-            server.broadcastMessage(new Message(requestHandler.getUserName().getName() + " disconnected (" + message.getDate() + ")" , MessageType.GENERAL_MESSAGE));
+            server.broadcastMessage(new Message(requestHandler.getUserName().getName() + " disconnected (" +
+                    message.getDate() + ")" , MessageType.GENERAL_MESSAGE, server.getServerName()));
         }
         else if (message.getMessageData().equals("/users")) {
-            requestHandler.sendMessage(new Message("All connected users: " + System.lineSeparator() + server.getUsers(), MessageType.GENERAL_MESSAGE));
+            requestHandler.sendMessage(new Message(System.lineSeparator() + "All connected users: " +
+                    System.lineSeparator() + server.getUsers(), MessageType.GENERAL_MESSAGE, server.getServerName()));
         }
         else {
-            requestHandler.sendMessage(new Message("Unknown command: " + message.getMessageData(), MessageType.GENERAL_MESSAGE));
+            requestHandler.sendMessage(new Message("Unknown command: " + message.getMessageData(),
+                    MessageType.GENERAL_MESSAGE, server.getServerName()));
         }
     }
 }
