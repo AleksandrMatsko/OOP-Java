@@ -1,0 +1,20 @@
+июн. 04, 2022 8:26:34 PM Server.Server run
+INFO: Server started on port: 12345
+июн. 04, 2022 8:26:42 PM Server.Server run
+INFO: Client connected /127.0.0.1:60128
+июн. 04, 2022 8:26:45 PM Server.RequestHandler run
+INFO: Sending stored messages
+июн. 04, 2022 8:26:45 PM Server.RequestHandler run
+INFO: Broadcast message of connection of user: 0w0
+июн. 04, 2022 8:26:52 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 04, 2022 8:27:07 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 04, 2022 8:27:12 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 04, 2022 8:27:14 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 04, 2022 8:27:20 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 04, 2022 8:27:20 PM Server.Commands.ServerRequestCommand execute
+INFO: 0w0 disconnected
