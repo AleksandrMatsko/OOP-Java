@@ -15,13 +15,14 @@ public class ServerRequestCommand implements IServerCommand {
         if (message.getMessageType() != MessageType.SERVER_REQUEST) {
             return;
         }
+        requestHandler.sendMessage(new Message(message.getMessageData(), MessageType.GENERAL_MESSAGE, message.getSenderName()));
         if (message.getMessageData().equals("/exit")) {
             server.disconnect(requestHandler.getUserName());
             if (server.isLogging()) {
                 logger.info(requestHandler.getUserName().getName() + " disconnected");
             }
-            server.broadcastMessage(new Message(requestHandler.getUserName().getName() + " disconnected (" +
-                    message.getDate() + ")" , MessageType.GENERAL_MESSAGE, server.getServerName()));
+            server.broadcastMessage(new Message(requestHandler.getUserName().getName() + " disconnected",
+                    MessageType.GENERAL_MESSAGE, server.getServerName()));
         }
         else if (message.getMessageData().equals("/users")) {
             requestHandler.sendMessage(new Message(System.lineSeparator() + "All connected users: " +

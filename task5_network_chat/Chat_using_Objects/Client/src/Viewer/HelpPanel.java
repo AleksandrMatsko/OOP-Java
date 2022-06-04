@@ -1,5 +1,7 @@
 package Viewer;
 
+import Names.UserName;
+
 import javax.swing.*;
 
 public class HelpPanel extends JPanel {
@@ -12,12 +14,24 @@ public class HelpPanel extends JPanel {
             
             """;
     private JTextArea textArea;
+    private JTextField userNameArea;
 
     public HelpPanel() {
         textArea = new JTextArea(6, 30);
         textArea.setEditable(false);
         textArea.setText(text);
-        setBounds(0, 0, 100, 50);
+        setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         add(textArea);
+
+        userNameArea = new JTextField();
+        userNameArea.setEditable(false);
+        add(userNameArea);
+
+
+        setBounds(0, 0, 100, 50);
+    }
+
+    public void updateUserName(UserName userName) {
+        userNameArea.setText("Your username:" + System.lineSeparator() + userName.getName());
     }
 }

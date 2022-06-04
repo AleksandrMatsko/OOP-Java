@@ -10,7 +10,7 @@ import Chat.*;
 import Names.UserName;
 import Viewer.UserNameAsker;
 
-public class Client implements Runnable, Observable {
+public class Client implements Observable {
     private final String ip;
     private final int port;
     private Socket socket;

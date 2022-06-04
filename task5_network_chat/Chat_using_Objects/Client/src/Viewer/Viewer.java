@@ -28,8 +28,16 @@ public class Viewer implements Observer, DocumentListener {
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-
                 super.windowClosing(e);
+                if (client.isConnected()) {
+                    try {
+                        client.sendMessage(new Message("/exit", MessageType.SERVER_REQUEST, client.getUserName()));
+                    }
+                    catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+
                 System.exit(0);
             }
         });
@@ -46,11 +54,16 @@ public class Viewer implements Observer, DocumentListener {
         JScrollPane scrollPane = new JScrollPane(chatArea);
         mainPanel.add(scrollPane);
 
+        JTextField textField = new JTextField();
+        textField.setEditable(false);
+        textField.setText("Write your message down and press enter to send it");
+        mainPanel.add(textField);
+
         messageArea = new JTextArea(3, 40);
         messageArea.getDocument().addDocumentListener(this);
         mainPanel.add(messageArea);
 
-        frame.setContentPane(mainPanel);
+        frame.add(mainPanel);
         frame.setBounds(100, 50, 600, 600);
         frame.setVisible(true);
 
@@ -64,6 +77,7 @@ public class Viewer implements Observer, DocumentListener {
     @Override
     public void update() {
         if (client.isConnected()) {
+            helpPanel.updateUserName(client.getUserName());
             chatArea.setText(chatArea.getText() + formatMessage(client.getReceivedMessage()));
         }
         else {
