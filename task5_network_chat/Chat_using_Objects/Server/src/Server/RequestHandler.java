@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.net.SocketException;
 import java.util.ListIterator;
 import java.util.logging.Logger;
 
@@ -27,9 +28,15 @@ public class RequestHandler implements Runnable {
 
     public void close() {
         try {
-            socket.close();
-            writer.close();
-            reader.close();
+            if (writer != null) {
+                writer.close();
+            }
+            if (reader != null) {
+                reader.close();
+            }
+            if (socket != null && !socket.isClosed()) {
+                socket.close();
+            }
         }
         catch (IOException ex) {
             ex.printStackTrace();
@@ -38,8 +45,10 @@ public class RequestHandler implements Runnable {
 
     public void sendMessage(Message message) {
         try {
-            writer.writeObject(message);
-            writer.flush();
+            if (!socket.isClosed()) {
+                writer.writeObject(message);
+                writer.flush();
+            }
         }
         catch (IOException ex) {
             ex.printStackTrace();
@@ -72,8 +81,13 @@ public class RequestHandler implements Runnable {
                     sendMessage(new Message("User name is taken", MessageType.SERVER_RESPONSE, server.getServerName()));
                 }
                 else {
+                    if (server.isLogging()) {
+                        logger.info(userName.getName() + " login success");
+                    }
                     ListIterator<Message> iterator = server.getStoredMessages().listIterator(server.getStoredMessages().size());
-                    logger.info("Sending stored messages");
+                    if (server.isLogging()) {
+                        logger.info("Sending stored messages");
+                    }
                     while (iterator.hasPrevious()) {
                         sendMessage(iterator.previous());
                     }
@@ -81,16 +95,25 @@ public class RequestHandler implements Runnable {
             }
 
             server.broadcastMessage(new Message("User connected: " + userName.getName(), MessageType.GENERAL_MESSAGE, server.getServerName()));
-            logger.info("Broadcast message of connection of user: " + userName.getName());
 
             while (!socket.isClosed()) {
                 Message message = (Message) reader.readObject();
-                logger.info("Received message from " + userName.getName());
+                if (server.isLogging()) {
+                    logger.info("Received message from " + userName.getName());
+                }
                 IServerCommand serverCommand = server.getCommand(message.getMessageType());
+                if (serverCommand == null) {
+                    throw new RuntimeException("Unknown type of message: " + message.getMessageType());
+                }
                 serverCommand.execute(server, message, this);
             }
 
 
+        }
+        catch (SocketException ex) {
+            Message exitMessage = new Message("/exit", MessageType.SERVER_REQUEST, userName);
+            IServerCommand serverCommand = server.getCommand(exitMessage.getMessageType());
+            serverCommand.execute(server, exitMessage, this);
         }
         catch (Exception ex) {
             ex.printStackTrace();

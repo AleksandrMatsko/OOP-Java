@@ -1,30 +1,38 @@
-июн. 05, 2022 12:05:50 AM Server.Server run
+июн. 05, 2022 12:31:57 PM Server.Server run
 INFO: Server started on port: 12345
-июн. 05, 2022 12:05:59 AM Server.Server run
-INFO: Client connected /192.168.1.8:50063
-июн. 05, 2022 12:06:02 AM Server.RequestHandler run
+июн. 05, 2022 12:32:00 PM Server.Server run
+INFO: Client connected /192.168.1.13 : 59369
+июн. 05, 2022 12:32:07 PM Server.RequestHandler run
+WARNING: User name is taken: SERVER
+июн. 05, 2022 12:32:19 PM Server.RequestHandler run
+INFO: cat login success
+июн. 05, 2022 12:32:19 PM Server.RequestHandler run
 INFO: Sending stored messages
-июн. 05, 2022 12:06:02 AM Server.RequestHandler run
-INFO: Broadcast message of connection of user: boss
-июн. 05, 2022 12:06:07 AM Server.Server run
-INFO: Client connected /192.168.1.13:63128
-июн. 05, 2022 12:06:10 AM Server.RequestHandler run
-INFO: Sending stored messages
-июн. 05, 2022 12:06:10 AM Server.RequestHandler run
-INFO: Broadcast message of connection of user: cat
-июн. 05, 2022 12:06:14 AM Server.RequestHandler run
+июн. 05, 2022 12:32:19 PM Server.Server broadcastMessage
+INFO: Broadcast message from SERVER
+июн. 05, 2022 12:32:20 PM Server.RequestHandler run
 INFO: Received message from cat
-июн. 05, 2022 12:06:14 AM Server.Commands.ServerRequestCommand execute
+июн. 05, 2022 12:32:20 PM Server.Commands.ServerRequestCommand execute
+INFO: command /exit from cat
+июн. 05, 2022 12:32:20 PM Server.Commands.ServerRequestCommand execute
 INFO: cat disconnected
-июн. 05, 2022 12:06:17 AM Server.Server run
-INFO: Client connected /192.168.1.13:63134
-июн. 05, 2022 12:06:19 AM Server.RequestHandler run
+июн. 05, 2022 12:32:20 PM Server.Server broadcastMessage
+INFO: Broadcast message from SERVER
+июн. 05, 2022 12:32:32 PM Server.Server run
+INFO: Client connected /192.168.1.13 : 59376
+июн. 05, 2022 12:32:37 PM Server.RequestHandler run
+WARNING: User name is taken: SERVER
+июн. 05, 2022 12:33:04 PM Server.RequestHandler run
+INFO: -0 login success
+июн. 05, 2022 12:33:04 PM Server.RequestHandler run
 INFO: Sending stored messages
-июн. 05, 2022 12:06:19 AM Server.RequestHandler run
-INFO: Broadcast message of connection of user: cat
-июн. 05, 2022 12:06:26 AM Server.RequestHandler run
-INFO: Received message from cat
-июн. 05, 2022 12:06:26 AM Server.Commands.ServerRequestCommand execute
-INFO: cat disconnected
-июн. 05, 2022 12:07:01 AM Server.Server run
-INFO: Client connected /192.168.1.13:63143
+июн. 05, 2022 12:33:04 PM Server.Server broadcastMessage
+INFO: Broadcast message from SERVER
+июн. 05, 2022 12:33:07 PM Server.RequestHandler run
+INFO: Received message from -0
+июн. 05, 2022 12:33:07 PM Server.Commands.ServerRequestCommand execute
+INFO: command /exit from -0
+июн. 05, 2022 12:33:07 PM Server.Commands.ServerRequestCommand execute
+INFO: -0 disconnected
+июн. 05, 2022 12:33:07 PM Server.Server broadcastMessage
+INFO: Broadcast message from SERVER

@@ -15,8 +15,10 @@ public class ServerRequestCommand implements IServerCommand {
         if (message.getMessageType() != MessageType.SERVER_REQUEST) {
             return;
         }
-        requestHandler.sendMessage(new Message(message.getMessageData(), MessageType.GENERAL_MESSAGE, message.getSenderName()));
         if (message.getMessageData().equals("/exit")) {
+            if (server.isLogging()) {
+                logger.info("command /exit from " + requestHandler.getUserName().getName());
+            }
             server.disconnect(requestHandler.getUserName());
             if (server.isLogging()) {
                 logger.info(requestHandler.getUserName().getName() + " disconnected");
@@ -25,10 +27,13 @@ public class ServerRequestCommand implements IServerCommand {
                     MessageType.GENERAL_MESSAGE, server.getServerName()));
         }
         else if (message.getMessageData().equals("/users")) {
+            requestHandler.sendMessage(new Message(message.getMessageData(), MessageType.GENERAL_MESSAGE, message.getSenderName()));
+            logger.info("command /users from " + requestHandler.getUserName().getName());
             requestHandler.sendMessage(new Message(System.lineSeparator() + "All connected users: " +
                     System.lineSeparator() + server.getUsers(), MessageType.GENERAL_MESSAGE, server.getServerName()));
         }
         else {
+            requestHandler.sendMessage(new Message(message.getMessageData(), MessageType.GENERAL_MESSAGE, message.getSenderName()));
             requestHandler.sendMessage(new Message("Unknown command: " + message.getMessageData(),
                     MessageType.GENERAL_MESSAGE, server.getServerName()));
         }

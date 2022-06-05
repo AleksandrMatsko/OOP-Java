@@ -8,6 +8,7 @@ import Client.Observer;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.text.DefaultCaret;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
@@ -52,6 +53,8 @@ public class Viewer implements Observer, DocumentListener {
         chatArea.setEditable(false);
         chatArea.setLineWrap(true);
         JScrollPane scrollPane = new JScrollPane(chatArea);
+        DefaultCaret caret = (DefaultCaret)chatArea.getCaret();
+        caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
         mainPanel.add(scrollPane);
 
         JTextField textField = new JTextField();
@@ -64,14 +67,21 @@ public class Viewer implements Observer, DocumentListener {
         mainPanel.add(messageArea);
 
         frame.add(mainPanel);
-        frame.setBounds(100, 50, 600, 600);
+        frame.setBounds(100, 50, 800, 600);
         frame.setVisible(true);
 
     }
 
     private String formatMessage(Message message) {
-        return message.getDate() + " " + message.getSenderName().getName() + " : " + message.getMessageData() +
-                System.lineSeparator();
+        String formattedMessage = "";
+        if (message.getDate() != null) {
+            formattedMessage += message.getDate() + " ";
+        }
+        if (message.getSenderName() != null) {
+            formattedMessage += message.getSenderName().getName() + " > ";
+        }
+        formattedMessage += message.getMessageData() + System.lineSeparator();
+        return  formattedMessage;
     }
 
     @Override

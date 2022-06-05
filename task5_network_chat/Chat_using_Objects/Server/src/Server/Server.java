@@ -25,7 +25,7 @@ public class Server implements Runnable {
     private ConcurrentHashMap<MessageType, IServerCommand> serverCommands;
     private int numOfShowingMessages;
     private final Chat chat;
-    private boolean isLogging;
+    private final boolean isLogging;
     private final UserName serverName;
 
 
@@ -63,9 +63,11 @@ public class Server implements Runnable {
 
     public void disconnect(UserName userName) {
         if (!clients.containsKey(userName)) {
-            //TODO exception
+            if (isLogging) {
+                logger.warning("try to disconnect not connected user: " + userName.getName());
+            }
+            return;
         }
-        clients.get(userName).sendMessage(new Message("/exit", MessageType.SERVER_RESPONSE, serverName));
         clients.get(userName).close();
         clients.remove(userName);
     }
@@ -89,7 +91,10 @@ public class Server implements Runnable {
 
     public IServerCommand getCommand(MessageType messageType) {
         if (!serverCommands.containsKey(messageType)) {
-            //TODO exception
+            if (isLogging) {
+                logger.warning("try to get command for message type: " + messageType);
+            }
+            return null;
         }
         return serverCommands.get(messageType);
     }
@@ -105,6 +110,7 @@ public class Server implements Runnable {
         for (Map.Entry<UserName, RequestHandler> entry : clients.entrySet()) {
             entry.getValue().sendMessage(message);
         }
+        logger.info("Broadcast message from " + message.getSenderName().getName());
     }
 
     public LinkedList<Message> getStoredMessages() {
@@ -118,9 +124,12 @@ public class Server implements Runnable {
     public void close() {
         try {
             serverSocket.close();
+            logger.info("Closing server socket...");
         } catch (IOException ex) {
+            logger.severe(ex.getMessage());
             ex.printStackTrace();
         }
+        logger.info("Server socket closed");
     }
 
     @Override
@@ -132,7 +141,7 @@ public class Server implements Runnable {
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 if (isLogging) {
-                    logger.info("Client connected " + clientSocket.getInetAddress() + ":" + clientSocket.getPort());
+                    logger.info("Client connected " + clientSocket.getInetAddress() + " : " + clientSocket.getPort());
                 }
                 Thread thread = new Thread(new RequestHandler(this, clientSocket));
                 thread.start();
@@ -148,6 +157,7 @@ public class Server implements Runnable {
 
     public void stop() {
         for (Map.Entry<UserName, RequestHandler> entry : clients.entrySet()) {
+            clients.get(entry.getKey()).sendMessage(new Message("/exit", MessageType.SERVER_RESPONSE, serverName));
             disconnect(entry.getKey());
         }
         close();

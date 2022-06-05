@@ -17,7 +17,7 @@ public class HelpPanel extends JPanel {
     private JTextField userNameArea;
 
     public HelpPanel() {
-        textArea = new JTextArea(6, 30);
+        textArea = new JTextArea(6, 25);
         textArea.setEditable(false);
         textArea.setText(text);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));

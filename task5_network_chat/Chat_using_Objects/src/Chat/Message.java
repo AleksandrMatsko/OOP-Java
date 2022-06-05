@@ -1,6 +1,5 @@
 package Chat;
 
-import Names.CommandName;
 import Names.UserName;
 
 import java.io.Serializable;

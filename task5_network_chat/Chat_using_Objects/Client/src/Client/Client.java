@@ -3,7 +3,9 @@ package Client;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.ConnectException;
 import java.net.Socket;
+import java.net.SocketException;
 import java.util.HashSet;
 import java.util.Set;
 import Chat.*;
@@ -16,25 +18,22 @@ public class Client implements Observable {
     private Socket socket;
     private ObjectInputStream reader;
     private ObjectOutputStream writer;
-    private final Chat chat;
     private final Set<Observer> observers;
     private Message receivedMessage;
     private UserName userName;
+    private final String askInfo = "Please enter user name.\nUser name must contain at least one character or digit.";
 
     public Client(String ip, int port) {
         this.ip = ip;
         this.port = port;
         observers = new HashSet<Observer>();
-        chat = new Chat();
+        userName = null;
     }
 
     public UserName getUserName() {
         return userName;
     }
 
-    public void setUserName(UserName userName) {
-        this.userName = userName;
-    }
 
     public boolean isConnected() {
         if (socket == null) {
@@ -44,13 +43,17 @@ public class Client implements Observable {
     }
 
     public void close() {
-        if (!isConnected()) {
-            return;
-        }
         try {
-            writer.close();
-            socket.close();
-            reader.close();
+            if (writer != null) {
+                writer.close();
+            }
+            if (reader != null) {
+                reader.close();
+            }
+            if (isConnected()) {
+                socket.close();
+            }
+
         }
         catch (IOException ex) {
             ex.printStackTrace();
@@ -74,6 +77,9 @@ public class Client implements Observable {
             writer = new ObjectOutputStream(socket.getOutputStream());
             reader = new ObjectInputStream(socket.getInputStream());
         }
+        catch (ConnectException ex) {
+            System.err.println("Server is offline");
+        }
         catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -87,35 +93,33 @@ public class Client implements Observable {
             }
 
             UserNameAsker userNameAsker = new UserNameAsker();
-            userName = userNameAsker.ask();
-            Message loginMessage = new Message("Hello", MessageType.SERVER_REQUEST, userName);
+            userName = userNameAsker.ask(askInfo);
+            Message loginMessage = new Message("/hello", MessageType.SERVER_REQUEST, userName);
             sendMessage(loginMessage);
 
             while (isConnected()) {
                 receivedMessage = (Message) reader.readObject();
-                if (receivedMessage.getMessageType() == MessageType.GENERAL_MESSAGE) {
-                    chat.addMessage(receivedMessage);
-                }
-                else if (receivedMessage.getMessageType() == MessageType.SERVER_RESPONSE) {
+                if (receivedMessage.getMessageType() == MessageType.SERVER_RESPONSE) {
                     if (receivedMessage.getMessageData().equals("Invalid request")) {
-                        loginMessage = new Message("Hello", MessageType.SERVER_REQUEST, userName);
+                        loginMessage = new Message("/hello", MessageType.SERVER_REQUEST, userName);
                         sendMessage(loginMessage);
+                        continue;
                     }
                     else if (receivedMessage.getMessageData().equals("User name is taken")) {
-                        userName = userNameAsker.ask();
-                        loginMessage = new Message("Hello", MessageType.SERVER_REQUEST, userName);
+                        userName = userNameAsker.ask("User name is taken. Please choose another user name.\n" + askInfo);
+                        loginMessage = new Message("/hello", MessageType.SERVER_REQUEST, userName);
                         sendMessage(loginMessage);
+                        continue;
                     }
                     else if (receivedMessage.getMessageData().equals("/exit")) {
-                        System.err.println("Exiting");
                         break;
-                    }
-                    else {
-                        chat.addMessage(receivedMessage);
                     }
                 }
                 notifyObservers();
             }
+        }
+        catch (SocketException ex) {
+            receivedMessage = new Message("you were disconnected ", MessageType.SERVER_RESPONSE, null);
         }
         catch (Exception ex) {
             ex.printStackTrace();
@@ -125,6 +129,7 @@ public class Client implements Observable {
             notifyObservers();
         }
     }
+
 
     public void notifyObservers() {
         for (Observer observer : observers) {
