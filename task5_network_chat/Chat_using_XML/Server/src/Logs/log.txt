@@ -1,0 +1,140 @@
+ июн. 05, 2022 7:24:58 PM Server.Server run
+INFO: Server started on port: 12345
+июн. 05, 2022 7:25:02 PM Server.Server run
+INFO: Client connected /192.168.1.13 : 54417
+июн. 05, 2022 7:25:05 PM Server.RequestHandler run
+INFO: 0w0 login success
+июн. 05, 2022 7:25:05 PM Server.RequestHandler run
+INFO: Sending stored messages
+июн. 05, 2022 7:25:05 PM Server.Server broadcastMessage
+INFO: Broadcast message from SERVER
+июн. 05, 2022 7:25:12 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:12 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:16 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:16 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:16 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:16 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:16 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:16 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:16 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:16 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:16 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:16 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:17 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:17 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:17 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:17 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:17 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:17 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:17 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:17 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:17 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:17 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:17 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:17 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:18 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:18 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:18 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:18 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:18 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:18 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:18 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:18 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:18 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:18 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:19 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:19 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:19 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:19 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:19 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:19 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:19 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:19 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:19 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:19 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:20 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:20 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:20 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:20 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:20 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:20 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:21 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:21 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:21 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:21 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:21 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:21 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:21 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:21 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:24 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:24 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:30 PM Server.RequestHandler run
+INFO: Received message from 0w0
+июн. 05, 2022 7:25:30 PM Server.Server broadcastMessage
+INFO: Broadcast message from 0w0
+июн. 05, 2022 7:25:30 PM Server.Commands.ServerRequestCommand execute
+INFO: command /exit from 0w0
+июн. 05, 2022 7:25:30 PM Server.Commands.ServerRequestCommand execute
+INFO: 0w0 disconnected
+июн. 05, 2022 7:25:30 PM Server.Server broadcastMessage
+INFO: Broadcast message from SERVER
