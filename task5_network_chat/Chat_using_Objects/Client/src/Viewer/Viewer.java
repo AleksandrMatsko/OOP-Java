@@ -63,6 +63,7 @@ public class Viewer implements Observer, DocumentListener {
         mainPanel.add(textField);
 
         messageArea = new JTextArea(3, 40);
+        messageArea.setLineWrap(true);
         messageArea.getDocument().addDocumentListener(this);
         mainPanel.add(messageArea);
 
