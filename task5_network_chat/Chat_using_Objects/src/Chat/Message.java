@@ -10,16 +10,8 @@ import java.util.GregorianCalendar;
 public class Message implements Serializable {
     private String messageData;
     private Calendar date;
-    private int senderID;
     private UserName senderName;
     private MessageType messageType;
-
-    /*public Message(String messageData, MessageType messageType) {
-        this.messageData = messageData;
-        date = new GregorianCalendar();
-        this.messageType = messageType;
-        senderName = null;
-    }*/
 
     public Message(String messageData, MessageType messageType, UserName userName) {
         this.messageData = messageData;
@@ -45,20 +37,9 @@ public class Message implements Serializable {
         return formatter.format(date.getTime());
     }
 
-    public int getSenderID() {
-        return senderID;
-    }
-
-    public void setSenderID(int senderID) {
-        this.senderID = senderID;
-    }
 
     public UserName getSenderName() {
         return senderName;
-    }
-
-    public void setSenderName(UserName senderName) {
-        this.senderName = senderName;
     }
 
 
