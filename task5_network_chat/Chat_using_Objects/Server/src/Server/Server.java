@@ -10,6 +10,7 @@ import Server.Commands.ServerRequestCommand;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketException;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Properties;
@@ -146,6 +147,9 @@ public class Server implements Runnable {
                 Thread thread = new Thread(new RequestHandler(this, clientSocket));
                 thread.start();
             }
+        }
+        catch (SocketException ex) {
+            System.out.println("Socket closed");
         }
         catch (IOException ex) {
             ex.printStackTrace();
